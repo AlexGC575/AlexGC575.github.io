@@ -55,6 +55,11 @@ input:focus ~ label,
 input:valid ~ label{
 top: -5px;
 }
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
 .login:hover{
     background-color: graytext;
     transition:0.35s;

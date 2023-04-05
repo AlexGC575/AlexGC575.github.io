@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +9,10 @@
 </head>
 <body>
 	<header >
-		
+		Welcome, <s:property value="#session.username"/>
+                <s:if test="%{#session['username']!=null">
+                        This is String 1
+                    </s:if>
 		<nav class="naveg">
                     <h1 class="logo">U<span>party</span> </h1>
 			<ul class="navbar">

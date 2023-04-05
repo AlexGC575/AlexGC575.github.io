@@ -7,4 +7,13 @@
     <package name="default" extends="struts-default">
         
     </package>
+    <package name="actionsLogin" extends="struts-default">
+        <action name="loginCheck" class="actions.loginCheck">
+            <result name="success">/main.jsp</result>
+            <result name="error">/login.jsp</result>
+        </action>
+        <action name="logout" class="actions.loginCheck" method="logout">
+            <result name="OK">/login.jsp</result>
+        </action>
+    </package>
 </struts>

@@ -1,20 +1,89 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 26-mar-2023, 18:24:51
-    Author     : juanl
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 *{
     margin:0;
-    paddin:0;
+    padding:0;
     font-family:'poppins',sans-serif;
+    box-sizing: border-box;
 }
-section{
+
+.header{
+    display: flex;
+}
+li{
+    list-style: none;
+}
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+.naveg{
+   width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+.naveg h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.naveg .navbar{
+    display: flex;
+    gap:2rem;
+}
+.princ{
+     
+     padding: 100px 0px;
+   
+    min-height: 100vh;
+    width: 100%;
+}
+.banner{
+   margin-top:50px;
+    height:cal(100vh-60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:white;
+    
+}
+.princbox{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+.princbox section{
+    height:365px;
+    width: 33%;
+    padding:20px 35px;
+     border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    margin: 15px;
+    position:relative;
+    overflow: hidden;
+    text-align: center;
+}
+.princbox h3{
+    color: #f9004d;
+    text-align: center;
+}
+p{
+    color:white;
+}
+body{
+    height:90%;
+    background: url('ltotbngnzzu.jpg')no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+section.loginsec{
     
     display: flex;
     justify-content: center;
@@ -40,9 +109,16 @@ section{
     justify-content: center;
     align-items: center;
 }
-h2{
+h1,h2{
     font-size: 2em;
     color: white;
+    justify-content: center;
+    text-align: center;
+}
+.menu{
+    font-size:75px;
+    width: 1130px;
+    margin: 30px auto;
     text-align: center;
 }
 .inputbox{
@@ -80,14 +156,16 @@ top: -5px;
     color:white;
     font-weight: 600;
 }
-.register p a{
+ a{
     text-decoration: none;
-    color:white;
+    color:orange;
+    font-weight: 600;
 }
-.register p a:hover{
+ a:hover{
     color: graytext;
     transition:0.35s;
-text-decoration: underline;    
+text-decoration: underline; 
+
 }
 .inputbox ion-icon{
      position: absolute;
@@ -116,4 +194,21 @@ text-decoration: underline;
     cursor:pointer;
     font-size: 1em;
     font-weight: 600;
+}
+span{
+    color:#f9004d;
+}
+footer{
+    position:relative;
+    width: 100%;
+    height: 10%;
+    background: #101010;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 30px;
+}
+h1 .logo{
+    font-weight: bold;
 }

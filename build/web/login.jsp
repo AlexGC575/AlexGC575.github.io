@@ -7,7 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html><head>
-        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="style.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login - Citas</title>
     </head>
@@ -20,7 +20,7 @@
             <%
         }
         %>
-        <section>
+        <section class="loginsec">
             <div class="form-box">
                 <div class="form-value">
         <form action="VetServlet">
@@ -43,7 +43,7 @@
            
         </form>
                     <div class="register">
-                        <p>¿No tienes cuenta? <a href="#">Registrate</a></p>
+                        <p>¿No tienes cuenta? <a href="main.jsp">Registrate</a></p>
                     </div>
                 </div>
             </div>

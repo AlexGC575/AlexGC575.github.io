@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,13 +32,22 @@ Copy code
 		<h2>Bienvenidos a nuestra web de organización de eventos</h2>
 		<p>Somos una empresa especializada en la organización de eventos para todo tipo de ocasiones. Desde bodas y cumpleaños hasta eventos corporativos y ferias, estamos aquí para ayudarte a hacer que tu evento sea un éxito.</p>
 		<a href="#contacto">Contáctanos</a>
+                <s:form action="evento">
+                    <s:submit name="evntTrigger" value="Cree su propio evento"/>
+                </s:form>
 	</section>
 	
 	<section id="eventos">
 		<h2>Eventos</h2>
 		<p>En esta sección encontrarás información sobre nuestros servicios de organización de eventos.</p>
 		<a href="#contacto">Contáctanos</a>
+<<<<<<< Updated upstream
 	</section>
+=======
+                <
+                </section>
+	
+>>>>>>> Stashed changes
 	
 	<section id="decoracion">
 		<h2>Decoración</h2>

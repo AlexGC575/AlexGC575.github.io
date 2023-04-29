@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 28, 2023 8:10:23 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="evento.Evento" table="evento" catalog="uparty" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="foreign">
+                <param name="property">rese&#241;a</param>
+            </generator>
+        </id>
+        <one-to-one name="rese&#241;a" class="evento.Rese&#241;a" constrained="true"></one-to-one>
+        <many-to-one name="tipo" class="evento.Tipo" fetch="select">
+            <column name="tipo" length="50" not-null="true" />
+        </many-to-one>
+        <many-to-one name="usuario" class="evento.Usuario" fetch="select">
+            <column name="usuario" length="50" not-null="true" />
+        </many-to-one>
+        <property name="fecha" type="date">
+            <column name="fecha" length="10" not-null="true" />
+        </property>
+        <property name="horaInicio" type="timestamp">
+            <column name="hora_inicio" length="19" not-null="true" />
+        </property>
+        <property name="horaFin" type="timestamp">
+            <column name="hora_fin" length="19" not-null="true" />
+        </property>
+        <property name="catering" type="string">
+            <column name="catering" length="50" />
+        </property>
+        <property name="musica" type="string">
+            <column name="musica" length="50" />
+        </property>
+        <property name="decoracion" type="string">
+            <column name="decoracion" length="50" />
+        </property>
+        <property name="audiovisuales" type="string">
+            <column name="audiovisuales" length="50" />
+        </property>
+        <property name="religion" type="string">
+            <column name="religion" length="50" not-null="true" />
+        </property>
+        <property name="precio" type="float">
+            <column name="precio" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="pagado" type="boolean">
+            <column name="pagado" not-null="true" />
+        </property>
+        <property name="patrocinador" type="string">
+            <column name="patrocinador" length="50" not-null="true" />
+        </property>
+        <property name="lugar" type="string">
+            <column name="lugar" length="50" not-null="true" />
+        </property>
+        <set name="asistentes" table="asistente" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="evento" not-null="true" />
+            </key>
+            <one-to-many class="evento.Asistente" />
+        </set>
+        <one-to-one name="patrocinador" class="evento.Patrocinador"></one-to-one>
+    </class>
+</hibernate-mapping>

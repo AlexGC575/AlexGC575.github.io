@@ -3,8 +3,15 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-    <!-- Configuration for the default package. -->
-    <package name="default" extends="struts-default">
-        
+    <package name="myActions" extends="struts-default">
+        <action name="evento" class="actions.eventoAction">
+            <result name="success">/creadorEvento.jsp</result>
+        </action>
+        <action name="elegirEvento" class="actions.eventoAction" method="eventoGeneral">
+            <result name="success">/boda.jsp</result>
+        </action>
+        <action name="crearEvento" class="actions.eventoAction" method="eventoOriginal">
+            <result name="success">/miEvento.jsp</result>
+        </action>
     </package>
 </struts>

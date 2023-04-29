@@ -59,6 +59,11 @@
             </key>
             <one-to-many class="evento.Asistente" />
         </set>
+<<<<<<< Updated upstream
         <one-to-one name="patrocinador" class="evento.Patrocinador"></one-to-one>
     </class>
+=======
+        <!--<one-to-one name="patrocinador" class="evento.Patrocinador"></one-to-one>
+    --></class>
+>>>>>>> Stashed changes
 </hibernate-mapping>

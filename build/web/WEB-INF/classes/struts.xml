@@ -7,5 +7,22 @@
         <action name="evento" class="actions.eventoAction">
             <result name="success">/creadorEvento.jsp</result>
         </action>
+<<<<<<< Updated upstream
+=======
+        <action name="elegirEvento" class="actions.eventoAction" method="eventoGeneral">
+            <result name="B">/boda.jsp</result>
+            <result name="BAU">/bautizo.jsp</result>
+            <result name="CUM">/cumpleaños.jsp</result>
+            <result name="COM">/comunion.jsp</result>
+            <result name="FT">/fiesta.jsp</result>
+            <result name="CON">/concierto.jsp</result>
+            <result name="D">/deporte.jsp</result>
+            <result name="CI">/cine.jsp</result>
+            <result name="error">/creadorEvento.jsp</result>
+        </action>
+        <action name="crearEvento" class="actions.eventoAction" method="eventoOriginal">
+            <result name="success">/miEvento.jsp</result>
+        </action>
+>>>>>>> Stashed changes
     </package>
 </struts>

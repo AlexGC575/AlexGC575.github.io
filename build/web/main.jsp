@@ -29,7 +29,11 @@
 		<p>Somos una empresa especializada en la organización de eventos para todo tipo de ocasiones. Desde bodas y cumpleaños hasta eventos corporativos y ferias, estamos aquí para ayudarte a hacer que tu evento sea un éxito.</p>
 		<a href="#contacto">Contáctanos</a>
                 <s:form action="evento">
+<<<<<<< Updated upstream
                     <s:submit name="evntTrigger" value="Cree su propio evento"/>
+=======
+                    <s:submit name="evntTrigger" value="Organice su evento"/>
+>>>>>>> Stashed changes
                 </s:form>
 	</section>
 	<div class="princ">

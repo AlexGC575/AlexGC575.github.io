@@ -5,7 +5,13 @@
         <group>
             <file>file:/C:/Users/User/Documents/NetBeansProjects/UParty/web/main.jsp</file>
             <file>file:/C:/Users/User/Documents/NetBeansProjects/UParty/src/java/struts.xml</file>
+<<<<<<< Updated upstream
             <file>file:/C:/Users/User/Documents/NetBeansProjects/UParty/src/java/actions/eventoAction.java</file>
+=======
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/UParty/web/bautizo.jsp</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/UParty/src/java/actions/eventoAction.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/UParty/web/boda.jsp</file>
+>>>>>>> Stashed changes
             <file>file:/C:/Users/User/Documents/NetBeansProjects/UParty/web/creadorEvento.jsp</file>
         </group>
     </open-files>

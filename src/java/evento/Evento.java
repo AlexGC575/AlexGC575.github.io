@@ -13,7 +13,7 @@ public class Evento  implements java.io.Serializable {
 
 
      private Integer id;
-     private Resena resena;
+     private Reseña reseña;
      private Tipo tipo;
      private Usuario usuario;
      private Date fecha;
@@ -34,8 +34,8 @@ public class Evento  implements java.io.Serializable {
     }
 
 	
-    public Evento(Resena resena, Tipo tipo, Usuario usuario, Date fecha, Date horaInicio, Date horaFin, String religion, float precio, boolean pagado, String patrocinador, String lugar) {
-        this.resena = resena;
+    public Evento(Reseña reseña, Tipo tipo, Usuario usuario, Date fecha, Date horaInicio, Date horaFin, String religion, float precio, boolean pagado, String patrocinador, String lugar) {
+        this.reseña = reseña;
         this.tipo = tipo;
         this.usuario = usuario;
         this.fecha = fecha;
@@ -47,8 +47,8 @@ public class Evento  implements java.io.Serializable {
         this.patrocinador = patrocinador;
         this.lugar = lugar;
     }
-    public Evento(Resena resena, Tipo tipo, Usuario usuario, Date fecha, Date horaInicio, Date horaFin, String catering, String musica, String decoracion, String audiovisuales, String religion, float precio, boolean pagado, String patrocinador, String lugar, Set asistentes) {
-       this.resena = resena;
+    public Evento(Reseña reseña, Tipo tipo, Usuario usuario, Date fecha, Date horaInicio, Date horaFin, String catering, String musica, String decoracion, String audiovisuales, String religion, float precio, boolean pagado, String patrocinador, String lugar, Set asistentes) {
+       this.reseña = reseña;
        this.tipo = tipo;
        this.usuario = usuario;
        this.fecha = fecha;
@@ -73,12 +73,12 @@ public class Evento  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
-    public Resena getResena() {
-        return this.resena;
+    public Reseña getReseña() {
+        return this.reseña;
     }
     
-    public void setResena(Resena resena) {
-        this.resena = resena;
+    public void setReseña(Reseña reseña) {
+        this.reseña = reseña;
     }
     public Tipo getTipo() {
         return this.tipo;

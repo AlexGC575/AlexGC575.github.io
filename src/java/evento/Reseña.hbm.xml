@@ -23,6 +23,6 @@
         <property name="evento" type="int">
             <column name="evento" not-null="true" />
         </property>
-        <one-to-one name="evento" class="evento.Evento"></one-to-one>
-    </class>
+        <!--<one-to-one name="evento" class="evento.Evento"></one-to-one>
+    --></class>
 </hibernate-mapping>

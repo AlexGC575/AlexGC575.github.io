@@ -12,29 +12,29 @@ public class Usuario  implements java.io.Serializable {
 
 
      private String email;
-     private String contrasena;
+     private String contraseña;
      private Set mensajes = new HashSet(0);
      private Set eventos = new HashSet(0);
      private Set pagos = new HashSet(0);
      private Set direccions = new HashSet(0);
-     private Set resenas = new HashSet(0);
+     private Set reseñas = new HashSet(0);
 
     public Usuario() {
     }
 
 	
-    public Usuario(String email, String contrasena) {
+    public Usuario(String email, String contraseña) {
         this.email = email;
-        this.contrasena = contrasena;
+        this.contraseña = contraseña;
     }
-    public Usuario(String email, String contrasena, Set mensajes, Set eventos, Set pagos, Set direccions, Set resenas) {
+    public Usuario(String email, String contraseña, Set mensajes, Set eventos, Set pagos, Set direccions, Set reseñas) {
        this.email = email;
-       this.contrasena = contrasena;
+       this.contraseña = contraseña;
        this.mensajes = mensajes;
        this.eventos = eventos;
        this.pagos = pagos;
        this.direccions = direccions;
-       this.resenas = resenas;
+       this.reseñas = reseñas;
     }
    
     public String getEmail() {
@@ -44,12 +44,12 @@ public class Usuario  implements java.io.Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-    public String getContrasena() {
-        return this.contrasena;
+    public String getContraseña() {
+        return this.contraseña;
     }
     
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
     }
     public Set getMensajes() {
         return this.mensajes;
@@ -79,12 +79,12 @@ public class Usuario  implements java.io.Serializable {
     public void setDireccions(Set direccions) {
         this.direccions = direccions;
     }
-    public Set getResenas() {
-        return this.resenas;
+    public Set getReseñas() {
+        return this.reseñas;
     }
     
-    public void setResenas(Set resenas) {
-        this.resenas = resenas;
+    public void setReseñas(Set reseñas) {
+        this.reseñas = reseñas;
     }
 
 

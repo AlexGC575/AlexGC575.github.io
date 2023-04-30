@@ -53,4 +53,5 @@ Contributor(s):
   <table-filter match-name="pago"/>
   <table-filter match-name="asistente"/>
   <table-filter match-name="evento"/>
+  <table-filter match-name="especializacion"/>
 </hibernate-reverse-engineering>

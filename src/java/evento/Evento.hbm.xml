@@ -59,6 +59,6 @@
             </key>
             <one-to-many class="evento.Asistente" />
         </set>
-        <one-to-one name="patrocinador" class="evento.Patrocinador"></one-to-one>
-    </class>
+        <!--<one-to-one name="patrocinador" class="evento.Patrocinador"></one-to-one>
+    --></class>
 </hibernate-mapping>

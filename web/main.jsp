@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,6 +28,9 @@
 		<h2>Bienvenidos a nuestra web de organización de eventos</h2>
 		<p>Somos una empresa especializada en la organización de eventos para todo tipo de ocasiones. Desde bodas y cumpleaños hasta eventos corporativos y ferias, estamos aquí para ayudarte a hacer que tu evento sea un éxito.</p>
 		<a href="#contacto">Contáctanos</a>
+                <s:form action="evento">
+                    <s:submit name="evntTrigger" value="Organice su evento"/>
+                </s:form>
 	</section>
 	<div class="princ">
 	
@@ -36,6 +40,7 @@
 		<h3>Eventos</h3>
 		<p>En esta sección encontrarás información sobre nuestros servicios de organización de eventos.</p>
 		<a href="#contacto">Contáctanos</a>
+                <
                 </section>
 	
 	

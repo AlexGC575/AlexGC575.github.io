@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 28, 2023 8:10:23 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="evento.Patrocinador" table="patrocinador" catalog="uparty" optimistic-lock="version">
+        <id name="nombre" type="string">
+            <column name="nombre" length="50" />
+            <generator class="foreign">
+                <param name="property">evento</param>
+            </generator>
+        </id>
+        <one-to-one name="evento" class="evento.Evento" constrained="true"></one-to-one>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="65535" not-null="true" />
+        </property>
+        <property name="NInvitados" type="int">
+            <column name="n_invitados" not-null="true" />
+        </property>
+        <property name="descuento" type="int">
+            <column name="descuento" not-null="true" />
+        </property>
+        <property name="telefono" type="int">
+            <column name="telefono" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

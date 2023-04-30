@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,6 +18,8 @@
         <h1>o cree el suyo propio</h1>
     </body>
 =======
+=======
+>>>>>>> Stashed changes
 <%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
@@ -63,5 +66,8 @@
             <s:submit name="crearEvntTrigger" value="Cree su propio evento personalizado"/>
         </s:form>
         </body>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 </html>

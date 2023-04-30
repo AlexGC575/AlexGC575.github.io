@@ -60,8 +60,13 @@
             <one-to-many class="evento.Asistente" />
         </set>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <one-to-one name="patrocinador" class="evento.Patrocinador"></one-to-one>
     </class>
+=======
+        <!--<one-to-one name="patrocinador" class="evento.Patrocinador"></one-to-one>
+    --></class>
+>>>>>>> Stashed changes
 =======
         <!--<one-to-one name="patrocinador" class="evento.Patrocinador"></one-to-one>
     --></class>

@@ -27,11 +27,17 @@
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
                 <library dirs="200">
                     <file>${libs.jpa2-persistence.classpath}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             </web-module-libraries>
             <web-module-additional-libraries/>

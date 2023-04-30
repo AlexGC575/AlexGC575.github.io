@@ -61,5 +61,6 @@ Contributor(s):
     <mapping resource="evento/Asistente.hbm.xml"/>
     <mapping resource="evento/Reseña.hbm.xml"/>
     <mapping resource="evento/Direccion.hbm.xml"/>
+    <mapping resource="evento/Especializacion.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

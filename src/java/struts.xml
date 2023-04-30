@@ -23,6 +23,24 @@
         <action name="crearEvento" class="actions.eventoAction" method="eventoOriginal">
             <result name="success">/miEvento.jsp</result>
         </action>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+        <action name="boda" class="actions.eventoGeneralAction" method="boda">
+            <result name="success">/detalles.jsp</result>
+        </action>
+        <action name="eventoOriginal" class="actions.eventoOriginalAction">
+            <result name="success">/detalles.jsp</result>
+        </action>
+        <action name="detallesEvento" class="actions.eventoAction" method="detalles">
+            <result name="success">/pago.jsp</result>
+        </action>
+        <action name="pago" class="actions.eventoAction" method="pago">
+            <result name="success">/detallesPago.jsp</result>
+        </action>
+        <action name="pInicio" class="actions.eventoAction" method="inicio">
+            <result name="success">/main.jsp</result>
+        </action>
 >>>>>>> Stashed changes
     </package>
 </struts>

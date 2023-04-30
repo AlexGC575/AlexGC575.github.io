@@ -5,6 +5,10 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<<<<<<< Updated upstream
+=======
+<%@taglib prefix="s" uri="/struts-tags"%>
+>>>>>>> Stashed changes
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +16,12 @@
         <title>JSP Page</title>
     </head>
     <body>
+<<<<<<< Updated upstream
         <h1>Hello World!</h1>
+=======
+        <s:form action="eventoOriginal">
+            <s:submit name="eventoOriginalTrigger" value="Especificar detalles"/>
+        </s:form>
+>>>>>>> Stashed changes
     </body>
 </html>

@@ -30,7 +30,11 @@
 		<a href="#contacto">Contáctanos</a>
                 <s:form action="evento">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                     <s:submit name="evntTrigger" value="Cree su propio evento"/>
+=======
+                    <s:submit name="evntTrigger" value="Organice su evento"/>
+>>>>>>> Stashed changes
 =======
                     <s:submit name="evntTrigger" value="Organice su evento"/>
 >>>>>>> Stashed changes

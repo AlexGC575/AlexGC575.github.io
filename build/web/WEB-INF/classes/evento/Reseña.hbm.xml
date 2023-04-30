@@ -24,8 +24,13 @@
             <column name="evento" not-null="true" />
         </property>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <one-to-one name="evento" class="evento.Evento"></one-to-one>
     </class>
+=======
+        <!--<one-to-one name="evento" class="evento.Evento"></one-to-one>
+    --></class>
+>>>>>>> Stashed changes
 =======
         <!--<one-to-one name="evento" class="evento.Evento"></one-to-one>
     --></class>

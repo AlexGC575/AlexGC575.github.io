@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
@@ -15,4 +16,22 @@
             <one-to-many class="evento.Evento" />
         </set>
     </class>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 30, 2023 1:04:11 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="uparty" name="evento.Tipo" optimistic-lock="version" table="tipo">
+    <id name="nombre" type="string">
+      <column length="50" name="nombre"/>
+      <generator class="assigned"/>
+    </id>
+    <set fetch="select" inverse="true" lazy="true" name="especializacions" table="especializacion">
+      <key>
+        <column length="50" name="tipo" not-null="true"/>
+      </key>
+      <one-to-many class="evento.Especializacion"/>
+    </set>
+  </class>
+>>>>>>> Stashed changes
 </hibernate-mapping>

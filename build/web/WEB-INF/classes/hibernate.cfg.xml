@@ -61,5 +61,9 @@ Contributor(s):
     <mapping resource="evento/Asistente.hbm.xml"/>
     <mapping resource="evento/Reseña.hbm.xml"/>
     <mapping resource="evento/Direccion.hbm.xml"/>
+<<<<<<< Updated upstream
+=======
+    <mapping resource="evento/Especializacion.hbm.xml"/>
+>>>>>>> Stashed changes
   </session-factory>
 </hibernate-configuration>

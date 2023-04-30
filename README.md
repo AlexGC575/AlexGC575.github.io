@@ -31,3 +31,6 @@ Estas interacciones se producen mediante métodos de la clase [NOMBRE DE LA CLAS
 ![ENTIDAD-RELACION drawio](https://user-images.githubusercontent.com/114749211/227796237-27f5346e-b3d7-42c4-b84f-0df3093216a0.png)
 ### Creación de la base de datos[XAMPP/phpMyAdmin]
 ...
+
+### Anotaciones
+El bot User que ha hecho commits ha sido el usuario ALEXGC575 cuyo perfil no había sido reconocido por Github Desktop.

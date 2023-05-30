@@ -1,5 +1,5 @@
 package evento;
-// Generated Apr 28, 2023 8:10:23 AM by Hibernate Tools 4.3.1
+// Generated May 30, 2023 1:23:05 PM by Hibernate Tools 4.3.1
 
 
 
@@ -9,23 +9,23 @@ package evento;
 public class DireccionId  implements java.io.Serializable {
 
 
-     private String nombre;
+     private int id;
      private String usuario;
 
     public DireccionId() {
     }
 
-    public DireccionId(String nombre, String usuario) {
-       this.nombre = nombre;
+    public DireccionId(int id, String usuario) {
+       this.id = id;
        this.usuario = usuario;
     }
    
-    public String getNombre() {
-        return this.nombre;
+    public int getId() {
+        return this.id;
     }
     
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setId(int id) {
+        this.id = id;
     }
     public String getUsuario() {
         return this.usuario;
@@ -42,14 +42,14 @@ public class DireccionId  implements java.io.Serializable {
 		 if ( !(other instanceof DireccionId) ) return false;
 		 DireccionId castOther = ( DireccionId ) other; 
          
-		 return ( (this.getNombre()==castOther.getNombre()) || ( this.getNombre()!=null && castOther.getNombre()!=null && this.getNombre().equals(castOther.getNombre()) ) )
+		 return (this.getId()==castOther.getId())
  && ( (this.getUsuario()==castOther.getUsuario()) || ( this.getUsuario()!=null && castOther.getUsuario()!=null && this.getUsuario().equals(castOther.getUsuario()) ) );
    }
    
    public int hashCode() {
          int result = 17;
          
-         result = 37 * result + ( getNombre() == null ? 0 : this.getNombre().hashCode() );
+         result = 37 * result + this.getId();
          result = 37 * result + ( getUsuario() == null ? 0 : this.getUsuario().hashCode() );
          return result;
    }   

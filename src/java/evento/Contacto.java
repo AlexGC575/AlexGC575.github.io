@@ -1,5 +1,5 @@
 package evento;
-// Generated Apr 28, 2023 8:10:23 AM by Hibernate Tools 4.3.1
+// Generated May 30, 2023 1:23:05 PM by Hibernate Tools 4.3.1
 
 
 
@@ -9,7 +9,7 @@ package evento;
 public class Contacto  implements java.io.Serializable {
 
 
-     private ContactoId id;
+     private Integer id;
      private Empresa empresa;
      private String provincia;
      private String calle;
@@ -19,8 +19,7 @@ public class Contacto  implements java.io.Serializable {
     public Contacto() {
     }
 
-    public Contacto(ContactoId id, Empresa empresa, String provincia, String calle, int numero, int telefono) {
-       this.id = id;
+    public Contacto(Empresa empresa, String provincia, String calle, int numero, int telefono) {
        this.empresa = empresa;
        this.provincia = provincia;
        this.calle = calle;
@@ -28,11 +27,11 @@ public class Contacto  implements java.io.Serializable {
        this.telefono = telefono;
     }
    
-    public ContactoId getId() {
+    public Integer getId() {
         return this.id;
     }
     
-    public void setId(ContactoId id) {
+    public void setId(Integer id) {
         this.id = id;
     }
     public Empresa getEmpresa() {

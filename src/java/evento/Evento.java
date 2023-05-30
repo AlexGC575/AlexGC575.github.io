@@ -1,5 +1,5 @@
 package evento;
-// Generated Apr 28, 2023 8:10:23 AM by Hibernate Tools 4.3.1
+// Generated May 30, 2023 1:23:05 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -13,7 +13,9 @@ public class Evento  implements java.io.Serializable {
 
 
      private Integer id;
-     private Reseña reseña;
+     private Lugar lugar;
+     private Patrocinador patrocinador;
+     private Resenya resenya;
      private Tipo tipo;
      private Usuario usuario;
      private Date fecha;
@@ -26,29 +28,34 @@ public class Evento  implements java.io.Serializable {
      private String religion;
      private float precio;
      private boolean pagado;
-     private String patrocinador;
-     private String lugar;
      private Set asistentes = new HashSet(0);
+     private Set resenyas = new HashSet(0);
+     private Set empresas = new HashSet(0);
 
     public Evento() {
     }
 
 	
-    public Evento(Reseña reseña, Tipo tipo, Usuario usuario, Date fecha, Date horaInicio, Date horaFin, String religion, float precio, boolean pagado, String patrocinador, String lugar) {
-        this.reseña = reseña;
+    public Evento(Lugar lugar, Patrocinador patrocinador, Resenya resenya, Tipo tipo, Usuario usuario, Date fecha, Date horaInicio, String catering, String musica, String decoracion, String audiovisuales, String religion, float precio, boolean pagado) {
+        this.lugar = lugar;
+        this.patrocinador = patrocinador;
+        this.resenya = resenya;
         this.tipo = tipo;
         this.usuario = usuario;
         this.fecha = fecha;
         this.horaInicio = horaInicio;
-        this.horaFin = horaFin;
+        this.catering = catering;
+        this.musica = musica;
+        this.decoracion = decoracion;
+        this.audiovisuales = audiovisuales;
         this.religion = religion;
         this.precio = precio;
         this.pagado = pagado;
-        this.patrocinador = patrocinador;
-        this.lugar = lugar;
     }
-    public Evento(Reseña reseña, Tipo tipo, Usuario usuario, Date fecha, Date horaInicio, Date horaFin, String catering, String musica, String decoracion, String audiovisuales, String religion, float precio, boolean pagado, String patrocinador, String lugar, Set asistentes) {
-       this.reseña = reseña;
+    public Evento(Lugar lugar, Patrocinador patrocinador, Resenya resenya, Tipo tipo, Usuario usuario, Date fecha, Date horaInicio, Date horaFin, String catering, String musica, String decoracion, String audiovisuales, String religion, float precio, boolean pagado, Set asistentes, Set resenyas, Set empresas) {
+       this.lugar = lugar;
+       this.patrocinador = patrocinador;
+       this.resenya = resenya;
        this.tipo = tipo;
        this.usuario = usuario;
        this.fecha = fecha;
@@ -61,9 +68,9 @@ public class Evento  implements java.io.Serializable {
        this.religion = religion;
        this.precio = precio;
        this.pagado = pagado;
-       this.patrocinador = patrocinador;
-       this.lugar = lugar;
        this.asistentes = asistentes;
+       this.resenyas = resenyas;
+       this.empresas = empresas;
     }
    
     public Integer getId() {
@@ -73,12 +80,26 @@ public class Evento  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
-    public Reseña getReseña() {
-        return this.reseña;
+    public Lugar getLugar() {
+        return this.lugar;
     }
     
-    public void setReseña(Reseña reseña) {
-        this.reseña = reseña;
+    public void setLugar(Lugar lugar) {
+        this.lugar = lugar;
+    }
+    public Patrocinador getPatrocinador() {
+        return this.patrocinador;
+    }
+    
+    public void setPatrocinador(Patrocinador patrocinador) {
+        this.patrocinador = patrocinador;
+    }
+    public Resenya getResenya() {
+        return this.resenya;
+    }
+    
+    public void setResenya(Resenya resenya) {
+        this.resenya = resenya;
     }
     public Tipo getTipo() {
         return this.tipo;
@@ -164,20 +185,6 @@ public class Evento  implements java.io.Serializable {
     public void setPagado(boolean pagado) {
         this.pagado = pagado;
     }
-    public String getPatrocinador() {
-        return this.patrocinador;
-    }
-    
-    public void setPatrocinador(String patrocinador) {
-        this.patrocinador = patrocinador;
-    }
-    public String getLugar() {
-        return this.lugar;
-    }
-    
-    public void setLugar(String lugar) {
-        this.lugar = lugar;
-    }
     public Set getAsistentes() {
         return this.asistentes;
     }
@@ -185,6 +192,21 @@ public class Evento  implements java.io.Serializable {
     public void setAsistentes(Set asistentes) {
         this.asistentes = asistentes;
     }
+    public Set getResenyas() {
+        return this.resenyas;
+    }
+    
+    public void setResenyas(Set resenyas) {
+        this.resenyas = resenyas;
+    }
+    public Set getEmpresas() {
+        return this.empresas;
+    }
+    
+    public void setEmpresas(Set empresas) {
+        this.empresas = empresas;
+    }
+
 
 
 

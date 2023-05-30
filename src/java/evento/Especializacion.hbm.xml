@@ -1,32 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Apr 30, 2023 1:04:11 AM by Hibernate Tools 4.3.1 -->
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 30, 2023 1:23:08 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-  <class catalog="uparty" name="evento.Especializacion" optimistic-lock="version" table="especializacion">
-    <id name="nombre" type="string">
-      <column length="50" name="nombre"/>
-      <generator class="assigned"/>
-    </id>
-    <many-to-one class="evento.Tipo" fetch="select" name="tipo">
-      <column length="50" name="tipo" not-null="true"/>
-    </many-to-one>
-    <property name="catering" type="string">
-      <column length="50" name="catering" not-null="true"/>
-    </property>
-    <property name="musica" type="string">
-      <column length="50" name="musica" not-null="true"/>
-    </property>
-    <property name="decoracion" type="string">
-      <column length="50" name="decoracion" not-null="true"/>
-    </property>
-    <property name="audiovisuales" type="string">
-      <column length="50" name="audiovisuales" not-null="true"/>
-    </property>
-    <property name="religion" type="string">
-      <column length="50" name="religion" not-null="true"/>
-    </property>
-    <property name="precio" type="float">
-      <column name="precio" not-null="true" precision="12" scale="0"/>
-    </property>
-  </class>
+    <class name="evento.Especializacion" table="especializacion" catalog="uparty" optimistic-lock="version">
+        <id name="nombre" type="string">
+            <column name="nombre" length="30" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="tipo" class="evento.Tipo" fetch="select">
+            <column name="tipo" length="30" not-null="true" />
+        </many-to-one>
+        <property name="catering" type="string">
+            <column name="catering" length="30" not-null="true" />
+        </property>
+        <property name="musica" type="string">
+            <column name="musica" length="30" not-null="true" />
+        </property>
+        <property name="decoracion" type="string">
+            <column name="decoracion" length="30" not-null="true" />
+        </property>
+        <property name="audiovisuales" type="string">
+            <column name="audiovisuales" length="30" not-null="true" />
+        </property>
+        <property name="religion" type="string">
+            <column name="religion" length="30" not-null="true" />
+        </property>
+        <property name="precio" type="float">
+            <column name="precio" precision="12" scale="0" not-null="true" />
+        </property>
+    </class>
 </hibernate-mapping>

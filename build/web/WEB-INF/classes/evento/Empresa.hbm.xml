@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 28, 2023 8:10:23 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="evento.Empresa" table="empresa" catalog="uparty" optimistic-lock="version">
+        <id name="nombre" type="string">
+            <column name="nombre" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="dia" type="string">
+            <column name="dia" length="7" not-null="true" />
+        </property>
+        <property name="categoria" type="string">
+            <column name="categoria" length="50" not-null="true" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="65535" not-null="true" />
+        </property>
+        <property name="valoracion" type="int">
+            <column name="valoracion" not-null="true" />
+        </property>
+        <set name="contactos" table="contacto" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="empresa" length="50" not-null="true" />
+            </key>
+            <one-to-many class="evento.Contacto" />
+        </set>
+    </class>
+</hibernate-mapping>

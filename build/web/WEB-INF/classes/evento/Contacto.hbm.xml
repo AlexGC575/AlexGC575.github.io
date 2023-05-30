@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 28, 2023 8:10:23 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="evento.Contacto" table="contacto" catalog="uparty" optimistic-lock="version">
+        <composite-id name="id" class="evento.ContactoId">
+            <key-property name="codigoPostal" type="int">
+                <column name="codigo_postal" />
+            </key-property>
+            <key-property name="empresa" type="string">
+                <column name="empresa" length="50" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="empresa" class="evento.Empresa" update="false" insert="false" fetch="select">
+            <column name="empresa" length="50" not-null="true" />
+        </many-to-one>
+        <property name="provincia" type="string">
+            <column name="provincia" length="50" not-null="true" />
+        </property>
+        <property name="calle" type="string">
+            <column name="calle" length="50" not-null="true" />
+        </property>
+        <property name="numero" type="int">
+            <column name="numero" not-null="true" />
+        </property>
+        <property name="telefono" type="int">
+            <column name="telefono" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

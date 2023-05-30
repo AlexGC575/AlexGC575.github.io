@@ -3,9 +3,39 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-    <!-- Configuration for the default package. -->
-    <package name="default" extends="struts-default">
-        
+    <package name="myActions" extends="struts-default">
+        <action name="evento" class="actions.eventoAction">
+            <result name="success">/creadorEvento.jsp</result>
+        </action>
+        <action name="elegirEvento" class="actions.eventoAction" method="eventoGeneral">
+            <result name="B">/boda.jsp</result>
+            <result name="BAU">/bautizo.jsp</result>
+            <result name="CUM">/cumpleaños.jsp</result>
+            <result name="COM">/comunion.jsp</result>
+            <result name="FT">/fiesta.jsp</result>
+            <result name="CON">/concierto.jsp</result>
+            <result name="D">/deporte.jsp</result>
+            <result name="CI">/cine.jsp</result>
+            <result name="error">/creadorEvento.jsp</result>
+        </action>
+        <action name="crearEvento" class="actions.eventoAction" method="eventoOriginal">
+            <result name="success">/miEvento.jsp</result>
+        </action>
+        <action name="boda" class="actions.eventoGeneralAction" method="boda">
+            <result name="success">/detalles.jsp</result>
+        </action>
+        <action name="eventoOriginal" class="actions.eventoOriginalAction">
+            <result name="success">/detalles.jsp</result>
+        </action>
+        <action name="detallesEvento" class="actions.eventoAction" method="detalles">
+            <result name="success">/pago.jsp</result>
+        </action>
+        <action name="pago" class="actions.eventoAction" method="pago">
+            <result name="success">/detallesPago.jsp</result>
+        </action>
+        <action name="pInicio" class="actions.eventoAction" method="inicio">
+            <result name="success">/main.jsp</result>
+        </action>
     </package>
     <package name="actionsLogin" extends="struts-default">
         <action name="loginCheck" class="actions.loginCheck">

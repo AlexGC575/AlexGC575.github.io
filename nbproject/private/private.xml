@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Victor/Documents/GitHub/UParty/src/java/struts.xml</file>
-            <file>file:/C:/Users/Victor/Documents/GitHub/UParty/web/login.jsp</file>
-            <file>file:/C:/Users/Victor/Documents/GitHub/UParty/src/java/actions/loginCheck.java</file>
-            <file>file:/C:/Users/Victor/Documents/GitHub/UParty/web/main.jsp</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/UParty/web/detalles.jsp</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/UParty/src/java/actions/eventoGeneralAction.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/UParty/src/java/actions/eventoAction.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/UParty/web/boda.jsp</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/UParty/web/detallesPago.jsp</file>
         </group>
     </open-files>
 </project-private>

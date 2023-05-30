@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 28, 2023 8:10:23 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="evento.Lugar" table="lugar" catalog="uparty" optimistic-lock="version">
+        <id name="nombre" type="string">
+            <column name="nombre" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="provincia" type="string">
+            <column name="provincia" length="50" not-null="true" />
+        </property>
+        <property name="codigoPostal" type="int">
+            <column name="codigo_postal" not-null="true" />
+        </property>
+        <property name="calle" type="string">
+            <column name="calle" length="50" not-null="true" />
+        </property>
+        <property name="numero" type="int">
+            <column name="numero" not-null="true" />
+        </property>
+        <property name="aforo" type="int">
+            <column name="aforo" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

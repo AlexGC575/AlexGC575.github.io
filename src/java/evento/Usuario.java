@@ -1,7 +1,8 @@
 package evento;
-// Generated Apr 28, 2023 8:10:23 AM by Hibernate Tools 4.3.1
+// Generated May 30, 2023 1:23:05 PM by Hibernate Tools 4.3.1
 
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,29 +13,41 @@ public class Usuario  implements java.io.Serializable {
 
 
      private String email;
-     private String contraseña;
+     private String contrasenya;
+     private String nombre;
+     private String apellidos;
+     private Date fechaNac;
+     private int telefono;
      private Set mensajes = new HashSet(0);
+     private Set resenyas = new HashSet(0);
      private Set eventos = new HashSet(0);
      private Set pagos = new HashSet(0);
      private Set direccions = new HashSet(0);
-     private Set reseñas = new HashSet(0);
 
     public Usuario() {
     }
 
 	
-    public Usuario(String email, String contraseña) {
+    public Usuario(String email, String contrasenya, String nombre, String apellidos, Date fechaNac, int telefono) {
         this.email = email;
-        this.contraseña = contraseña;
+        this.contrasenya = contrasenya;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.fechaNac = fechaNac;
+        this.telefono = telefono;
     }
-    public Usuario(String email, String contraseña, Set mensajes, Set eventos, Set pagos, Set direccions, Set reseñas) {
+    public Usuario(String email, String contrasenya, String nombre, String apellidos, Date fechaNac, int telefono, Set mensajes, Set resenyas, Set eventos, Set pagos, Set direccions) {
        this.email = email;
-       this.contraseña = contraseña;
+       this.contrasenya = contrasenya;
+       this.nombre = nombre;
+       this.apellidos = apellidos;
+       this.fechaNac = fechaNac;
+       this.telefono = telefono;
        this.mensajes = mensajes;
+       this.resenyas = resenyas;
        this.eventos = eventos;
        this.pagos = pagos;
        this.direccions = direccions;
-       this.reseñas = reseñas;
     }
    
     public String getEmail() {
@@ -44,12 +57,40 @@ public class Usuario  implements java.io.Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-    public String getContraseña() {
-        return this.contraseña;
+    public String getContrasenya() {
+        return this.contrasenya;
     }
     
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasenya(String contrasenya) {
+        this.contrasenya = contrasenya;
+    }
+    public String getNombre() {
+        return this.nombre;
+    }
+    
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public String getApellidos() {
+        return this.apellidos;
+    }
+    
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+    public Date getFechaNac() {
+        return this.fechaNac;
+    }
+    
+    public void setFechaNac(Date fechaNac) {
+        this.fechaNac = fechaNac;
+    }
+    public int getTelefono() {
+        return this.telefono;
+    }
+    
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
     }
     public Set getMensajes() {
         return this.mensajes;
@@ -57,6 +98,13 @@ public class Usuario  implements java.io.Serializable {
     
     public void setMensajes(Set mensajes) {
         this.mensajes = mensajes;
+    }
+    public Set getResenyas() {
+        return this.resenyas;
+    }
+    
+    public void setResenyas(Set resenyas) {
+        this.resenyas = resenyas;
     }
     public Set getEventos() {
         return this.eventos;
@@ -78,13 +126,6 @@ public class Usuario  implements java.io.Serializable {
     
     public void setDireccions(Set direccions) {
         this.direccions = direccions;
-    }
-    public Set getReseñas() {
-        return this.reseñas;
-    }
-    
-    public void setReseñas(Set reseñas) {
-        this.reseñas = reseñas;
     }
 
 

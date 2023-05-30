@@ -1,5 +1,5 @@
 package evento;
-// Generated Apr 28, 2023 8:10:23 AM by Hibernate Tools 4.3.1
+// Generated May 30, 2023 1:23:05 PM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -17,6 +17,7 @@ public class Empresa  implements java.io.Serializable {
      private String descripcion;
      private int valoracion;
      private Set contactos = new HashSet(0);
+     private Set eventos = new HashSet(0);
 
     public Empresa() {
     }
@@ -29,13 +30,14 @@ public class Empresa  implements java.io.Serializable {
         this.descripcion = descripcion;
         this.valoracion = valoracion;
     }
-    public Empresa(String nombre, String dia, String categoria, String descripcion, int valoracion, Set contactos) {
+    public Empresa(String nombre, String dia, String categoria, String descripcion, int valoracion, Set contactos, Set eventos) {
        this.nombre = nombre;
        this.dia = dia;
        this.categoria = categoria;
        this.descripcion = descripcion;
        this.valoracion = valoracion;
        this.contactos = contactos;
+       this.eventos = eventos;
     }
    
     public String getNombre() {
@@ -79,6 +81,13 @@ public class Empresa  implements java.io.Serializable {
     
     public void setContactos(Set contactos) {
         this.contactos = contactos;
+    }
+    public Set getEventos() {
+        return this.eventos;
+    }
+    
+    public void setEventos(Set eventos) {
+        this.eventos = eventos;
     }
 
 

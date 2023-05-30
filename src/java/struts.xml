@@ -4,7 +4,7 @@
 
 <struts>
     <package name="myActions" extends="struts-default">
-        <action name="evento" class="actions.eventoAction">
+        <action name="eventos" class="actions.eventoAction">
             <result name="success">/creadorEvento.jsp</result>
         </action>
         <action name="elegirEvento" class="actions.eventoAction" method="eventoGeneral">

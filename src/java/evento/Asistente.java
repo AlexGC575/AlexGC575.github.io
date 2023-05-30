@@ -1,5 +1,5 @@
 package evento;
-// Generated Apr 28, 2023 8:10:23 AM by Hibernate Tools 4.3.1
+// Generated May 30, 2023 1:23:05 PM by Hibernate Tools 4.3.1
 
 
 
@@ -9,7 +9,7 @@ package evento;
 public class Asistente  implements java.io.Serializable {
 
 
-     private AsistenteId id;
+     private Integer id;
      private Evento evento;
      private String nombre;
      private String apellidos;
@@ -17,18 +17,17 @@ public class Asistente  implements java.io.Serializable {
     public Asistente() {
     }
 
-    public Asistente(AsistenteId id, Evento evento, String nombre, String apellidos) {
-       this.id = id;
+    public Asistente(Evento evento, String nombre, String apellidos) {
        this.evento = evento;
        this.nombre = nombre;
        this.apellidos = apellidos;
     }
    
-    public AsistenteId getId() {
+    public Integer getId() {
         return this.id;
     }
     
-    public void setId(AsistenteId id) {
+    public void setId(Integer id) {
         this.id = id;
     }
     public Evento getEvento() {

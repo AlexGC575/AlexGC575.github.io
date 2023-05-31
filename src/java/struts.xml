@@ -24,6 +24,39 @@
         <action name="boda" class="actions.eventoGeneralAction" method="boda">
             <result name="success">/detalles.jsp</result>
         </action>
+        
+        <action name="bautizo" class="actions.eventoGeneralAction" method="bautizo">
+            <result name="success">/detalles.jsp</result>
+        </action>
+        
+        <action name="cine" class="actions.eventoGeneralAction" method="cine">
+            <result name="success">/detalles.jsp</result>
+        </action>
+        
+        <action name="comunion" class="actions.eventoGeneralAction" method="comunion">
+            <result name="success">/detalles.jsp</result>
+        </action>
+        
+        <action name="concierto" class="actions.eventoGeneralAction" method="concierto">
+            <result name="success">/detalles.jsp</result>
+        </action>
+        
+        <action name="cumpleaños" class="actions.eventoGeneralAction" method="cumpleaños">
+            <result name="success">/detalles.jsp</result>
+        </action>
+        
+        <action name="deporte" class="actions.eventoGeneralAction" method="deporte">
+            <result name="success">/detalles.jsp</result>
+        </action>
+        
+        <action name="fiesta" class="actions.eventoGeneralAction" method="fiesta">
+            <result name="success">/detalles.jsp</result>
+        </action>
+        
+        <action name="eventoP" class="actions.eventoGeneralAction" method="eventoP">
+            <result name="success">/detalles.jsp</result>
+        </action>
+        
         <action name="eventoOriginal" class="actions.eventoOriginalAction">
             <result name="success">/detalles.jsp</result>
         </action>
@@ -35,15 +68,6 @@
         </action>
         <action name="pInicio" class="actions.eventoAction" method="inicio">
             <result name="success">/main.jsp</result>
-        </action>
-    </package>
-    <package name="actionsLogin" extends="struts-default">
-        <action name="loginCheck" class="actions.loginCheck">
-            <result name="success">/main.jsp</result>
-            <result name="error">/login.jsp</result>
-        </action>
-        <action name="logout" class="actions.loginCheck" method="logout">
-            <result name="OK">/login.jsp</result>
         </action>
     </package>
 </struts>

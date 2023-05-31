@@ -9,10 +9,7 @@
 </head>
 <body>
 	<header >
-		Welcome, <s:property value="#session.username"/>
-                <s:if test="%{#session['username']!=null">
-                        This is String 1
-                    </s:if>
+		
 		<nav class="naveg">
                     <h1 class="logo">U<span>party</span> </h1>
 			<ul class="navbar">

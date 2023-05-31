@@ -7,6 +7,25 @@
         <action name="eventos" class="actions.eventoAction">
             <result name="success">/creadorEvento.jsp</result>
         </action>
+        <action name="loginCheck" class="actions.GestionUser" >
+            <result name="success">main.jsp</result>      
+           <result name="error" >login.jsp</result> 
+            <result name="input" >login.jsp</result>         
+        </action>
+        <action name="registerCheck" class="actions.ResgistroUser" >
+            <result name="success">main.jsp</result>      
+           <result name="error" >register.jsp</result> 
+            <result name="input" >register.jsp</result>         
+        </action>
+        
+        <action name="unlog" class="actions.GestionUser" method="unlog">
+            <result name="success">login.jsp</result>      
+              
+        </action>
+        <action name="yaLog" class="actions.GestionUser" method="yaLogueado">
+            <result name="success">main.jsp</result>      
+  
+        </action>
         <action name="elegirEvento" class="actions.eventoAction" method="eventoGeneral">
             <result name="B">/boda.jsp</result>
             <result name="BAU">/bautizo.jsp</result>

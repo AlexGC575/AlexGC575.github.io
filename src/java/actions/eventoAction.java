@@ -54,7 +54,7 @@ public class eventoAction extends ActionSupport{
         if(this.getElegirEvento().equals("Boda")){
             this.setEspecializaciones(a.consultaEspecializaciones(this.getElegirEvento()));
             return "B";
-        }else if(this.getElegirEvento().equals("Cumpleanyos")){
+        }else if(this.getElegirEvento().equals("Cumpleaños")){
             return "CUM";  
         }else if(this.getElegirEvento().equals("Cine")){
             return "CI";  

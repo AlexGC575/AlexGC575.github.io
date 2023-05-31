@@ -15,6 +15,7 @@ import org.hibernate.Session;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -26,6 +27,15 @@ public class Almacen {
     
     public Almacen(){
         
+    }
+    
+    public Usuario compruebaUser(String user, String pass){
+        session=NewHibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx=session.beginTransaction();
+        Query q=session.createQuery("From Usuario where email='"+user+"' and contrasenya='"+pass+"'");
+        Usuario u = (Usuario)q.uniqueResult();
+        tx.commit();
+        return u;
     }
     
     public List<String> consultaTipos() throws SQLException{
@@ -61,5 +71,12 @@ public class Almacen {
        e = (Especializacion) q.uniqueResult();
        tx.commit();
        return e;
+    }
+    
+    public void altaUser(Usuario user) {
+        session=NewHibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx=session.beginTransaction();
+        session.save(user);
+        tx.commit();
     }
 }

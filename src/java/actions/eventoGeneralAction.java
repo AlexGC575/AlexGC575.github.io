@@ -123,7 +123,7 @@ public class eventoGeneralAction extends ActionSupport {
     public String bautizo() throws SQLException{
         Almacen a = new Almacen();
         
-        if(this.getElegirBautizo().equals("en las aguas") || this.getElegirBautizo().equals("con el Espíritu Santo") || this.getElegirBautizo().equals("de fuego")){
+        if(this.getElegirBautizo().equals("en las aguas") || this.getElegirBautizo().equals("con el Espiritu Santo") || this.getElegirBautizo().equals("de fuego")){
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirBautizo()));
             return SUCCESS;
         }
@@ -133,7 +133,7 @@ public class eventoGeneralAction extends ActionSupport {
     public String cine() throws SQLException{
         Almacen a = new Almacen();
         
-        if(this.getElegirCine().equals("de verano") || this.getElegirCine().equals("en aparcamiento") || this.getElegirCine().equals("en centro comercial")){
+        if(this.getElegirCine().equals("al aire libre") || this.getElegirCine().equals("de verano") || this.getElegirCine().equals("en aparcamiento") || this.getElegirCine().equals("en centro comercial")){
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirCine()));
             return SUCCESS;
         }
@@ -143,7 +143,7 @@ public class eventoGeneralAction extends ActionSupport {
     public String comunion() throws SQLException{
         Almacen a = new Almacen();
         
-        if(this.getElegirComunion().equals("colectiva") || this.getElegirComunion().equals("uniformada") || this.getElegirComunion().equals("domiciliaria") || this.getElegirComunion().equals("simbólica")){
+        if(this.getElegirComunion().equals("colectiva") || this.getElegirComunion().equals("uniformada") || this.getElegirComunion().equals("domiciliaria") || this.getElegirComunion().equals("simbolica")){
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirComunion()));
             return SUCCESS;
         }
@@ -153,7 +153,7 @@ public class eventoGeneralAction extends ActionSupport {
     public String concierto() throws SQLException{
         Almacen a = new Almacen();
         
-        if(this.getElegirConcierto().equals("benéfico") || this.getElegirConcierto().equals("clásico") || this.getElegirConcierto().equals("íntimo")){
+        if(this.getElegirConcierto().equals("benefico") || this.getElegirConcierto().equals("clasico") || this.getElegirConcierto().equals("intimo")){
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirConcierto()));
             return SUCCESS;
         }
@@ -163,7 +163,7 @@ public class eventoGeneralAction extends ActionSupport {
     public String cumpleaños() throws SQLException{
         Almacen a = new Almacen();
         
-        if(this.getElegirCumpleaños().equals("escape room") || this.getElegirCumpleaños().equals("paintball") || this.getElegirCumpleaños().equals("temática") || this.getElegirCumpleaños().equals("disfraces")){
+        if(this.getElegirCumpleaños().equals("escape room") || this.getElegirCumpleaños().equals("paintball") || this.getElegirCumpleaños().equals("tematica") || this.getElegirCumpleaños().equals("disfraces")){
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirCumpleaños()));
             return SUCCESS;
         }
@@ -173,7 +173,7 @@ public class eventoGeneralAction extends ActionSupport {
     public String deporte() throws SQLException{
         Almacen a = new Almacen();
         
-        if(this.getElegirDeporte().equals("halterofilia") || this.getElegirDeporte().equals("campeonato") || this.getElegirDeporte().equals("pachanga")){
+        if(this.getElegirDeporte().equals("al aire libre") || this.getElegirDeporte().equals("religiosa") || this.getElegirDeporte().equals("minimalista") || this.getElegirDeporte().equals("civil")){
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirDeporte()));
             return SUCCESS;
         }
@@ -183,7 +183,7 @@ public class eventoGeneralAction extends ActionSupport {
     public String fiesta() throws SQLException{
         Almacen a = new Almacen();
         
-        if(this.getElegirFiesta().equals("\"legal\"") || this.getElegirFiesta().equals("social") || this.getElegirFiesta().equals("infantil")){
+        if(this.getElegirFiesta().equals("religiosa") || this.getElegirFiesta().equals("social") || this.getElegirFiesta().equals("infantil")){
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirFiesta()));
             return SUCCESS;
         }

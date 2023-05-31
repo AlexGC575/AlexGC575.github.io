@@ -19,7 +19,7 @@
 				<li><a href="#catering">Catering</a></li>
 				<li><a href="#audiovisuales">Audiovisuales</a></li>
 				<li><a href="#empresas">Empresas</a></li>
-                                <s:form action="unlog" theme="simple" >
+<s:form action="unlog" theme="simple" >
                                 <s:submit cssClass="login" name="unlog" value="Cerrar Sesion"/>
                                 </s:form>
 			</ul>

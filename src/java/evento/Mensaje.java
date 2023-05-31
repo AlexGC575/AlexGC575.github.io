@@ -1,5 +1,5 @@
 package evento;
-// Generated Apr 28, 2023 8:10:23 AM by Hibernate Tools 4.3.1
+// Generated May 30, 2023 1:23:05 PM by Hibernate Tools 4.3.1
 
 
 
@@ -9,24 +9,23 @@ package evento;
 public class Mensaje  implements java.io.Serializable {
 
 
-     private MensajeId id;
+     private Integer id;
      private Usuario usuario;
      private String contenido;
 
     public Mensaje() {
     }
 
-    public Mensaje(MensajeId id, Usuario usuario, String contenido) {
-       this.id = id;
+    public Mensaje(Usuario usuario, String contenido) {
        this.usuario = usuario;
        this.contenido = contenido;
     }
    
-    public MensajeId getId() {
+    public Integer getId() {
         return this.id;
     }
     
-    public void setId(MensajeId id) {
+    public void setId(Integer id) {
         this.id = id;
     }
     public Usuario getUsuario() {

@@ -1,5 +1,5 @@
 package evento;
-// Generated Apr 28, 2023 8:10:23 AM by Hibernate Tools 4.3.1
+// Generated May 30, 2023 1:23:05 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -10,27 +10,25 @@ import java.util.Date;
 public class Pago  implements java.io.Serializable {
 
 
-     private int tarjetaCredito;
+     private PagoId id;
      private Usuario usuario;
      private Date caducidad;
-     private int evento;
 
     public Pago() {
     }
 
-    public Pago(int tarjetaCredito, Usuario usuario, Date caducidad, int evento) {
-       this.tarjetaCredito = tarjetaCredito;
+    public Pago(PagoId id, Usuario usuario, Date caducidad) {
+       this.id = id;
        this.usuario = usuario;
        this.caducidad = caducidad;
-       this.evento = evento;
     }
    
-    public int getTarjetaCredito() {
-        return this.tarjetaCredito;
+    public PagoId getId() {
+        return this.id;
     }
     
-    public void setTarjetaCredito(int tarjetaCredito) {
-        this.tarjetaCredito = tarjetaCredito;
+    public void setId(PagoId id) {
+        this.id = id;
     }
     public Usuario getUsuario() {
         return this.usuario;
@@ -45,13 +43,6 @@ public class Pago  implements java.io.Serializable {
     
     public void setCaducidad(Date caducidad) {
         this.caducidad = caducidad;
-    }
-    public int getEvento() {
-        return this.evento;
-    }
-    
-    public void setEvento(int evento) {
-        this.evento = evento;
     }
 
 

@@ -46,21 +46,18 @@ Contributor(s):
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/uparty?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <property name="current_session_context_class">thread</property>
-    <property name="hibernate.show_sql">true</property>
-    <property name="hibernate.format_sql">true</property>
-    <property name="hbm2ddl.auto">update</property>
-    <mapping resource="evento/Patrocinador.hbm.xml"/>
-    <mapping resource="evento/Evento.hbm.xml"/>
-    <mapping resource="evento/Asistente.hbm.xml"/>
-    <mapping resource="evento/Mensaje.hbm.xml"/>
     <mapping resource="evento/Direccion.hbm.xml"/>
-    <mapping resource="evento/Lugar.hbm.xml"/>
-    <mapping resource="evento/Pago.hbm.xml"/>
-    <mapping resource="evento/Contacto.hbm.xml"/>
-    <mapping resource="evento/Empresa.hbm.xml"/>
+    <mapping resource="evento/Mensaje.hbm.xml"/>
+    <mapping resource="evento/Asistente.hbm.xml"/>
+    <mapping resource="evento/Evento.hbm.xml"/>
     <mapping resource="evento/Tipo.hbm.xml"/>
-    <mapping resource="evento/Resenya.hbm.xml"/>
+    <mapping resource="evento/Lugar.hbm.xml"/>
+    <mapping resource="evento/Patrocinador.hbm.xml"/>
+    <mapping resource="evento/Contacto.hbm.xml"/>
     <mapping resource="evento/Usuario.hbm.xml"/>
+    <mapping resource="evento/Pago.hbm.xml"/>
+    <mapping resource="evento/Empresa.hbm.xml"/>
     <mapping resource="evento/Especializacion.hbm.xml"/>
+    <mapping resource="evento/Resenya.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

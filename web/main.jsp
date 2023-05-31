@@ -23,9 +23,7 @@
                                 <s:submit cssClass="login" name="unlog" value="Cerrar Sesion"/>
                                 </s:form>
 			</ul>
-                    ¡
 		</nav>
-            
 	</header>
 
     <main>
@@ -33,7 +31,7 @@
 		<h2>Bienvenidos a nuestra web de organización de eventos</h2>
 		<p>Somos una empresa especializada en la organización de eventos para todo tipo de ocasiones. Desde bodas y cumpleaños hasta eventos corporativos y ferias, estamos aquí para ayudarte a hacer que tu evento sea un éxito.</p>
 		<a href="#contacto">Contáctanos</a>
-                <s:form action="eventos" theme="simple">
+                <s:form action="eventos">
                     <s:submit cssClass="login" name="evntTrigger" value="Organice su evento"/>
                 </s:form>
 	</section>

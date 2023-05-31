@@ -1,5 +1,5 @@
 package evento;
-// Generated 30-may-2023 21:57:04 by Hibernate Tools 4.3.1
+// Generated May 30, 2023 1:23:05 PM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -12,19 +12,20 @@ public class Tipo  implements java.io.Serializable {
 
 
      private String nombre;
-     private Evento evento;
      private Set especializacions = new HashSet(0);
+     private Set eventos = new HashSet(0);
 
     public Tipo() {
     }
 
 	
-    public Tipo(Evento evento) {
-        this.evento = evento;
+    public Tipo(String nombre) {
+        this.nombre = nombre;
     }
-    public Tipo(Evento evento, Set especializacions) {
-       this.evento = evento;
+    public Tipo(String nombre, Set especializacions, Set eventos) {
+       this.nombre = nombre;
        this.especializacions = especializacions;
+       this.eventos = eventos;
     }
    
     public String getNombre() {
@@ -34,19 +35,19 @@ public class Tipo  implements java.io.Serializable {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public Evento getEvento() {
-        return this.evento;
-    }
-    
-    public void setEvento(Evento evento) {
-        this.evento = evento;
-    }
     public Set getEspecializacions() {
         return this.especializacions;
     }
     
     public void setEspecializacions(Set especializacions) {
         this.especializacions = especializacions;
+    }
+    public Set getEventos() {
+        return this.eventos;
+    }
+    
+    public void setEventos(Set eventos) {
+        this.eventos = eventos;
     }
 
 

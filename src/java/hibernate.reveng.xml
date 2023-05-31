@@ -41,18 +41,18 @@ Contributor(s):
 -->
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="uparty"/>
-  <table-filter match-name="direccion"/>
-  <table-filter match-name="lugar"/>
-  <table-filter match-name="contacto"/>
-  <table-filter match-name="patrocinador"/>
-  <table-filter match-name="empresa"/>
-  <table-filter match-name="especializacion"/>
   <table-filter match-name="pago"/>
   <table-filter match-name="mensaje"/>
-  <table-filter match-name="asistente"/>
-  <table-filter match-name="evento"/>
-  <table-filter match-name="resenya"/>
   <table-filter match-name="tipo"/>
-  <table-filter match-name="eventoxempresa"/>
+  <table-filter match-name="contacto"/>
+  <table-filter match-name="lugar"/>
+  <table-filter match-name="resenya"/>
+  <table-filter match-name="patrocinador"/>
   <table-filter match-name="usuario"/>
+  <table-filter match-name="empresa"/>
+  <table-filter match-name="eventoxempresa"/>
+  <table-filter match-name="evento"/>
+  <table-filter match-name="asistente"/>
+  <table-filter match-name="especializacion"/>
+  <table-filter match-name="direccion"/>
 </hibernate-reverse-engineering>

@@ -1,5 +1,5 @@
 package evento;
-// Generated 30-may-2023 21:57:04 by Hibernate Tools 4.3.1
+// Generated May 30, 2023 1:23:05 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -16,6 +16,7 @@ public class Evento  implements java.io.Serializable {
      private Lugar lugar;
      private Patrocinador patrocinador;
      private Resenya resenya;
+     private Tipo tipo;
      private Usuario usuario;
      private Date fecha;
      private Date horaInicio;
@@ -27,20 +28,19 @@ public class Evento  implements java.io.Serializable {
      private String religion;
      private float precio;
      private boolean pagado;
-     
      private Set asistentes = new HashSet(0);
      private Set resenyas = new HashSet(0);
      private Set empresas = new HashSet(0);
-     private Tipo tipo;
 
     public Evento() {
     }
 
 	
-    public Evento(Lugar lugar, Patrocinador patrocinador, Resenya resenya, Usuario usuario, Date fecha, Date horaInicio, String catering, String musica, String decoracion, String audiovisuales, String religion, float precio, boolean pagado) {
+    public Evento(Lugar lugar, Patrocinador patrocinador, Resenya resenya, Tipo tipo, Usuario usuario, Date fecha, Date horaInicio, String catering, String musica, String decoracion, String audiovisuales, String religion, float precio, boolean pagado) {
         this.lugar = lugar;
         this.patrocinador = patrocinador;
         this.resenya = resenya;
+        this.tipo = tipo;
         this.usuario = usuario;
         this.fecha = fecha;
         this.horaInicio = horaInicio;
@@ -51,12 +51,12 @@ public class Evento  implements java.io.Serializable {
         this.religion = religion;
         this.precio = precio;
         this.pagado = pagado;
-        this.tipo = tipo;
     }
-    public Evento(Lugar lugar, Patrocinador patrocinador, Resenya resenya, Usuario usuario, Date fecha, Date horaInicio, Date horaFin, String catering, String musica, String decoracion, String audiovisuales, String religion, float precio, boolean pagado, Set asistentes, Set resenyas, Set empresas, Tipo tipo) {
+    public Evento(Lugar lugar, Patrocinador patrocinador, Resenya resenya, Tipo tipo, Usuario usuario, Date fecha, Date horaInicio, Date horaFin, String catering, String musica, String decoracion, String audiovisuales, String religion, float precio, boolean pagado, Set asistentes, Set resenyas, Set empresas) {
        this.lugar = lugar;
        this.patrocinador = patrocinador;
        this.resenya = resenya;
+       this.tipo = tipo;
        this.usuario = usuario;
        this.fecha = fecha;
        this.horaInicio = horaInicio;
@@ -68,11 +68,9 @@ public class Evento  implements java.io.Serializable {
        this.religion = religion;
        this.precio = precio;
        this.pagado = pagado;
-     
        this.asistentes = asistentes;
        this.resenyas = resenyas;
        this.empresas = empresas;
-       this.tipo = tipo;
     }
    
     public Integer getId() {
@@ -102,6 +100,13 @@ public class Evento  implements java.io.Serializable {
     
     public void setResenya(Resenya resenya) {
         this.resenya = resenya;
+    }
+    public Tipo getTipo() {
+        return this.tipo;
+    }
+    
+    public void setTipo(Tipo tipo) {
+        this.tipo = tipo;
     }
     public Usuario getUsuario() {
         return this.usuario;
@@ -180,7 +185,6 @@ public class Evento  implements java.io.Serializable {
     public void setPagado(boolean pagado) {
         this.pagado = pagado;
     }
-    
     public Set getAsistentes() {
         return this.asistentes;
     }
@@ -201,13 +205,6 @@ public class Evento  implements java.io.Serializable {
     
     public void setEmpresas(Set empresas) {
         this.empresas = empresas;
-    }
-    public Tipo getTipo() {
-        return this.tipo;
-    }
-    
-    public void setTipo(Tipo tipo) {
-        this.tipo = tipo;
     }
 
 

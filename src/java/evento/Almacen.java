@@ -72,7 +72,7 @@ public class Almacen {
        tx.commit();
        return e;
     }
-
+    
     public void altaUser(Usuario user) {
         session=NewHibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx=session.beginTransaction();

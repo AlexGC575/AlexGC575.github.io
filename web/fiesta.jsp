@@ -8,10 +8,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <!--<link rel="stylesheet" href="crearEvnt.css">
+        --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Fiestas</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Fiestas</h1>
+        <s:form action="fiesta">
+            <s:iterator value="especializaciones" var="e">
+                <details>
+                    <summary>Fiesta <s:property value="#e.nombre"/></summary>
+                    <li>Cátering: <s:property value="#e.catering"/></li>
+                    <li>Música: <s:property value="#e.musica"/></li>
+                    <li>Decoración: <s:property value="#e.decoracion"/></li>
+                    <li>Audiovisuales: <s:property value="#e.audiovisuales"/></li>
+                    <li>Religión: <s:property value="#e.religion"/></li>
+                    <li>Precio estándar: <s:property value="#e.precio"/></li>
+                </details>
+                <s:radio id="radio" name="elegirFiesta" list="#e.getNombre()"/>
+            </s:iterator>
+            <s:submit name="fiestaTrigger" value="Especificar detalles"/>
+        </s:form>
     </body>
 </html>

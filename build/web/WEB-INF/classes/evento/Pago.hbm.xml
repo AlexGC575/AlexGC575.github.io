@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 30, 2023 1:23:08 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="evento.Pago" table="pago" catalog="uparty" optimistic-lock="version">
+        <composite-id name="id" class="evento.PagoId">
+            <key-property name="tarjetoCredito" type="int">
+                <column name="tarjetoCredito" />
+            </key-property>
+            <key-property name="usuario" type="string">
+                <column name="usuario" length="30" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="usuario" class="evento.Usuario" update="false" insert="false" fetch="select">
+            <column name="usuario" length="30" not-null="true" />
+        </many-to-one>
+        <property name="caducidad" type="date">
+            <column name="caducidad" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

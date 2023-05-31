@@ -1,5 +1,5 @@
 package evento;
-// Generated 30-may-2023 21:57:04 by Hibernate Tools 4.3.1
+// Generated May 30, 2023 1:23:05 PM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;

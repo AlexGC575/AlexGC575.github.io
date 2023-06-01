@@ -6,7 +6,6 @@
 package actions;
 
 import static com.opensymphony.xwork2.Action.ERROR;
-import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
 import evento.Almacen;
 import evento.Especializacion;

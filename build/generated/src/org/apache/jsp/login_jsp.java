@@ -75,7 +75,9 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html><head>\n");
-      out.write("        <link rel=\"stylesheet\" href=\"style.css\"/>\n");
+      out.write("        <link rel=\"stylesheet\" href=\"login.css\"/>\n");
+      out.write("        \n");
+      out.write("       \n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>Login - UParty</title>\n");
       out.write("    </head>\n");

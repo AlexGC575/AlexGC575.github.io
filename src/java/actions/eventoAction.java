@@ -10,8 +10,6 @@ package actions;
  * @author User
  */
 
-import static com.opensymphony.xwork2.Action.ERROR;
-import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
 import evento.Almacen;
 import evento.Especializacion;
@@ -87,6 +85,10 @@ public class eventoAction extends ActionSupport{
     }
     
     public String pago(){
+        //recoger especializacion de la sesion
+        return SUCCESS;
+    }
+     public String irAPerfil(){
         //recoger especializacion de la sesion
         return SUCCESS;
     }

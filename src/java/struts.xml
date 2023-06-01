@@ -7,6 +7,9 @@
         <action name="eventos" class="actions.eventoAction">
             <result name="success">/creadorEvento.jsp</result>
         </action>
+        <action name="irPerfil" class="actions.eventoAction" method="irAPerfil">
+            <result name="success">/perfil.jsp</result>
+        </action>
 	  <action name="loginCheck" class="actions.GestionUser" >
             <result name="success">main.jsp</result>      
            <result name="error" >login.jsp</result> 

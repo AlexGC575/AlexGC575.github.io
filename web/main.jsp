@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="login.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Organización de eventos</title>
 </head>
 <body>
+    <div class="all">
 	<header >
 		
 		<nav class="naveg">
@@ -19,8 +20,9 @@
 				<li><a href="#catering">Catering</a></li>
 				<li><a href="#audiovisuales">Audiovisuales</a></li>
 				<li><a href="#empresas">Empresas</a></li>
-                                <s:form action="unlog" theme="simple" >
-                                <s:submit cssClass="login" name="unlog" value="Cerrar Sesion"/>
+
+                                <s:form action="irPerfil" theme="simple" >
+                                <s:submit cssClass="login" name="irperfil" value="Ver Perfil"/>
                                 </s:form>
 			</ul>
 		</nav>
@@ -106,5 +108,6 @@
         </section>
         </footer>
     </main>
+    </div>
     </body>
 </html>

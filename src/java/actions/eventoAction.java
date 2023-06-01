@@ -50,11 +50,11 @@ public class eventoAction extends ActionSupport{
     
     public String eventoGeneral() throws Exception{
         Almacen a = new Almacen();
+        this.setEspecializaciones(a.consultaEspecializaciones(this.getElegirEvento()));
         
         if(this.getElegirEvento().equals("Boda")){
-            this.setEspecializaciones(a.consultaEspecializaciones(this.getElegirEvento()));
             return "B";
-        }else if(this.getElegirEvento().equals("Cumpleaños")){
+        }else if(this.getElegirEvento().equals("Cumpleanyos")){
             return "CUM";  
         }else if(this.getElegirEvento().equals("Cine")){
             return "CI";  

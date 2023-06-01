@@ -13,7 +13,7 @@
         <title>Detalles pago</title>
     </head>
     <body>
-        Generar pdf con detalles
+        Generar pdf con detalles del evento
         <s:form action="pInicio">
             <s:submit name="inicioTrigger" value="Volver página inicio"/>
         </s:form>

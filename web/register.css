@@ -4,6 +4,10 @@
     paddin:0;
     font-family:'poppins',sans-serif;
 }
+
+ul{
+    color:#f9004d;;
+}
 section{
     height: 100%;
     display: flex;
@@ -83,6 +87,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: graytext;
     transition:0.35s;
 text-decoration: underline;    
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
 }
 .inputbox ion-icon{
      position: absolute;

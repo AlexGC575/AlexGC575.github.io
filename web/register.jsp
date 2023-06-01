@@ -5,64 +5,71 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="register.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Registrarse - UParty</title>
     </head>
     <body>
+        
+        <s:if test="#session.Usuario != null">
+            <s:action name="yaLog" executeResult="true"/>
+        </s:if>
          <section>
             <div class="form-box">
                 <div class="form-value">
-        <form action="VetServlet">
+                    <s:form action="registerCheck" theme="simple">
             <h2>Registrarse</h2>
             
             <div class="inputbox">
                 <ion-icon name="mail-outline"></ion-icon>
                
-            <input type="text" name="email" > 
-            <label for="">Email:</label>
+              <s:textfield name="email"/>
+            
+            <label for=""><s:fielderror fieldName="email"/> Email:</label>
             </div>
             <div class="inputbox">
                 <ion-icon name="pricetag-outline"></ion-icon>
-               
-            <input type="text" name="nombre" > 
-            <label for="">Nombre:</label>
+               <s:textfield name="nombre"/>
+           
+            <label for=""><s:fielderror fieldName="nombre"/>Nombre:</label>
             </div>
             <div class="inputbox">
                 <ion-icon name="pricetags-outline"></ion-icon>
-               
-            <input type="text" name="apellidos" > 
-            <label for="">Apellidos:</label>
+               <s:textfield name="apellidos"/>
+            
+            <label for=""><s:fielderror fieldName="apellidos"/>Apellidos:</label>
             </div>
             <div class="inputbox">
                 <ion-icon name="calendar-outline"></ion-icon>
-               
-            <input type="date" name="fecha" value="" > 
-            <label for="">Fecha de nacimiento:</label>
+                
+                <s:textfield name="fecha"/>
+           <!-- <input type="date" name="fecha"/> -->
+            <label for=""><s:fielderror fieldName="fecha"/>Fecha de nacimiento:</label>
             </div>
+           
             <div class="inputbox">
                 <ion-icon name="call-outline"></ion-icon>
-               
-            <input type="text" name="tlfn" > 
-            <label for="">Telefono:</label>
+               <s:textfield name="tlfn"/>
+          
+            <label for=""><s:fielderror fieldName="tlfn"/>Telefono:</label>
             </div>
             <div class="inputbox">
                 
                 <ion-icon name="lock-closed-outline"></ion-icon>
-               
-            <input  type="password" name="password">
+               <s:password name="passregister"/>
             <ion-icon name="lock-closed-outline"></ion-icon>
-             <label for="">Contraseña:</label>
+             <label for=""><s:fielderror fieldName="passregister"/>Contraseña:</label>
             </div>
-            <input type="hidden" name="accion" value="Log in">
-            <input class="login" type="submit" name="login" value="Login">
+            
+            <input class="login" type="submit" name="login" value="Registrarse">
            
-        </form>
+        </s:form>
                     <div class="register">
-                        <p>¿No tienes cuenta? <a href="#">Registrate</a></p>
+                        <p>¿Ya tienes cuenta? <a href="login.jsp">Logueate</a></p>
                     </div>
                 </div>
             </div>

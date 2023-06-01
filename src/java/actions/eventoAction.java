@@ -10,6 +10,8 @@ package actions;
  * @author User
  */
 
+import static com.opensymphony.xwork2.Action.ERROR;
+import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
 import evento.Almacen;
 import evento.Especializacion;
@@ -54,7 +56,7 @@ public class eventoAction extends ActionSupport{
         if(this.getElegirEvento().equals("Boda")){
             this.setEspecializaciones(a.consultaEspecializaciones(this.getElegirEvento()));
             return "B";
-        }else if(this.getElegirEvento().equals("Cumpleaños")){
+        }else if(this.getElegirEvento().equals("Cumpleanyos")){
             return "CUM";  
         }else if(this.getElegirEvento().equals("Cine")){
             return "CI";  

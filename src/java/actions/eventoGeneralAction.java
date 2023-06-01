@@ -7,8 +7,8 @@ package actions;
 
 import static com.opensymphony.xwork2.Action.ERROR;
 import com.opensymphony.xwork2.ActionSupport;
-import evento.Almacen;
-import evento.Especializacion;
+import entidades.*;
+
 import java.sql.SQLException;
 
 /**

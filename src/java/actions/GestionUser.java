@@ -11,8 +11,8 @@ import com.opensymphony.xwork2.validator.annotations.DateRangeFieldValidator;
 import com.opensymphony.xwork2.validator.annotations.EmailValidator;
 import com.opensymphony.xwork2.validator.annotations.RequiredStringValidator;
 import com.opensymphony.xwork2.validator.annotations.StringLengthFieldValidator;
-import evento.Almacen;
-import evento.Usuario;
+import entidades.*;
+
 import java.util.Date;
 import java.util.Map;
 import javax.servlet.http.HttpSession;

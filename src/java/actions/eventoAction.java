@@ -11,9 +11,9 @@ package actions;
  */
 
 import com.opensymphony.xwork2.ActionSupport;
-import evento.Almacen;
-import evento.Especializacion;
-import evento.Tipo;
+import entidades.Almacen;
+import entidades.*;
+
 import java.util.List;
 
 public class eventoAction extends ActionSupport{
@@ -94,9 +94,9 @@ public class eventoAction extends ActionSupport{
     }
     
     public String execute() throws Exception{
-        Almacen a = new Almacen();
-        this.setTipos(a.consultaTipos());
-        return SUCCESS;
-    }
+         Almacen a = new Almacen();
+         this.setTipos(a.consultaTipos());
+         return SUCCESS;
+     }
     
 }

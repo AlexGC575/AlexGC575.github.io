@@ -28,6 +28,37 @@ public class Almacen {
         
     }
     
+<<<<<<< Updated upstream
+=======
+    public Usuario compruebaUser(String user, String pass){
+        session=NewHibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx=session.beginTransaction();
+        Query q=session.createQuery("From Usuario where email='"+user+"' and contrasenya='"+pass+"'");
+        Usuario u = (Usuario)q.uniqueResult();
+        tx.commit();
+        return u;
+    }
+    
+    public Usuario consultaUsuario(String user){
+        session=NewHibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx=session.beginTransaction();
+        Query q=session.createQuery("From Usuario where email='"+user+"'");
+        Usuario u = (Usuario)q.uniqueResult();
+        tx.commit();
+        return u;
+    }
+    
+    public List<Empresa> consultaEmpresas() throws SQLException{
+        session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        List<Empresa> le = new ArrayList();
+        org.hibernate.Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("from Empresa");
+        le = q.list();
+        tx.commit();
+        return le;
+    }
+    
+>>>>>>> Stashed changes
     public List<String> consultaTipos() throws SQLException{
         session = NewHibernateUtil.getSessionFactory().getCurrentSession();
         List<Tipo> lc = new ArrayList();
@@ -62,4 +93,31 @@ public class Almacen {
        tx.commit();
        return e;
     }
+<<<<<<< Updated upstream
+=======
+    
+    public Pago consultaTarjeta (String nombre)throws SQLException {
+       session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+       Pago p = null;
+       org.hibernate.Transaction tx = session.beginTransaction();
+       Query q = session.createQuery("from Pago where usuario = '" + nombre +"'");
+       p = (Pago) q.uniqueResult();
+       tx.commit();
+       return p;
+    }
+    
+    public void altaUser(Usuario user) {
+        session=NewHibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx=session.beginTransaction();
+        session.save(user);
+        tx.commit();
+    }
+    
+    public void altaEvento(Evento e) {
+        session=NewHibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx=session.beginTransaction();
+        session.save(e);
+        tx.commit();
+    }
+>>>>>>> Stashed changes
 }

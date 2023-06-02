@@ -15,12 +15,9 @@
         <title>Bautizos</title>
     </head>
     <body>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
+
         <div class="eventos">
->>>>>>> Juan
+
         <header >
 		
 		<nav class="naveg">
@@ -32,25 +29,24 @@
 				<li><a href="#catering">Catering</a></li>
 				<li><a href="#audiovisuales">Audiovisuales</a></li>
 				<li><a href="#empresas">Empresas</a></li>
-<<<<<<< HEAD
+
 <s:form action="unlog" theme="simple" >
                                 <s:submit cssClass="login" name="unlog" value="Cerrar Sesion"/>
-=======
+
 
                                 <s:form action="irPerfil" theme="simple" >
                                 <s:submit cssClass="login" name="irperfil" value="Ver Perfil"/>
->>>>>>> Juan
+
                                 </s:form>
 			</ul>
 		</nav>
 	</header>
-<<<<<<< HEAD
->>>>>>> Alejandro
+
         <h1>Bautizos</h1>
-=======
+
         <div class="tabla">
         
->>>>>>> Juan
+
         <s:form action="bautizo">
             <h2>Bautizos</h2>
             <s:iterator value="especializaciones" var="e">
@@ -62,9 +58,9 @@
                     <li>Música: <s:property value="#e.musica"/></li>
                     <li>Decoración: <s:property value="#e.decoracion"/></li>
                     <li>Audiovisuales: <s:property value="#e.audiovisuales"/></li>
-<<<<<<< HEAD
+
                     <li>Religión: <s:property value="#e.religion"/></li>
-=======
+
                     <s:if test="%{#e.religion != ''}">
                     <li>Religión: <s:property value="#e.religion"/></li>
                     </s:if>

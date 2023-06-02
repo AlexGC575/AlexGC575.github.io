@@ -22,7 +22,7 @@ import java.util.Date;
 import java.util.List;
 
 public class eventoAction extends ActionSupport{
-    private Especializacion especializacion;
+    private String especializacion;
     private String lugar;
     private String elegirLugar;
     private Date fecha;
@@ -150,11 +150,11 @@ public class eventoAction extends ActionSupport{
         this.precio = precio;
     }
 
-    public Especializacion getEspecializacion() {
+    public String getEspecializacion() {
         return especializacion;
     }
 
-    public void setEspecializacion(Especializacion especializacion) {
+    public void setEspecializacion(String especializacion) {
         this.especializacion = especializacion;
     }
 
@@ -217,6 +217,7 @@ public class eventoAction extends ActionSupport{
         e.setUsuario(a.consultaUsuario(this.getSession()));
         e.setPagado(false);
         */
+
         this.setPago(a.consultaTarjeta(this.getSession()));
         //this.setEvento(e);
         

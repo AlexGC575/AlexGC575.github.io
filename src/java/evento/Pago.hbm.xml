@@ -5,7 +5,7 @@
 <hibernate-mapping>
     <class name="evento.Pago" table="pago" catalog="uparty" optimistic-lock="version">
         <composite-id name="id" class="evento.PagoId">
-            <key-property name="tarjetoCredito" type="int">
+            <key-property name="tarjetoCredito" type="string">
                 <column name="tarjetoCredito" />
             </key-property>
             <key-property name="usuario" type="string">

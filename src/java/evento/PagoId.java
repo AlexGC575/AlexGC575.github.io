@@ -1,6 +1,9 @@
 package evento;
 // Generated May 30, 2023 1:23:05 PM by Hibernate Tools 4.3.1
 
+import java.math.BigInteger;
+
+
 
 
 /**
@@ -9,22 +12,22 @@ package evento;
 public class PagoId  implements java.io.Serializable {
 
 
-     private int tarjetoCredito;
+     private String tarjetoCredito;
      private String usuario;
 
     public PagoId() {
     }
 
-    public PagoId(int tarjetoCredito, String usuario) {
+    public PagoId(String tarjetoCredito, String usuario) {
        this.tarjetoCredito = tarjetoCredito;
        this.usuario = usuario;
     }
    
-    public int getTarjetoCredito() {
+    public String getTarjetoCredito() {
         return this.tarjetoCredito;
     }
     
-    public void setTarjetoCredito(int tarjetoCredito) {
+    public void setTarjetoCredito(String tarjetoCredito) {
         this.tarjetoCredito = tarjetoCredito;
     }
     public String getUsuario() {
@@ -42,18 +45,10 @@ public class PagoId  implements java.io.Serializable {
 		 if ( !(other instanceof PagoId) ) return false;
 		 PagoId castOther = ( PagoId ) other; 
          
-		 return (this.getTarjetoCredito()==castOther.getTarjetoCredito())
- && ( (this.getUsuario()==castOther.getUsuario()) || ( this.getUsuario()!=null && castOther.getUsuario()!=null && this.getUsuario().equals(castOther.getUsuario()) ) );
+		 return (this.getTarjetoCredito().equals(castOther.getTarjetoCredito()))
+ && ( (this.getUsuario().equals(castOther.getUsuario())) || ( this.getUsuario()!=null && castOther.getUsuario()!=null && this.getUsuario().equals(castOther.getUsuario()) ) );
    }
    
-   public int hashCode() {
-         int result = 17;
-         
-         result = 37 * result + this.getTarjetoCredito();
-         result = 37 * result + ( getUsuario() == null ? 0 : this.getUsuario().hashCode() );
-         return result;
-   }   
-
 
 }
 

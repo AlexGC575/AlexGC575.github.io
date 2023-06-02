@@ -15,7 +15,6 @@
         <script src="jquery-1.12.4.min.js" type="text/javascript"></script>
         <script type="text/javascript">
             function checkPlace() {
-                <s:property value="pago"/>;
                 var lugar = document.getElementById("lugar").value;
                 var list = [];
             <s:iterator value="lugares" var="l">
@@ -111,7 +110,7 @@
                 </details>
                 <s:radio id="radio2" name="elegirPatrocinador" list="#p.getNombre()" disabled="true" onclick="checkPrice()"/>
             </s:iterator> 
-            <s:hidden name="especializacion" value="%{especializacion}"/>
+            <s:hidden name="especializacion" value="%{especializacion.nombre}"/>
             <s:hidden name="session" value="%{#session.Usuario}"/>
             <s:label name="precio" id="precio" label="Precio final" value="%{especializacion.precio}"/><br/>
             <s:submit name="bodaTrigger" value="Confirmar evento"/>

@@ -11,23 +11,20 @@
             <result name="success">/perfil.jsp</result>
         </action>
 	  <action name="loginCheck" class="actions.GestionUser" >
-            <result name="success">main.jsp</result>      
-           <result name="error" >login.jsp</result> 
-            <result name="input" >login.jsp</result>         
+            <result name="success">/main.jsp</result>      
+           <result name="error" >/login.jsp</result> 
+            <result name="input" >/login.jsp</result>         
         </action>
         <action name="registerCheck" class="actions.ResgistroUser" >
-            <result name="success">main.jsp</result>      
-           <result name="error" >register.jsp</result> 
-            <result name="input" >register.jsp</result>         
-        </action>
-        
+            <result name="success">/main.jsp</result>      
+           <result name="error" >/register.jsp</result> 
+            <result name="input" >/register.jsp</result>         
+        </action>     
         <action name="unlog" class="actions.GestionUser" method="unlog">
-            <result name="success">login.jsp</result>      
-              
+            <result name="success">/login.jsp</result>          
         </action>
         <action name="yaLog" class="actions.GestionUser" method="yaLogueado">
-            <result name="success">main.jsp</result>      
-  
+            <result name="success">/main.jsp</result>     
         </action>
         <action name="elegirEvento" class="actions.eventoAction" method="eventoGeneral">
             <result name="B">/boda.jsp</result>
@@ -45,45 +42,34 @@
         </action>
         <action name="boda" class="actions.eventoGeneralAction" method="boda">
             <result name="success">/detalles.jsp</result>
-        </action>
-        
+        </action>     
         <action name="bautizo" class="actions.eventoGeneralAction" method="bautizo">
             <result name="success">/detalles.jsp</result>
         </action>
-        
         <action name="cine" class="actions.eventoGeneralAction" method="cine">
             <result name="success">/detalles.jsp</result>
-        </action>
-        
+        </action>   
         <action name="comunion" class="actions.eventoGeneralAction" method="comunion">
             <result name="success">/detalles.jsp</result>
-        </action>
-        
+        </action>      
         <action name="concierto" class="actions.eventoGeneralAction" method="concierto">
             <result name="success">/detalles.jsp</result>
-        </action>
-        
+        </action>       
         <action name="cumpleaños" class="actions.eventoGeneralAction" method="cumpleaños">
             <result name="success">/detalles.jsp</result>
-        </action>
-        
+        </action>        
         <action name="deporte" class="actions.eventoGeneralAction" method="deporte">
             <result name="success">/detalles.jsp</result>
-        </action>
-        
+        </action>       
         <action name="fiesta" class="actions.eventoGeneralAction" method="fiesta">
             <result name="success">/detalles.jsp</result>
-        </action>
-        
+        </action> 
         <action name="eventoP" class="actions.eventoGeneralAction" method="eventoP">
-            <result name="success">/detalles.jsp</result>
-        </action>
-        
-        <action name="eventoOriginal" class="actions.eventoOriginalAction">
             <result name="success">/detalles.jsp</result>
         </action>
         <action name="detallesEvento" class="actions.eventoAction" method="detalles">
             <result name="success">/pago.jsp</result>
+            <result name="input">/detalles.jsp</result>
         </action>
         <action name="pago" class="actions.eventoAction" method="pago">
             <result name="success">/detallesPago.jsp</result>

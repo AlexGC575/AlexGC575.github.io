@@ -10,10 +10,30 @@
 <html>
     <head>
         <link rel="stylesheet" href="eventos.css"/>
+        <link rel="stylesheet" href="style.css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Bodas</title>
     </head>
-    <body>
+    <body >
+        <div class="eventos">
+        <header >
+		
+		<nav class="naveg">
+                    <h1 class="logo">U<span>party</span> </h1>
+			<ul class="navbar">
+				<li><a href="#eventos">Eventos</a></li>
+				<li><a href="#decoracion">Decoración</a></li>
+				<li><a href="#musica">Música</a></li>
+				<li><a href="#catering">Catering</a></li>
+				<li><a href="#audiovisuales">Audiovisuales</a></li>
+				<li><a href="#empresas">Empresas</a></li>
+
+                                <s:form action="irPerfil" theme="simple" >
+                                <s:submit cssClass="login" name="irperfil" value="Ver Perfil"/>
+                                </s:form>
+			</ul>
+		</nav>
+	</header>
         <div class="tabla">
      
              
@@ -42,5 +62,6 @@
         
 
     </div>
+           </div> 
     </body>
 </html>

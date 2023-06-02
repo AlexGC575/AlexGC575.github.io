@@ -23,7 +23,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author juanl
+ * @author User
  */
 @Entity
 @Table(name = "pago")
@@ -59,7 +59,7 @@ public class Pago implements Serializable {
         this.caducidad = caducidad;
     }
 
-    public Pago(long tarjetoCredito, String usuario) {
+    public Pago(String tarjetoCredito, String usuario) {
         this.pagoPK = new PagoPK(tarjetoCredito, usuario);
     }
 

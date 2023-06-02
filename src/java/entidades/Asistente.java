@@ -9,8 +9,6 @@ import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -23,24 +21,24 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author juanl
+ * @author User
  */
 @Entity
 @Table(name = "asistente")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Asistente.findAll", query = "SELECT a FROM Asistente a")
-    , @NamedQuery(name = "Asistente.findById", query = "SELECT a FROM Asistente a WHERE a.id = :id")
+    , @NamedQuery(name = "Asistente.findByDni", query = "SELECT a FROM Asistente a WHERE a.dni = :dni")
     , @NamedQuery(name = "Asistente.findByNombre", query = "SELECT a FROM Asistente a WHERE a.nombre = :nombre")
     , @NamedQuery(name = "Asistente.findByApellidos", query = "SELECT a FROM Asistente a WHERE a.apellidos = :apellidos")})
 public class Asistente implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "id")
-    private Integer id;
+    @NotNull
+    @Column(name = "dni")
+    private Integer dni;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 30)
@@ -58,22 +56,22 @@ public class Asistente implements Serializable {
     public Asistente() {
     }
 
-    public Asistente(Integer id) {
-        this.id = id;
+    public Asistente(Integer dni) {
+        this.dni = dni;
     }
 
-    public Asistente(Integer id, String nombre, String apellidos) {
-        this.id = id;
+    public Asistente(Integer dni, String nombre, String apellidos) {
+        this.dni = dni;
         this.nombre = nombre;
         this.apellidos = apellidos;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getDni() {
+        return dni;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setDni(Integer dni) {
+        this.dni = dni;
     }
 
     public String getNombre() {
@@ -103,7 +101,7 @@ public class Asistente implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
+        hash += (dni != null ? dni.hashCode() : 0);
         return hash;
     }
 
@@ -114,7 +112,7 @@ public class Asistente implements Serializable {
             return false;
         }
         Asistente other = (Asistente) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+        if ((this.dni == null && other.dni != null) || (this.dni != null && !this.dni.equals(other.dni))) {
             return false;
         }
         return true;
@@ -122,7 +120,7 @@ public class Asistente implements Serializable {
 
     @Override
     public String toString() {
-        return "entidades.Asistente[ id=" + id + " ]";
+        return "entidades.Asistente[ dni=" + dni + " ]";
     }
     
 }

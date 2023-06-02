@@ -100,6 +100,12 @@
         <action name="eventos" class="actions.eventoAction">
             <result name="success">/creadorEvento.jsp</result>
         </action>
+<<<<<<< HEAD
+=======
+        <action name="irPerfil" class="actions.eventoAction" method="irAPerfil">
+            <result name="success">/perfil.jsp</result>
+        </action>
+>>>>>>> Juan
 	  <action name="loginCheck" class="actions.GestionUser" >
             <result name="success">/main.jsp</result>      
            <result name="error" >/login.jsp</result> 

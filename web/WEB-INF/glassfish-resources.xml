@@ -10,5 +10,9 @@
         <property name="URL" value="jdbc:mysql://localhost:3306/uparty?zeroDateTimeBehavior=convertToNull"/>
         <property name="driverClass" value="com.mysql.jdbc.Driver"/>
     </jdbc-connection-pool>
+<<<<<<< HEAD
+=======
+    <jdbc-resource enabled="true" jndi-name="java:app/a" object-type="user" pool-name="mysql_uparty_rootPool"/>
+>>>>>>> Juan
     <jdbc-resource enabled="true" jndi-name="java:app/Uparty" object-type="user" pool-name="mysql_uparty_rootPool"/>
 </resources>

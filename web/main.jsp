@@ -8,11 +8,13 @@
 	<title>Organización de eventos</title>
 </head>
 <body>
+    <div class="all">
 	<header >
 		
 		<nav class="naveg">
                     <h1 class="logo">U<span>party</span> </h1>
 			<ul class="navbar">
+<<<<<<< HEAD
 <<<<<<< HEAD
 				<li><a href="#eventos">Eventos</a></li>
 				<li><a href="#decoracion">Decoración</a></li>
@@ -21,17 +23,25 @@
 				<li><a href="#audiovisuales">Audiovisuales</a></li>
 				<li><a href="#empresas">Empresas</a></li>
 =======
+=======
+>>>>>>> Juan
 				<li><a href="eventos.jsp">Eventos</a></li>
 				<li><a href="decoracion.jsp">Decoración</a></li>
 				<li><a href="musica.jsp">Música</a></li>
 				<li><a href="catering.jsp">Catering</a></li>
 				<li><a href="audiovisuales.jsp">Audiovisuales</a></li>
 				<li><a href="empresas.jsp">Empresas</a></li>
+<<<<<<< HEAD
                                  <%= session.getAttribute("Usuario") %>
 >>>>>>> Alejandro
 <s:form action="unlog" theme="simple" >
                                 <s:submit cssClass="login" name="unlog" value="Cerrar Sesion"/>
                                 </s:form>
+=======
+<s:form action="irPerfil" theme="simple" >
+                                <s:submit cssClass="login" name="irperfil" value="Ver Perfil"/>
+                            </s:form>
+>>>>>>> Juan
 			</ul>
 		</nav>
 	</header>
@@ -116,5 +126,6 @@
         </section>
         </footer>
     </main>
+    </div>
     </body>
 </html>

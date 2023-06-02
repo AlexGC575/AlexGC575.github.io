@@ -1,7 +1,13 @@
 <%-- 
+<<<<<<< HEAD
     Document   : perfil
     Created on : Jun 1, 2023, 4:33:29 AM
     Author     : User
+=======
+    Document   : perfil.jsp
+    Created on : 01-jun-2023, 18:59:09
+    Author     : juanl
+>>>>>>> Juan
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -12,6 +18,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+<<<<<<< HEAD
         <header >
 		
 		<nav class="naveg">
@@ -29,5 +36,8 @@
 			</ul>
 		</nav>
 	</header>
+=======
+        <h1>Hello World!</h1>
+>>>>>>> Juan
     </body>
 </html>

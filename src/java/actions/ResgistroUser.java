@@ -5,7 +5,7 @@
  * and open the template in the editor.
  */
 package actions;
-
+import javax.ws.rs.core.GenericType;
 import static com.opensymphony.xwork2.Action.ERROR;
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
@@ -16,8 +16,9 @@ import com.opensymphony.xwork2.validator.annotations.IntRangeFieldValidator;
 import com.opensymphony.xwork2.validator.annotations.RequiredFieldValidator;
 import com.opensymphony.xwork2.validator.annotations.RequiredStringValidator;
 import com.opensymphony.xwork2.validator.annotations.StringLengthFieldValidator;
-import evento.Almacen;
-import evento.Usuario;
+import entidades.*;
+
+
 import java.util.Date;
 import java.util.Map;
 import javax.servlet.http.HttpSession;
@@ -131,7 +132,7 @@ public class ResgistroUser extends ActionSupport implements SessionAware{
      HttpSession session=ServletActionContext.getRequest().getSession(false);
         Almacen alm=new Almacen();
         Usuario user=new Usuario(this.getEmail(),this.getPassregister(),this.getNombre(),this.getApellidos(),this.getFecha(),this.getTlfn());
-        alm.altaUser(user);
+        alm.altaUser(this.getEmail(),this.getPassregister(),this.getNombre(),this.getApellidos(),this.getFecha(),this.getTlfn());
         sessionMap.put("Usuario", user.getEmail());
         return SUCCESS;
     

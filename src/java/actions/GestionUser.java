@@ -12,8 +12,8 @@ import com.opensymphony.xwork2.validator.annotations.DateRangeFieldValidator;
 import com.opensymphony.xwork2.validator.annotations.EmailValidator;
 import com.opensymphony.xwork2.validator.annotations.RequiredStringValidator;
 import com.opensymphony.xwork2.validator.annotations.StringLengthFieldValidator;
-import evento.Almacen;
-import evento.Usuario;
+import entidades.*;
+
 import java.util.Date;
 import java.util.Map;
 import javax.servlet.http.HttpSession;
@@ -73,8 +73,8 @@ public class GestionUser extends ActionSupport implements SessionAware{
    
         Almacen alm=new Almacen();
        Usuario user=alm.compruebaUser(this.getUsuario(),this.getPassword());
-        if(user!=null){
-            sessionMap.put("Usuario", user);
+        if(user!=null&&user.getContrasenya().equals(this.getPassword())){
+            sessionMap.put("Usuario", this.getUsuario());
             
             return SUCCESS;
         }

@@ -9,11 +9,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!--<link rel="stylesheet" href="crearEvnt.css">
-        --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="eventos.css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Fiestas</title>
     </head>
     <body>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         <header >
@@ -34,6 +35,25 @@
 		</nav>
 	</header>
 >>>>>>> Alejandro
+=======
+        <header >
+
+                <nav class="naveg">
+                    <h1 class="logo">U<span>party</span> </h1>
+                    <ul class="navbar">
+                        <li><a href="eventos.jsp">Eventos</a></li>
+                        <li><a href="decoracion.jsp">Decoración</a></li>
+                        <li><a href="musica.jsp">Música</a></li>
+                        <li><a href="catering.jsp">Catering</a></li>
+                        <li><a href="audiovisuales.jsp">Audiovisuales</a></li>
+                        <li><a href="empresas.jsp">Empresas</a></li>
+                            <s:form action="irPerfil" theme="simple" >
+                                <s:submit cssClass="login" name="irperfil" value="Ver Perfil"/>
+                            </s:form>
+                    </ul>
+                </nav>
+            </header>
+>>>>>>> Juan
         <h1>Fiestas</h1>
         <s:form action="fiesta">
             <s:iterator value="especializaciones" var="e">

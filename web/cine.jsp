@@ -14,9 +14,7 @@
         <title>Cines</title>
     </head>
     <body>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
         <header >
 		
 		<nav class="naveg">
@@ -34,8 +32,7 @@
 			</ul>
 		</nav>
 	</header>
->>>>>>> Alejandro
-=======
+
         <header >
 
                 <nav class="naveg">
@@ -53,7 +50,7 @@
                     </ul>
                 </nav>
             </header>
->>>>>>> Juan
+
         <h1>Cines</h1>
         <s:form action="cine">
             <s:iterator value="especializaciones" var="e">
@@ -63,13 +60,13 @@
                     <li>Música: <s:property value="#e.musica"/></li>
                     <li>Decoración: <s:property value="#e.decoracion"/></li>
                     <li>Audiovisuales: <s:property value="#e.audiovisuales"/></li>
-<<<<<<< HEAD
+
                     <li>Religión: <s:property value="#e.religion"/></li>
-=======
+
                     <s:if test="%{#e.religion != ''}">
                     <li>Religión: <s:property value="#e.religion"/></li>
                     </s:if>
->>>>>>> Alejandro
+
                     <li>Precio estándar: <s:property value="#e.precio"/></li>
                 </details>
                 <s:radio id="radio" name="elegirCine" list="#e.getNombre()"/>

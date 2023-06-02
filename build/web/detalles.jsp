@@ -110,6 +110,7 @@
                 </details>
                 <s:radio id="radio2" name="elegirPatrocinador" list="#p.getNombre()" disabled="true" onclick="checkPrice()"/>
             </s:iterator> 
+            <s:hidden name="tipo" value="%{eventos}"/>
             <s:hidden name="especializacion" value="%{especializacion.nombre}"/>
             <s:hidden name="session" value="%{#session.Usuario}"/>
             <s:label name="precio" id="precio" label="Precio final" value="%{especializacion.precio}"/><br/>

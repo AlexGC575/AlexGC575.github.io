@@ -47,6 +47,16 @@ public class Almacen {
         return u;
     }
     
+    public List<Empresa> consultaEmpresas() throws SQLException{
+        session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        List<Empresa> le = new ArrayList();
+        org.hibernate.Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("from Empresa");
+        le = q.list();
+        tx.commit();
+        return le;
+    }
+    
     public List<String> consultaTipos() throws SQLException{
         session = NewHibernateUtil.getSessionFactory().getCurrentSession();
         List<Tipo> lc = new ArrayList();
@@ -60,6 +70,16 @@ public class Almacen {
             l.add(i.next().getNombre());         
         }
         return l;
+    }
+    
+    public Tipo consultaTipo(String tipo) throws SQLException{
+        session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        Tipo t = null;
+        org.hibernate.Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("from Tipo where nombre = '" + tipo +"'");
+        t = (Tipo)q.uniqueResult();
+        tx.commit();
+        return t;
     }
     
     public List<Especializacion> consultaEspecializaciones (String tipo)throws SQLException {

@@ -32,21 +32,16 @@
 		</nav>
 	</header>
         <h1>Eventos</h1>
+
+        <label>Personaliza tu evento:</label>
         <s:form action="eventoP">
-            <s:iterator value="especializaciones" var="e">
-                <details>
-                    <summary>Evento <s:property value="#e.nombre"/></summary>
-                    <li>Cátering: <s:property value="#e.catering"/></li>
-                    <li>Música: <s:property value="#e.musica"/></li>
-                    <li>Decoración: <s:property value="#e.decoracion"/></li>
-                    <li>Audiovisuales: <s:property value="#e.audiovisuales"/></li>
-                    <s:if test="%{#e.religion != ''}">
-                    <li>Religión: <s:property value="#e.religion"/></li>
-                    </s:if>
-                    <li>Precio estándar: <s:property value="#e.precio"/></li>
-                </details>
-                <s:radio id="radio" name="elegirEventoP" list="#e.getNombre()"/>
-            </s:iterator>
+                Evento: <s:select name="eventos" id="eventos" list="%{tipos}"/>
+                Cátering: <s:select name="eCat" id="eCat" list="%{empresasC.{nombre}}"/>
+                <label>Música:</label> <s:select name="eMus" id="eMus" list="%{empresasM.{nombre}}"/>
+                Decoración: <s:select name="eDec" id="eDec" list="%{empresasD.{nombre}}"/>
+                Audiovisuales: <s:select name="eAud" id="eAud" list="%{empresasA.{nombre}}"/>
+                Precio estándar: <s:property value="%{precio}"/>
+                <s:hidden name="precio" value="%{precio}"/>
             <s:submit name="eventoPTrigger" value="Especificar detalles"/>
         </s:form>
     </body>

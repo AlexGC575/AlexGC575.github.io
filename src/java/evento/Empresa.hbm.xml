@@ -8,9 +8,6 @@
             <column name="nombre" length="30" />
             <generator class="assigned" />
         </id>
-        <property name="dia" type="string">
-            <column name="dia" length="7" not-null="true" />
-        </property>
         <property name="categoria" type="string">
             <column name="categoria" length="30" not-null="true" />
         </property>

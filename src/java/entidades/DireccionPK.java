@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author juanl
+ * @author User
  */
 @Embeddable
 public class DireccionPK implements Serializable {

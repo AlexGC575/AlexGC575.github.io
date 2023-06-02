@@ -14,15 +14,16 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author juanl
+ * @author User
  */
 @Embeddable
 public class PagoPK implements Serializable {
 
     @Basic(optional = false)
     @NotNull
+    @Size(min = 1, max = 16)
     @Column(name = "tarjetoCredito")
-    private long tarjetoCredito;
+    private String tarjetoCredito;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 30)
@@ -32,16 +33,16 @@ public class PagoPK implements Serializable {
     public PagoPK() {
     }
 
-    public PagoPK(long tarjetoCredito, String usuario) {
+    public PagoPK(String tarjetoCredito, String usuario) {
         this.tarjetoCredito = tarjetoCredito;
         this.usuario = usuario;
     }
 
-    public long getTarjetoCredito() {
+    public String getTarjetoCredito() {
         return tarjetoCredito;
     }
 
-    public void setTarjetoCredito(long tarjetoCredito) {
+    public void setTarjetoCredito(String tarjetoCredito) {
         this.tarjetoCredito = tarjetoCredito;
     }
 
@@ -56,7 +57,7 @@ public class PagoPK implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (int) tarjetoCredito;
+        hash += (tarjetoCredito != null ? tarjetoCredito.hashCode() : 0);
         hash += (usuario != null ? usuario.hashCode() : 0);
         return hash;
     }
@@ -68,7 +69,7 @@ public class PagoPK implements Serializable {
             return false;
         }
         PagoPK other = (PagoPK) object;
-        if (this.tarjetoCredito != other.tarjetoCredito) {
+        if ((this.tarjetoCredito == null && other.tarjetoCredito != null) || (this.tarjetoCredito != null && !this.tarjetoCredito.equals(other.tarjetoCredito))) {
             return false;
         }
         if ((this.usuario == null && other.usuario != null) || (this.usuario != null && !this.usuario.equals(other.usuario))) {

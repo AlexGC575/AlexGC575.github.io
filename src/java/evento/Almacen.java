@@ -38,6 +38,28 @@ public class Almacen {
         return u;
     }
     
+<<<<<<< HEAD
+=======
+    public Usuario consultaUsuario(String user){
+        session=NewHibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx=session.beginTransaction();
+        Query q=session.createQuery("From Usuario where email='"+user+"'");
+        Usuario u = (Usuario)q.uniqueResult();
+        tx.commit();
+        return u;
+    }
+    
+    public List<Empresa> consultaEmpresas() throws SQLException{
+        session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        List<Empresa> le = new ArrayList();
+        org.hibernate.Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("from Empresa");
+        le = q.list();
+        tx.commit();
+        return le;
+    }
+    
+>>>>>>> Alejandro
     public List<String> consultaTipos() throws SQLException{
         session = NewHibernateUtil.getSessionFactory().getCurrentSession();
         List<Tipo> lc = new ArrayList();
@@ -53,12 +75,62 @@ public class Almacen {
         return l;
     }
     
+    public Tipo consultaTipo(String tipo) throws SQLException{
+        session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        Tipo t = null;
+        org.hibernate.Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("from Tipo where nombre = '" + tipo +"'");
+        t = (Tipo)q.uniqueResult();
+        tx.commit();
+        return t;
+    }
+    
     public List<Especializacion> consultaEspecializaciones (String tipo)throws SQLException {
        session = NewHibernateUtil.getSessionFactory().getCurrentSession();
        List<Especializacion> l = new ArrayList();
        org.hibernate.Transaction tx = session.beginTransaction();
        Query q = session.createQuery("from Especializacion where tipo = '" + tipo +"'");
        l = q.list();
+       tx.commit();
+       return l;
+    }
+    
+    public List<Patrocinador> consultaPatrocinadores ()throws SQLException {
+       session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+       List<Patrocinador> l = new ArrayList();
+       org.hibernate.Transaction tx = session.beginTransaction();
+       Query q = session.createQuery("from Patrocinador");
+       l = q.list();
+       tx.commit();
+       return l;
+    }
+    
+    public Patrocinador consultaPatrocinador (String nombre)throws SQLException {
+       session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+       Patrocinador p = null;
+       org.hibernate.Transaction tx = session.beginTransaction();
+       Query q = session.createQuery("from Patrocinador where nombre = '" + nombre +"'");
+       p = (Patrocinador) q.uniqueResult();
+       tx.commit();
+       return p;
+    }
+    
+    public List<Lugar> consultaLugares ()throws SQLException {
+       session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+       List<Lugar> l = new ArrayList();
+       org.hibernate.Transaction tx = session.beginTransaction();
+       Query q = session.createQuery("from Lugar");
+       l = q.list();
+       tx.commit();
+       return l;
+    }
+    
+    public Lugar consultaLugar (String nombre)throws SQLException {
+       session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+       Lugar l = null;
+       org.hibernate.Transaction tx = session.beginTransaction();
+       Query q = session.createQuery("from Lugar where nombre = '" + nombre +"'");
+       l = (Lugar) q.uniqueResult();
        tx.commit();
        return l;
     }
@@ -73,10 +145,33 @@ public class Almacen {
        return e;
     }
     
+<<<<<<< HEAD
+=======
+    public Pago consultaTarjeta (String nombre)throws SQLException {
+       session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+       Pago p = null;
+       org.hibernate.Transaction tx = session.beginTransaction();
+       Query q = session.createQuery("from Pago where usuario = '" + nombre +"'");
+       p = (Pago) q.uniqueResult();
+       tx.commit();
+       return p;
+    }
+    
+>>>>>>> Alejandro
     public void altaUser(Usuario user) {
         session=NewHibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx=session.beginTransaction();
         session.save(user);
         tx.commit();
     }
+<<<<<<< HEAD
+=======
+    
+    public void altaEvento(Evento e) {
+        session=NewHibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx=session.beginTransaction();
+        session.save(e);
+        tx.commit();
+    }
+>>>>>>> Alejandro
 }

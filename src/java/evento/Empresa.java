@@ -12,7 +12,6 @@ public class Empresa  implements java.io.Serializable {
 
 
      private String nombre;
-     private String dia;
      private String categoria;
      private String descripcion;
      private int valoracion;
@@ -23,16 +22,14 @@ public class Empresa  implements java.io.Serializable {
     }
 
 	
-    public Empresa(String nombre, String dia, String categoria, String descripcion, int valoracion) {
+    public Empresa(String nombre, String categoria, String descripcion, int valoracion) {
         this.nombre = nombre;
-        this.dia = dia;
         this.categoria = categoria;
         this.descripcion = descripcion;
         this.valoracion = valoracion;
     }
-    public Empresa(String nombre, String dia, String categoria, String descripcion, int valoracion, Set contactos, Set eventos) {
+    public Empresa(String nombre, String categoria, String descripcion, int valoracion, Set contactos, Set eventos) {
        this.nombre = nombre;
-       this.dia = dia;
        this.categoria = categoria;
        this.descripcion = descripcion;
        this.valoracion = valoracion;
@@ -47,13 +44,7 @@ public class Empresa  implements java.io.Serializable {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public String getDia() {
-        return this.dia;
-    }
-    
-    public void setDia(String dia) {
-        this.dia = dia;
-    }
+
     public String getCategoria() {
         return this.categoria;
     }

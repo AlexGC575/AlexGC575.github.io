@@ -13,9 +13,13 @@
         <title>RedSys</title>
     </head>
     <body>
+        <s:property value="pago.tarjetoCredito"/>
+        <s:property value="#pago.tarjetoCredito"/>
+        <s:iterator value="pago" var="p">
+            Tarjeta de Crédito: <s:property value="#p.tarjetoCredito"/><br/>
+            Fecha de Caducidad: <s:property value="#p.caducidad"/><br/>
+        </s:iterator>
         <s:form action="pago">
-            <s:textfield name="tCredito" label="Tarjeta de crédito"/><br/>
-            <s:textfield name="fechaC" label="Fecha de caducidad"/><br/>
             <s:textfield name="pin" label="Número secreto"/><br/>
             <s:submit name="pagoTrigger" value="Pagar"/>
         </s:form>

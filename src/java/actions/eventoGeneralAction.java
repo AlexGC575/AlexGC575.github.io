@@ -9,7 +9,10 @@ import static com.opensymphony.xwork2.Action.ERROR;
 import com.opensymphony.xwork2.ActionSupport;
 import evento.Almacen;
 import evento.Especializacion;
+import evento.Lugar;
+import evento.Patrocinador;
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  *
@@ -26,6 +29,8 @@ public class eventoGeneralAction extends ActionSupport {
     private String elegirFiesta;
     private String elegirEventoP;
     private Especializacion especializacion;
+    private List<Lugar> lugares;
+    private List<Patrocinador> patrocinadores;
 
     public String getElegirBoda() {
         return elegirBoda;
@@ -99,6 +104,22 @@ public class eventoGeneralAction extends ActionSupport {
         this.elegirEventoP = elegirEventoP;
     }
 
+    public List<Lugar> getLugares() {
+        return lugares;
+    }
+
+    public void setLugares(List<Lugar> lugares) {
+        this.lugares = lugares;
+    }
+
+    public List<Patrocinador> getPatrocinadores() {
+        return patrocinadores;
+    }
+
+    public void setPatrocinadores(List<Patrocinador> patrocinadores) {
+        this.patrocinadores = patrocinadores;
+    }
+
     public Especializacion getEspecializacion() {
         return especializacion;
     }
@@ -115,6 +136,8 @@ public class eventoGeneralAction extends ActionSupport {
         
         if(this.getElegirBoda().equals("al aire libre") || this.getElegirBoda().equals("religiosa") || this.getElegirBoda().equals("minimalista") || this.getElegirBoda().equals("civil")){
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirBoda()));
+            this.setLugares(a.consultaLugares());
+            this.setPatrocinadores(a.consultaPatrocinadores());
             return SUCCESS;
         }
         return ERROR;
@@ -125,6 +148,8 @@ public class eventoGeneralAction extends ActionSupport {
         
         if(this.getElegirBautizo().equals("en las aguas") || this.getElegirBautizo().equals("con el Espíritu Santo") || this.getElegirBautizo().equals("de fuego")){
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirBautizo()));
+            this.setLugares(a.consultaLugares());
+            this.setPatrocinadores(a.consultaPatrocinadores());
             return SUCCESS;
         }
         return ERROR;
@@ -135,6 +160,8 @@ public class eventoGeneralAction extends ActionSupport {
         
         if(this.getElegirCine().equals("de verano") || this.getElegirCine().equals("en aparcamiento") || this.getElegirCine().equals("en centro comercial")){
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirCine()));
+            this.setLugares(a.consultaLugares());
+            this.setPatrocinadores(a.consultaPatrocinadores());
             return SUCCESS;
         }
         return ERROR;
@@ -145,6 +172,8 @@ public class eventoGeneralAction extends ActionSupport {
         
         if(this.getElegirComunion().equals("colectiva") || this.getElegirComunion().equals("uniformada") || this.getElegirComunion().equals("domiciliaria") || this.getElegirComunion().equals("simbólica")){
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirComunion()));
+            this.setLugares(a.consultaLugares());
+            this.setPatrocinadores(a.consultaPatrocinadores());
             return SUCCESS;
         }
         return ERROR;
@@ -155,6 +184,8 @@ public class eventoGeneralAction extends ActionSupport {
         
         if(this.getElegirConcierto().equals("benéfico") || this.getElegirConcierto().equals("clásico") || this.getElegirConcierto().equals("íntimo")){
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirConcierto()));
+            this.setLugares(a.consultaLugares());
+            this.setPatrocinadores(a.consultaPatrocinadores());
             return SUCCESS;
         }
         return ERROR;
@@ -165,6 +196,8 @@ public class eventoGeneralAction extends ActionSupport {
         
         if(this.getElegirCumpleaños().equals("escape room") || this.getElegirCumpleaños().equals("paintball") || this.getElegirCumpleaños().equals("temática") || this.getElegirCumpleaños().equals("disfraces")){
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirCumpleaños()));
+            this.setLugares(a.consultaLugares());
+            this.setPatrocinadores(a.consultaPatrocinadores());
             return SUCCESS;
         }
         return ERROR;
@@ -175,6 +208,8 @@ public class eventoGeneralAction extends ActionSupport {
         
         if(this.getElegirDeporte().equals("halterofilia") || this.getElegirDeporte().equals("campeonato") || this.getElegirDeporte().equals("pachanga")){
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirDeporte()));
+            this.setLugares(a.consultaLugares());
+            this.setPatrocinadores(a.consultaPatrocinadores());
             return SUCCESS;
         }
         return ERROR;
@@ -185,14 +220,15 @@ public class eventoGeneralAction extends ActionSupport {
         
         if(this.getElegirFiesta().equals("\"legal\"") || this.getElegirFiesta().equals("social") || this.getElegirFiesta().equals("infantil")){
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirFiesta()));
+            this.setLugares(a.consultaLugares());
+            this.setPatrocinadores(a.consultaPatrocinadores());
             return SUCCESS;
         }
         return ERROR;
     }
     
     public String eventoP() throws SQLException{
-        Almacen a = new Almacen();
-        
+            
         return SUCCESS;
     }
     

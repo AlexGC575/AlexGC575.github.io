@@ -7,14 +7,7 @@ package actions;
 
 import static com.opensymphony.xwork2.Action.ERROR;
 import com.opensymphony.xwork2.ActionSupport;
-<<<<<<< HEAD
-import evento.Almacen;
-import evento.Especializacion;
-import evento.Lugar;
-import evento.Patrocinador;
-=======
 import entidades.*;
->>>>>>> Juan
 import java.sql.SQLException;
 import java.util.List;
 
@@ -163,11 +156,6 @@ public class eventoGeneralAction extends ActionSupport {
         this.elegirEventoP = elegirEventoP;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> Juan
     public List<Lugar> getLugares() {
         return lugares;
     }
@@ -184,10 +172,6 @@ public class eventoGeneralAction extends ActionSupport {
         this.patrocinadores = patrocinadores;
     }
 
-<<<<<<< HEAD
->>>>>>> Alejandro
-=======
->>>>>>> Juan
     public Especializacion getEspecializacion() {
         return especializacion;
     }
@@ -210,15 +194,6 @@ public class eventoGeneralAction extends ActionSupport {
         }
         return ERROR;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-    public String bautizo() throws SQLException{
-        Almacen a = new Almacen();
-        
-        if(this.getElegirBautizo().equals("en las aguas") || this.getElegirBautizo().equals("con el Espíritu Santo") || this.getElegirBautizo().equals("de fuego")){
-            this.setEspecializacion(a.consultaEspecializacion(this.getElegirBautizo()));
-=======
 
     public String bautizo() throws SQLException {
         Almacen a = new Almacen();
@@ -227,30 +202,10 @@ public class eventoGeneralAction extends ActionSupport {
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirBautizo()));
             this.setLugares(a.consultaLugares());
             this.setPatrocinadores(a.consultaPatrocinadores());
->>>>>>> Alejandro
-=======
-
-    public String bautizo() throws SQLException {
-        Almacen a = new Almacen();
-
-        if (this.getElegirBautizo().equals("en las aguas") || this.getElegirBautizo().equals("con el Espíritu Santo") || this.getElegirBautizo().equals("de fuego")) {
-            this.setEspecializacion(a.consultaEspecializacion(this.getElegirBautizo()));
-            this.setLugares(a.consultaLugares());
-            this.setPatrocinadores(a.consultaPatrocinadores());
->>>>>>> Juan
             return SUCCESS;
         }
         return ERROR;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-    public String cine() throws SQLException{
-        Almacen a = new Almacen();
-        
-        if(this.getElegirCine().equals("de verano") || this.getElegirCine().equals("en aparcamiento") || this.getElegirCine().equals("en centro comercial")){
-            this.setEspecializacion(a.consultaEspecializacion(this.getElegirCine()));
-=======
 
     public String cine() throws SQLException {
         Almacen a = new Almacen();
@@ -259,30 +214,10 @@ public class eventoGeneralAction extends ActionSupport {
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirCine()));
             this.setLugares(a.consultaLugares());
             this.setPatrocinadores(a.consultaPatrocinadores());
->>>>>>> Alejandro
-=======
-
-    public String cine() throws SQLException {
-        Almacen a = new Almacen();
-
-        if (this.getElegirCine().equals("de verano") || this.getElegirCine().equals("en aparcamiento") || this.getElegirCine().equals("en centro comercial")) {
-            this.setEspecializacion(a.consultaEspecializacion(this.getElegirCine()));
-            this.setLugares(a.consultaLugares());
-            this.setPatrocinadores(a.consultaPatrocinadores());
->>>>>>> Juan
             return SUCCESS;
         }
         return ERROR;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-    public String comunion() throws SQLException{
-        Almacen a = new Almacen();
-        
-        if(this.getElegirComunion().equals("colectiva") || this.getElegirComunion().equals("uniformada") || this.getElegirComunion().equals("domiciliaria") || this.getElegirComunion().equals("simbólica")){
-            this.setEspecializacion(a.consultaEspecializacion(this.getElegirComunion()));
-=======
 
     public String comunion() throws SQLException {
         Almacen a = new Almacen();
@@ -291,30 +226,10 @@ public class eventoGeneralAction extends ActionSupport {
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirComunion()));
             this.setLugares(a.consultaLugares());
             this.setPatrocinadores(a.consultaPatrocinadores());
->>>>>>> Alejandro
-=======
-
-    public String comunion() throws SQLException {
-        Almacen a = new Almacen();
-
-        if (this.getElegirComunion().equals("colectiva") || this.getElegirComunion().equals("uniformada") || this.getElegirComunion().equals("domiciliaria") || this.getElegirComunion().equals("simbólica")) {
-            this.setEspecializacion(a.consultaEspecializacion(this.getElegirComunion()));
-            this.setLugares(a.consultaLugares());
-            this.setPatrocinadores(a.consultaPatrocinadores());
->>>>>>> Juan
             return SUCCESS;
         }
         return ERROR;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-    public String concierto() throws SQLException{
-        Almacen a = new Almacen();
-        
-        if(this.getElegirConcierto().equals("benéfico") || this.getElegirConcierto().equals("clásico") || this.getElegirConcierto().equals("íntimo")){
-            this.setEspecializacion(a.consultaEspecializacion(this.getElegirConcierto()));
-=======
 
     public String concierto() throws SQLException {
         Almacen a = new Almacen();
@@ -323,50 +238,10 @@ public class eventoGeneralAction extends ActionSupport {
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirConcierto()));
             this.setLugares(a.consultaLugares());
             this.setPatrocinadores(a.consultaPatrocinadores());
->>>>>>> Alejandro
-=======
-
-    public String concierto() throws SQLException {
-        Almacen a = new Almacen();
-
-        if (this.getElegirConcierto().equals("benéfico") || this.getElegirConcierto().equals("clásico") || this.getElegirConcierto().equals("íntimo")) {
-            this.setEspecializacion(a.consultaEspecializacion(this.getElegirConcierto()));
-            this.setLugares(a.consultaLugares());
-            this.setPatrocinadores(a.consultaPatrocinadores());
->>>>>>> Juan
             return SUCCESS;
         }
         return ERROR;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-    public String cumpleaños() throws SQLException{
-        Almacen a = new Almacen();
-        
-        if(this.getElegirCumpleaños().equals("escape room") || this.getElegirCumpleaños().equals("paintball") || this.getElegirCumpleaños().equals("temática") || this.getElegirCumpleaños().equals("disfraces")){
-            this.setEspecializacion(a.consultaEspecializacion(this.getElegirCumpleaños()));
-            return SUCCESS;
-        }
-        return ERROR;
-    }
-    
-    public String deporte() throws SQLException{
-        Almacen a = new Almacen();
-        
-        if(this.getElegirDeporte().equals("halterofilia") || this.getElegirDeporte().equals("campeonato") || this.getElegirDeporte().equals("pachanga")){
-            this.setEspecializacion(a.consultaEspecializacion(this.getElegirDeporte()));
-            return SUCCESS;
-        }
-        return ERROR;
-    }
-    
-    public String fiesta() throws SQLException{
-        Almacen a = new Almacen();
-        
-        if(this.getElegirFiesta().equals("\"legal\"") || this.getElegirFiesta().equals("social") || this.getElegirFiesta().equals("infantil")){
-            this.setEspecializacion(a.consultaEspecializacion(this.getElegirFiesta()));
-=======
 
     public String cumpleaños() throws SQLException {
         Almacen a = new Almacen();
@@ -375,69 +250,10 @@ public class eventoGeneralAction extends ActionSupport {
             this.setEspecializacion(a.consultaEspecializacion(this.getElegirFiesta()));
             this.setLugares(a.consultaLugares());
             this.setPatrocinadores(a.consultaPatrocinadores());
->>>>>>> Alejandro
-=======
-
-    public String cumpleaños() throws SQLException {
-        Almacen a = new Almacen();
-
-        if (this.getElegirFiesta().equals("escape room") || this.getElegirFiesta().equals("paintball") || this.getElegirFiesta().equals("disfraces") || this.getElegirFiesta().equals("temática")) {
-            this.setEspecializacion(a.consultaEspecializacion(this.getElegirFiesta()));
-            this.setLugares(a.consultaLugares());
-            this.setPatrocinadores(a.consultaPatrocinadores());
->>>>>>> Juan
             return SUCCESS;
         }
         return ERROR;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-    public String eventoP() throws SQLException{
-=======
-
-    public String deporte() throws SQLException {
->>>>>>> Juan
-        Almacen a = new Almacen();
-
-        if (this.getElegirDeporte().equals("halterofilia") || this.getElegirDeporte().equals("campeonato") || this.getElegirDeporte().equals("pachanga")) {
-            this.setEspecializacion(a.consultaEspecializacion(this.getElegirDeporte()));
-            this.setLugares(a.consultaLugares());
-            this.setPatrocinadores(a.consultaPatrocinadores());
-            return SUCCESS;
-        }
-        return ERROR;
-    }
-
-    public String fiesta() throws SQLException {
-        Almacen a = new Almacen();
-
-        if (this.getElegirFiesta().equals("\"legal\"") || this.getElegirFiesta().equals("social") || this.getElegirFiesta().equals("infantil")) {
-            this.setEspecializacion(a.consultaEspecializacion(this.getElegirFiesta()));
-            this.setLugares(a.consultaLugares());
-            this.setPatrocinadores(a.consultaPatrocinadores());
-            return SUCCESS;
-        }
-        return ERROR;
-    }
-
-    public String eventoP() throws SQLException {
-        Almacen a = new Almacen();
-        Especializacion e = new Especializacion();
-
-        e.setTipo(a.consultaTipo(this.getEventos()));
-        e.setAudiovisuales(this.geteAud());
-        e.setCatering(this.geteCat());
-        e.setMusica(this.geteMus());
-        e.setDecoracion(this.geteDec());
-        this.setEspecializacion(e);
-        this.setLugares(a.consultaLugares());
-        this.setPatrocinadores(a.consultaPatrocinadores());
-        return SUCCESS;
-    }
-<<<<<<< HEAD
-    
-=======
 
     public String deporte() throws SQLException {
         Almacen a = new Almacen();
@@ -478,16 +294,8 @@ public class eventoGeneralAction extends ActionSupport {
         return SUCCESS;
     }
 
->>>>>>> Alejandro
-=======
-
->>>>>>> Juan
     public String execute() throws Exception {
         return SUCCESS;
     }
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> Juan

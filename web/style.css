@@ -69,8 +69,6 @@ header{
     align-items: center;
     min-height: 400px;
 }
-
-
 .princbox section{
     height:365px;
     width: 33%;
@@ -99,7 +97,6 @@ body{
     display: flex;
     align-items: center;
 }
-
 section.loginsec{
     
     display: flex;
@@ -219,4 +216,3 @@ footer{
 h1 .logo{
     font-weight: bold;
 }
-

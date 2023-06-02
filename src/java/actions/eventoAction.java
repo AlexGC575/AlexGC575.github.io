@@ -12,17 +12,7 @@ package actions;
 
 import com.opensymphony.xwork2.ActionSupport;
 import java.util.Random;
-<<<<<<< HEAD
-import evento.Almacen;
-import evento.Empresa;
-import evento.Especializacion;
-import evento.Evento;
-import evento.Pago;
-import evento.Tipo;
-import evento.Usuario;
-=======
 import entidades.*;
->>>>>>> Juan
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -216,7 +206,7 @@ public class eventoAction extends ActionSupport{
             return "CUM";  
         }else if(this.getElegirEvento().equals("Cine")){
             return "CI";  
-        }else if(this.getElegirEvento().equals("Comunion")){
+        }else if(this.getElegirEvento().equals("Comunión")){
             return "COM";  
         }else if(this.getElegirEvento().equals("Concierto")){
             return "CON";  

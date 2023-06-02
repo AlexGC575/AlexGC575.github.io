@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="login.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Organización de eventos</title>
 </head>
@@ -14,34 +14,16 @@
 		<nav class="naveg">
                     <h1 class="logo">U<span>party</span> </h1>
 			<ul class="navbar">
-<<<<<<< HEAD
-<<<<<<< HEAD
 				<li><a href="#eventos">Eventos</a></li>
 				<li><a href="#decoracion">Decoración</a></li>
 				<li><a href="#musica">Música</a></li>
 				<li><a href="#catering">Catering</a></li>
 				<li><a href="#audiovisuales">Audiovisuales</a></li>
 				<li><a href="#empresas">Empresas</a></li>
-=======
-=======
->>>>>>> Juan
-				<li><a href="eventos.jsp">Eventos</a></li>
-				<li><a href="decoracion.jsp">Decoración</a></li>
-				<li><a href="musica.jsp">Música</a></li>
-				<li><a href="catering.jsp">Catering</a></li>
-				<li><a href="audiovisuales.jsp">Audiovisuales</a></li>
-				<li><a href="empresas.jsp">Empresas</a></li>
-<<<<<<< HEAD
-                                 <%= session.getAttribute("Usuario") %>
->>>>>>> Alejandro
-<s:form action="unlog" theme="simple" >
-                                <s:submit cssClass="login" name="unlog" value="Cerrar Sesion"/>
-                                </s:form>
-=======
-<s:form action="irPerfil" theme="simple" >
+
+                                <s:form action="irPerfil" theme="simple" >
                                 <s:submit cssClass="login" name="irperfil" value="Ver Perfil"/>
-                            </s:form>
->>>>>>> Juan
+                                </s:form>
 			</ul>
 		</nav>
 	</header>

@@ -14,11 +14,7 @@
     </head>
     <body>
         <s:iterator value="pago" var="p">
-<<<<<<< HEAD
-            Tarjeta de Crédito: <s:property value="#p.id.tarjetoCredito"/><br/>
-=======
             Tarjeta de Crédito: <s:property value="#p.pagoPK.tarjetoCredito"/><br/>
->>>>>>> Juan
             Fecha de Caducidad: <s:property value="#p.caducidad"/><br/>
         </s:iterator>
         <s:form action="pago">

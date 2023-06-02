@@ -9,51 +9,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="eventos.css"/>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--<link rel="stylesheet" href="crearEvnt.css">
+        --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Comuniones</title>
     </head>
     <body>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        <header >
-		
-		<nav class="naveg">
-                    <h1 class="logo">U<span>party</span> </h1>
-			<ul class="navbar">
-				<li><a href="#eventos">Eventos</a></li>
-				<li><a href="#decoracion">Decoración</a></li>
-				<li><a href="#musica">Música</a></li>
-				<li><a href="#catering">Catering</a></li>
-				<li><a href="#audiovisuales">Audiovisuales</a></li>
-				<li><a href="#empresas">Empresas</a></li>
-<s:form action="unlog" theme="simple" >
-                                <s:submit cssClass="login" name="unlog" value="Cerrar Sesion"/>
-                                </s:form>
-			</ul>
-		</nav>
-	</header>
->>>>>>> Alejandro
-=======
-        <header >
-
-                <nav class="naveg">
-                    <h1 class="logo">U<span>party</span> </h1>
-                    <ul class="navbar">
-                        <li><a href="eventos.jsp">Eventos</a></li>
-                        <li><a href="decoracion.jsp">Decoración</a></li>
-                        <li><a href="musica.jsp">Música</a></li>
-                        <li><a href="catering.jsp">Catering</a></li>
-                        <li><a href="audiovisuales.jsp">Audiovisuales</a></li>
-                        <li><a href="empresas.jsp">Empresas</a></li>
-                            <s:form action="irPerfil" theme="simple" >
-                                <s:submit cssClass="login" name="irperfil" value="Ver Perfil"/>
-                            </s:form>
-                    </ul>
-                </nav>
-            </header>
->>>>>>> Juan
         <h1>Comuniones</h1>
         <s:form action="comunion">
             <s:iterator value="especializaciones" var="e">
@@ -63,13 +23,7 @@
                     <li>Música: <s:property value="#e.musica"/></li>
                     <li>Decoración: <s:property value="#e.decoracion"/></li>
                     <li>Audiovisuales: <s:property value="#e.audiovisuales"/></li>
-<<<<<<< HEAD
                     <li>Religión: <s:property value="#e.religion"/></li>
-=======
-                    <s:if test="%{#e.religion != ''}">
-                    <li>Religión: <s:property value="#e.religion"/></li>
-                    </s:if>
->>>>>>> Alejandro
                     <li>Precio estándar: <s:property value="#e.precio"/></li>
                 </details>
                 <s:radio id="radio" name="elegirComunion" list="#e.getNombre()"/>

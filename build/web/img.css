@@ -11,15 +11,12 @@
     align-items:  center;
      display:flex;
 }
-<<<<<<< HEAD
-=======
 .all{
     width: 100%;
     justify-content: center;
     align-items:  center;
     
 }
->>>>>>> Juan
 .container{
     width: 410px;
     height: 410px;

@@ -9,26 +9,38 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!--<link rel="stylesheet" href="crearEvnt.css">
-        --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="eventos.css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Bodas</title>
     </head>
     <body>
-        <h1>Bodas</h1>
+        <div class="tabla">
+     
+             
         <s:form action="boda">
+            <h2>Bodas</h2>
             <s:iterator value="especializaciones" var="e">
-                <details>
+            
+                <details class="styled">
+                   
                     <summary>Boda <s:property value="#e.nombre"/></summary>
+                    <div >
                     <li>Cátering: <s:property value="#e.catering"/></li>
                     <li>Música: <s:property value="#e.musica"/></li>
                     <li>Decoración: <s:property value="#e.decoracion"/></li>
                     <li>Audiovisuales: <s:property value="#e.audiovisuales"/></li>
                     <li>Religión: <s:property value="#e.religion"/></li>
                     <li>Precio estándar: <s:property value="#e.precio"/></li>
+                    </div>
                 </details>
+              
+                
                 <s:radio id="radio" name="elegirBoda" list="#e.getNombre()"/>
             </s:iterator>
-            <s:submit name="bodaTrigger" value="Especificar detalles"/>
+            <s:submit cssClass="login" name="bodaTrigger" value="Especificar detalles"/>
         </s:form>
+        
+
+    </div>
     </body>
 </html>

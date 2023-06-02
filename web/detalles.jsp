@@ -9,18 +9,72 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="register.css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Detalles (nombre evento)</title>
     </head>
-    <body>
-        <s:form action="detallesEvento">
-            <s:textfield name="lugar" label="Lugar"/><br/>Lista de lugares y si no introduzca su propia direccion
-            <s:textfield name="fecha" label="Fecha"/><br/>
-            <s:textfield name="horaI" label="Hora inicio"/><br/>
-            <s:textfield name="horaF" label="Hora fin"/><br/>
-            <s:textfield name="patrocinador" label="Patrocinador"/><br/>
-            <s:textfield name="precio" label="Precio final"/><br/>
-            <s:submit name="bodaTrigger" value="Especificar detalles"/>
+
+        
+       <body>
+        
+     
+         <section>
+            <div class="form-box">
+                <div class="form-value">
+                    <s:form action="detallesEvento" theme="simple">
+            <h2>Detalles</h2>
+            
+            <div class="inputbox">
+                <ion-icon name="business-outline"></ion-icon>
+               
+              <s:textfield name="lugar"/>
+            
+            <label for=""><s:fielderror fieldName="lugar"/> Lugar:</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="calendar-outline"></ion-icon>
+               <s:textfield name="fecha"/>
+           
+            <label for=""><s:fielderror fieldName="fecha"/>Fecha:</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="alarm-outline"></ion-icon>
+               <s:textfield name="horaI"/>
+            
+            <label for=""><s:fielderror fieldName="horaI"/>Hora Inicio:</label>
+            </div>
+            <div class="inputbox">
+                
+                <ion-icon name="alarm-outline"></ion-icon>
+                
+                <s:textfield name="horaF"/>
+           <!-- <input type="date" name="fecha"/> -->
+            <label for=""><s:fielderror fieldName="horaF"/>Hora Fin:</label>
+            </div>
+           
+            <div class="inputbox">
+                <ion-icon name="accessibility-outline"></ion-icon>
+               <s:textfield name="patrocinador"/>
+          
+            <label for=""><s:fielderror fieldName="patrocinador"/>Patrocinador:</label>
+            </div>
+            <div class="inputbox">
+                
+                <ion-icon name="journal-outline"></ion-icon>
+               <s:textfield name="precio"/>
+            <ion-icon name="lock-closed-outline"></ion-icon>
+             <label for=""><s:fielderror fieldName="precio"/>Precio:</label>
+            </div>
+            
+            <s:submit cssClass="login" name="bodaTrigger" value="Especificar Detalles"/>
+           
         </s:form>
+                  
+                </div>
+            </div>
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        </section> 
     </body>
+    
 </html>

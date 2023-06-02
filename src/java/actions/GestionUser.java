@@ -72,7 +72,7 @@ public class GestionUser extends ActionSupport implements SessionAware{
    
         Almacen alm=new Almacen();
        Usuario user=alm.compruebaUser(this.getUsuario(),this.getPassword());
-        if(user!=null){
+        if(user!=null&&user.getContrasenya().equals(this.getPassword())){
             sessionMap.put("Usuario", user);
             
             return SUCCESS;

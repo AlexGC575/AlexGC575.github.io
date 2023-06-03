@@ -43,6 +43,13 @@ public class Almacen {
         return (Usuario) client.find_XML(genericType, user);
     }
     
+    public List<Resenya> consultaResenyas() throws SQLException{
+        ClienteResenya client = new ClienteResenya();
+        GenericType<List<Resenya>> genericType = new GenericType<List<Resenya>>() {
+        };
+        return client.findAll_XML(genericType);
+    }
+    
     public List<Empresa> consultaEmpresas() throws SQLException{
         ClienteEmpresa client = new ClienteEmpresa();
         GenericType<List<Empresa>> genericType = new GenericType<List<Empresa>>() {
@@ -117,6 +124,13 @@ public class Almacen {
     public void altaEvento(Evento e) {
         ClienteEvento event = new ClienteEvento();
         event.create_XML(e);
+    }
+    
+    public void altaResenya(int id, int calificacion,String titulo, String opinion, Usuario u) {
+        ClienteEvento event = new ClienteEvento();
+        Resenya r = new Resenya(id,calificacion,titulo,opinion);
+        r.setUsuario(u);
+        event.create_XML(r);
     }
     
     public List<Especializacion> consultaEspecializaciones(String tipo) throws SQLException {

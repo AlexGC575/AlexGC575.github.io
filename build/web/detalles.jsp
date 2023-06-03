@@ -32,7 +32,7 @@
             }
             function checkPatron() {
             <s:iterator value="patrocinadores" var="p">
-                if (document.getElementById("inv").value >= <s:property value="#p.ninvitados"/>) {
+                if (document.getElementById("inv").value >= <s:property value="#p.NInvitados"/>) {
                         document.getElementById("radio2" + "<s:property value="#p.nombre"/>").removeAttribute('disabled');
                 } else {
                         document.getElementById("radio2" + "<s:property value="#p.nombre"/>").setAttribute('disabled', true);
@@ -99,19 +99,22 @@
             <s:textfield name="horaF" label="Hora fin"/><br/>
             </s:form>
             
-            <s:form action="detallesEvento">
-            <s:textfield id="inv" name="inv" label="Número de invitados" onchange='checkPatron()'/><br/>
+            <s:form action="detallesEvento" >
+            <s:textfield id="inv" name="invitados" label="Número de invitados" onchange='checkPatron()'/><br/>
             <s:iterator value="patrocinadores" var="p">
                 <details>
                     <summary><s:property value="#p.nombre"/></summary>
                     <li>Descuento: <s:property value="#p.descuento"/>%</li>
-                    <li>Invitados necesarios: <s:property value="#p.ninvitados"/></li>
+                    <li>Invitados necesarios: <s:property value="#p.NInvitados"/></li>
                     <li>Email: <s:property value="#p.email"/></li>
                 </details>
                 <s:radio id="radio2" name="elegirPatrocinador" list="#p.getNombre()" disabled="true" onclick="checkPrice()"/>
             </s:iterator> 
-            <s:hidden name="tipo" value="%{eventos}"/>
-            <s:hidden name="especializacion" value="%{especializacion.nombre}"/>
+            <s:hidden name="espT" value="%{especializacion.tipo.nombre}"/>
+            <s:hidden name="espA" value="%{especializacion.audiovisuales}"/>
+            <s:hidden name="espC" value="%{especializacion.catering}"/>
+            <s:hidden name="espM" value="%{especializacion.musica}"/>
+            <s:hidden name="espD" value="%{especializacion.decoracion}"/>
             <s:hidden name="session" value="%{#session.Usuario}"/>
             <s:label name="precio" id="precio" label="Precio final" value="%{especializacion.precio}"/><br/>
             <s:submit name="bodaTrigger" value="Confirmar evento"/>

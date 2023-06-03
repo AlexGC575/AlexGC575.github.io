@@ -55,7 +55,7 @@
         <action name="concierto" class="actions.eventoGeneralAction" method="concierto">
             <result name="success">/detalles.jsp</result>
         </action>       
-        <action name="cumpleaños" class="actions.eventoGeneralAction" method="cumpleaños">
+        <action name="cumpleaños" class="actions.eventoGeneralAction" method="cumpleanyos">
             <result name="success">/detalles.jsp</result>
         </action>        
         <action name="deporte" class="actions.eventoGeneralAction" method="deporte">
@@ -69,7 +69,6 @@
         </action>
         <action name="detallesEvento" class="actions.eventoAction" method="detalles">
             <result name="success">/pago.jsp</result>
-            <result name="input">/detalles.jsp</result>
         </action>
         <action name="pago" class="actions.eventoAction" method="pago">
             <result name="success">/detallesPago.jsp</result>

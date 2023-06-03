@@ -46,14 +46,14 @@
                 <s:label name="evento" value="Evento:"></s:label>
                 <s:select name="eventos" id="eventos" list="%{tipos}" onchange="checkPrice()"/>
                 <s:label name="catering" value="Cátering:"></s:label>
-                <s:select name="eCat" id="eCat" list="%{empresasC.{nombre}}" onchange="checkPrice()"/>
+                <s:select name="c" id="cat" list="%{empresasC.{nombre}}" onchange="checkPrice()"/>
                 <s:label name="musica" value="Música:"></s:label>
-                <s:select name="eMus" id="eMus" list="%{empresasM.{nombre}}" onchange="checkPrice()"/>
+                <s:select name="m" id="mus" list="%{empresasM.{nombre}}" onchange="checkPrice()"/>
                 <s:label name="decoracion" value="Decoración:"></s:label>
-                <s:select name="eDec" id="eDec" list="%{empresasD.{nombre}}" onchange="checkPrice()"/>
+                <s:select name="d" id="dec" list="%{empresasD.{nombre}}" onchange="checkPrice()"/>
                 <s:label name="audiovisuales" value="Audiovisuales:"></s:label>
-                <s:select name="eAud" id="eAud" list="%{empresasA.{nombre}}" onchange="checkPrice()"/>
-                <s:label name="precio" id="precio" value="Precio: %{precio}"/>
+                <s:select name="a" id="aud" list="%{empresasA.{nombre}}" onchange="checkPrice()"/>
+                <s:label name="pre" id="precio" value="Precio: %{precio}"/>
                 <s:hidden name="precio" value="%{precio}"/>
             <s:submit name="eventoPTrigger" value="Especificar detalles"/>
         </s:form>

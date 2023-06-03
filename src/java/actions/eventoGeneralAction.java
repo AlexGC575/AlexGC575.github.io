@@ -18,10 +18,10 @@ import java.util.List;
 public class eventoGeneralAction extends ActionSupport {
 
     private String eventos;
-    private String eCat;
-    private String eMus;
-    private String eDec;
-    private String eAud;
+    private String c;
+    private String m;
+    private String d;
+    private String a;
     private float precio;
     private String elegirBoda;
     private String elegirBautizo;
@@ -44,36 +44,36 @@ public class eventoGeneralAction extends ActionSupport {
         this.eventos = eventos;
     }
 
-    public String geteCat() {
-        return eCat;
+    public String getC() {
+        return c;
     }
 
-    public void seteCat(String eCat) {
-        this.eCat = eCat;
+    public void setC(String c) {
+        this.c = c;
     }
 
-    public String geteMus() {
-        return eMus;
+    public String getM() {
+        return m;
     }
 
-    public void seteMus(String eMus) {
-        this.eMus = eMus;
+    public void setM(String m) {
+        this.m = m;
     }
 
-    public String geteDec() {
-        return eDec;
+    public String getD() {
+        return d;
     }
 
-    public void seteDec(String eDec) {
-        this.eDec = eDec;
+    public void setD(String d) {
+        this.d = d;
     }
 
-    public String geteAud() {
-        return eAud;
+    public String getA() {
+        return a;
     }
 
-    public void seteAud(String eAud) {
-        this.eAud = eAud;
+    public void setA(String a) {
+        this.a = a;
     }
 
     public float getPrecio() {
@@ -243,11 +243,11 @@ public class eventoGeneralAction extends ActionSupport {
         return ERROR;
     }
 
-    public String cumpleaños() throws SQLException {
+    public String cumpleanyos() throws SQLException {
         Almacen a = new Almacen();
 
-        if (this.getElegirFiesta().equals("escape room") || this.getElegirFiesta().equals("paintball") || this.getElegirFiesta().equals("disfraces") || this.getElegirFiesta().equals("temática")) {
-            this.setEspecializacion(a.consultaEspecializacion(this.getElegirFiesta()));
+        if (this.getElegirCumpleaños().equals("escape room") || this.getElegirCumpleaños().equals("paintball") || this.getElegirCumpleaños().equals("disfraces") || this.getElegirCumpleaños().equals("temática")) {
+            this.setEspecializacion(a.consultaEspecializacion(this.getElegirCumpleaños()));
             this.setLugares(a.consultaLugares());
             this.setPatrocinadores(a.consultaPatrocinadores());
             return SUCCESS;
@@ -283,11 +283,13 @@ public class eventoGeneralAction extends ActionSupport {
         Almacen a = new Almacen();
         Especializacion e = new Especializacion();
 
+        e.setNombre("aux");
         e.setTipo(a.consultaTipo(this.getEventos()));
-        e.setAudiovisuales(this.geteAud());
-        e.setCatering(this.geteCat());
-        e.setMusica(this.geteMus());
-        e.setDecoracion(this.geteDec());
+        e.setAudiovisuales(this.getA());
+        e.setCatering(this.getC());
+        e.setMusica(this.getM());
+        e.setDecoracion(this.getD());
+        e.setPrecio(this.getPrecio());
         this.setEspecializacion(e);
         this.setLugares(a.consultaLugares());
         this.setPatrocinadores(a.consultaPatrocinadores());

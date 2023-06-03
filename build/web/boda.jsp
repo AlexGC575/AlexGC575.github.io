@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags"%>
+<script src="jquery-1.12.4.min.js" type="text/javascript"></script>
 <!DOCTYPE html>
 <html>
     <head>
@@ -45,7 +46,7 @@
                    
                     <summary>Boda <s:property value="#e.nombre"/></summary>
                     <div >
-                    <li>Cátering: <s:property value="#e.catering"/></li>
+                        <li onmouseover="description()">Cátering: <s:property value="#e.catering"/></li>
                     <li>Música: <s:property value="#e.musica"/></li>
                     <li>Decoración: <s:property value="#e.decoracion"/></li>
                     <li>Audiovisuales: <s:property value="#e.audiovisuales"/></li>

@@ -80,5 +80,19 @@
         <action name="pInicio" class="actions.eventoAction" method="inicio">
             <result name="success">/main.jsp</result>
         </action>
+        <action name="altaEmpresa" class="actions.empresaAction">
+            <result name="success">/gestion.jsp</result>
+        </action>
+        <action name="borrarEmpresa" class="actions.empresaAction" method="borrar">
+            <result name="success">/gestion.jsp</result>
+        </action>
+        <action name="modEmpresa" class="actions.empresaAction" method="modificar">
+            <result name="success">/gestion.jsp</result>
+        </action>
+        <action name="consultarEmpresas" class="actions.empresaAction" method="consulta">
+            <result name="success">/empresas.jsp</result>
+        </action>
+        
+        
     </package>
 </struts>

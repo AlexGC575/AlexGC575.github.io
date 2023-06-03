@@ -19,7 +19,11 @@
 				<li><a href="musica.jsp">Música</a></li>
 				<li><a href="catering.jsp">Catering</a></li>
 				<li><a href="audiovisuales.jsp">Audiovisuales</a></li>
-				<li><a href="empresas.jsp">Empresas</a></li>
+                                <li><a href="gestion.jsp">Gestión</a></li>
+				<s:form action="consultarEmpresas" theme="simple" >
+                                <s:submit cssClass="login" name="irEmpresa" value="Empresas"/>
+                            </s:form>
+                                
                                 <s:if test="#session.Usuario!=null">         
                                 <s:form action="irPerfil" theme="simple" >
                                 <s:submit cssClass="login" name="irperfil" value="Ver Perfil"/>

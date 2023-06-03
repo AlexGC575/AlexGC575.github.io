@@ -152,4 +152,25 @@ public class Almacen {
     client.create_XML(p);
 
     }
+
+    public void altaEmpresa(Empresa emp) {
+    ClienteEmpresa client = new ClienteEmpresa();
+    client.create_XML(emp);
+    }
+
+    public void bajaEmpresa(String nombreb) {
+    ClienteEmpresa client = new ClienteEmpresa();
+    client.remove(nombreb);
+    }
+    public void modEmpresa(Empresa emp, String nombreb) {
+    ClienteEmpresa client = new ClienteEmpresa();
+    
+    client.edit_XML(emp, nombreb);
+    }
+
+    public List<Empresa> obtenerEmpresas() {
+    ClienteEmpresa client = new ClienteEmpresa();
+        GenericType<List<Empresa>> genericType = new GenericType<List<Empresa>>() {
+        };
+        return client.findAll_XML(genericType);}
 }

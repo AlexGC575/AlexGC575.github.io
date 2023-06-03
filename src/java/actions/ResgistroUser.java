@@ -42,6 +42,29 @@ public class ResgistroUser extends ActionSupport implements SessionAware{
     private Date fecha;
     private int tlfn;
     private String passregister;
+    private String numTarjeta;
+    private Date caducidad;
+
+    public String getNumTarjeta() {
+        return numTarjeta;
+    }
+@RequiredStringValidator(message="Introduce un valor")
+    public void setNumTarjeta(String numTarjeta) {
+        this.numTarjeta = numTarjeta;
+    }
+
+    public Date getCaducidad() {
+        return caducidad;
+    }
+@DateRangeFieldValidator(
+        min = "01/01/1980",
+        max = "31/12/2010",
+        dateFormat = "dd/MM/yyyy",
+        message = "Debe estar entre ${min} y ${max}"
+        )
+    public void setCaducidad(Date caducidad) {
+        this.caducidad = caducidad;
+    }
 
     public SessionMap<String, Object> getSessionMap() {
         return sessionMap;
@@ -131,7 +154,16 @@ public class ResgistroUser extends ActionSupport implements SessionAware{
      HttpSession session=ServletActionContext.getRequest().getSession(false);
         Almacen alm=new Almacen();
         Usuario user=new Usuario(this.getEmail(),this.getPassregister(),this.getNombre(),this.getApellidos(),this.getFecha(),this.getTlfn());
-        alm.altaUser(this.getEmail(),this.getPassregister(),this.getNombre(),this.getApellidos(),this.getFecha(),this.getTlfn());
+       
+        PagoPK p=new PagoPK(user.getEmail(),this.getNumTarjeta());
+        Pago pa=new Pago(); 
+        pa.setCaducidad(this.getCaducidad());
+        pa.setPagoPK(p);
+        pa.setUsuario1(user);
+        alm.altaUser(user);
+        alm.altaPago(pa);
+        
+        
         sessionMap.put("Usuario", user.getEmail());
         return SUCCESS;
     

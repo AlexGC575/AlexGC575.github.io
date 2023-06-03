@@ -66,40 +66,40 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("<!DOCTYPE html>\n");
-      out.write("<html>\n");
-      out.write("    <head>\n");
-      out.write("        <link rel=\"stylesheet\" href=\"register.css\">\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>Registrarse - UParty</title>\n");
-      out.write("    </head>\n");
-      out.write("    <body>\n");
-      out.write("        \n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("<!DOCTYPE html>\r\n");
+      out.write("<html>\r\n");
+      out.write("    <head>\r\n");
+      out.write("        <link rel=\"stylesheet\" href=\"register.css\">\r\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
+      out.write("        <title>Registrarse - UParty</title>\r\n");
+      out.write("    </head>\r\n");
+      out.write("    <body>\r\n");
+      out.write("        \r\n");
       out.write("        ");
       if (_jspx_meth_s_if_0(_jspx_page_context))
         return;
-      out.write("\n");
-      out.write("         <section>\n");
-      out.write("            <div class=\"form-box\">\n");
-      out.write("                <div class=\"form-value\">\n");
+      out.write("\r\n");
+      out.write("         <section>\r\n");
+      out.write("            <div class=\"form-box\">\r\n");
+      out.write("                <div class=\"form-value\">\r\n");
       out.write("                    ");
       if (_jspx_meth_s_form_0(_jspx_page_context))
         return;
-      out.write("\n");
-      out.write("                    <div class=\"register\">\n");
-      out.write("                        <p>¿Ya tienes cuenta? <a href=\"login.jsp\">Logueate</a></p>\n");
-      out.write("                    </div>\n");
-      out.write("                </div>\n");
-      out.write("            </div>\n");
-      out.write("            <script type=\"module\" src=\"https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js\"></script>\n");
-      out.write("            <script nomodule src=\"https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js\"></script>\n");
-      out.write("        </section> \n");
-      out.write("    </body>\n");
-      out.write("</html>\n");
+      out.write("\r\n");
+      out.write("                    <div class=\"register\">\r\n");
+      out.write("                        <p>¿Ya tienes cuenta? <a href=\"login.jsp\">Logueate</a></p>\r\n");
+      out.write("                    </div>\r\n");
+      out.write("                </div>\r\n");
+      out.write("            </div>\r\n");
+      out.write("            <script type=\"module\" src=\"https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js\"></script>\r\n");
+      out.write("            <script nomodule src=\"https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js\"></script>\r\n");
+      out.write("        </section> \r\n");
+      out.write("    </body>\r\n");
+      out.write("</html>\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -130,11 +130,11 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_s_if_0.doInitBody();
       }
       do {
-        out.write("\n");
+        out.write("\r\n");
         out.write("            ");
         if (_jspx_meth_s_action_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_if_0, _jspx_page_context))
           return true;
-        out.write("\n");
+        out.write("\r\n");
         out.write("        ");
         int evalDoAfterBody = _jspx_th_s_if_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -188,88 +188,115 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_s_form_0.doInitBody();
       }
       do {
-        out.write("\n");
-        out.write("            <h2>Registrarse</h2>\n");
-        out.write("            \n");
-        out.write("            <div class=\"inputbox\">\n");
-        out.write("                <ion-icon name=\"mail-outline\"></ion-icon>\n");
-        out.write("               \n");
+        out.write("\r\n");
+        out.write("                        <h2>Registarse</h2>\r\n");
+        out.write("            \r\n");
+        out.write("            <div class=\"inputbox\">\r\n");
+        out.write("                \r\n");
+        out.write("                <ion-icon name=\"mail-outline\"></ion-icon>\r\n");
+        out.write("               \r\n");
         out.write("              ");
         if (_jspx_meth_s_textfield_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_form_0, _jspx_page_context))
           return true;
-        out.write("\n");
-        out.write("            \n");
+        out.write("\r\n");
+        out.write("            \r\n");
         out.write("            <label for=\"\">");
         if (_jspx_meth_s_fielderror_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_form_0, _jspx_page_context))
           return true;
-        out.write(" Email:</label>\n");
-        out.write("            </div>\n");
-        out.write("            <div class=\"inputbox\">\n");
-        out.write("                <ion-icon name=\"pricetag-outline\"></ion-icon>\n");
+        out.write(" Email:</label>\r\n");
+        out.write("            </div>\r\n");
+        out.write("            <div class=\"inputbox\">\r\n");
+        out.write("                <ion-icon name=\"pricetag-outline\"></ion-icon>\r\n");
         out.write("               ");
         if (_jspx_meth_s_textfield_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_form_0, _jspx_page_context))
           return true;
-        out.write("\n");
-        out.write("           \n");
+        out.write("\r\n");
+        out.write("           \r\n");
         out.write("            <label for=\"\">");
         if (_jspx_meth_s_fielderror_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_form_0, _jspx_page_context))
           return true;
-        out.write("Nombre:</label>\n");
-        out.write("            </div>\n");
-        out.write("            <div class=\"inputbox\">\n");
-        out.write("                <ion-icon name=\"pricetags-outline\"></ion-icon>\n");
+        out.write("Nombre:</label>\r\n");
+        out.write("            </div>\r\n");
+        out.write("            <div class=\"inputbox\">\r\n");
+        out.write("                <ion-icon name=\"pricetags-outline\"></ion-icon>\r\n");
         out.write("               ");
         if (_jspx_meth_s_textfield_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_form_0, _jspx_page_context))
           return true;
-        out.write("\n");
-        out.write("            \n");
+        out.write("\r\n");
+        out.write("            \r\n");
         out.write("            <label for=\"\">");
         if (_jspx_meth_s_fielderror_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_form_0, _jspx_page_context))
           return true;
-        out.write("Apellidos:</label>\n");
-        out.write("            </div>\n");
-        out.write("            <div class=\"inputbox\">\n");
-        out.write("                <ion-icon name=\"calendar-outline\"></ion-icon>\n");
-        out.write("                \n");
+        out.write("Apellidos:</label>\r\n");
+        out.write("            </div>\r\n");
+        out.write("            <div class=\"inputbox\">\r\n");
+        out.write("                <ion-icon name=\"calendar-outline\"></ion-icon>\r\n");
+        out.write("                \r\n");
         out.write("                ");
         if (_jspx_meth_s_textfield_3((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_form_0, _jspx_page_context))
           return true;
-        out.write("\n");
-        out.write("           <!-- <input type=\"date\" name=\"fecha\"/> -->\n");
+        out.write("\r\n");
+        out.write("           <!-- <input type=\"date\" name=\"fecha\"/> -->\r\n");
         out.write("            <label for=\"\">");
         if (_jspx_meth_s_fielderror_3((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_form_0, _jspx_page_context))
           return true;
-        out.write("Fecha de nacimiento:</label>\n");
-        out.write("            </div>\n");
-        out.write("           \n");
-        out.write("            <div class=\"inputbox\">\n");
-        out.write("                <ion-icon name=\"call-outline\"></ion-icon>\n");
+        out.write("Fecha de nacimiento:</label>\r\n");
+        out.write("            </div>\r\n");
+        out.write("           \r\n");
+        out.write("            <div class=\"inputbox\">\r\n");
+        out.write("                <ion-icon name=\"call-outline\"></ion-icon>\r\n");
         out.write("               ");
         if (_jspx_meth_s_textfield_4((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_form_0, _jspx_page_context))
           return true;
-        out.write("\n");
-        out.write("          \n");
+        out.write("\r\n");
+        out.write("          \r\n");
         out.write("            <label for=\"\">");
         if (_jspx_meth_s_fielderror_4((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_form_0, _jspx_page_context))
           return true;
-        out.write("Telefono:</label>\n");
-        out.write("            </div>\n");
-        out.write("            <div class=\"inputbox\">\n");
-        out.write("                \n");
-        out.write("                <ion-icon name=\"lock-closed-outline\"></ion-icon>\n");
+        out.write("Telefono:</label>\r\n");
+        out.write("            </div>\r\n");
+        out.write("            <div class=\"inputbox\">\r\n");
+        out.write("                \r\n");
+        out.write("                <ion-icon name=\"lock-closed-outline\"></ion-icon>\r\n");
         out.write("               ");
         if (_jspx_meth_s_password_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_form_0, _jspx_page_context))
           return true;
-        out.write("\n");
-        out.write("            <ion-icon name=\"lock-closed-outline\"></ion-icon>\n");
+        out.write("\r\n");
+        out.write("            <ion-icon name=\"lock-closed-outline\"></ion-icon>\r\n");
         out.write("             <label for=\"\">");
         if (_jspx_meth_s_fielderror_5((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_form_0, _jspx_page_context))
           return true;
-        out.write("Contraseña:</label>\n");
-        out.write("            </div>\n");
-        out.write("            \n");
-        out.write("            <input class=\"login\" type=\"submit\" name=\"login\" value=\"Registrarse\">\n");
-        out.write("           \n");
+        out.write("Contraseña:</label>\r\n");
+        out.write("            </div>\r\n");
+        out.write("            <div class=\"inputbox\">\r\n");
+        out.write("                \r\n");
+        out.write("               \r\n");
+        out.write("               ");
+        if (_jspx_meth_s_textfield_5((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_form_0, _jspx_page_context))
+          return true;
+        out.write("\r\n");
+        out.write("            <ion-icon name=\"journal-outline\"></ion-icon>\r\n");
+        out.write("             <label for=\"\">");
+        if (_jspx_meth_s_fielderror_6((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_form_0, _jspx_page_context))
+          return true;
+        out.write("Numero Tarjeta:</label>\r\n");
+        out.write("            </div>\r\n");
+        out.write("            <div class=\"inputbox\">\r\n");
+        out.write("                \r\n");
+        out.write("                \r\n");
+        out.write("               ");
+        if (_jspx_meth_s_textfield_6((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_form_0, _jspx_page_context))
+          return true;
+        out.write("\r\n");
+        out.write("            <ion-icon name=\"calendar-number-outline\"></ion-icon>\r\n");
+        out.write("             <label for=\"\">");
+        if (_jspx_meth_s_fielderror_7((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_form_0, _jspx_page_context))
+          return true;
+        out.write("Caducidad:</label>\r\n");
+        out.write("            </div>\r\n");
+        out.write("            \r\n");
+        out.write("            <input class=\"login\" type=\"submit\" name=\"login\" value=\"Registrarse\">\r\n");
+        out.write("           \r\n");
         out.write("        ");
         int evalDoAfterBody = _jspx_th_s_form_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -499,6 +526,78 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
       return true;
     }
     _jspx_tagPool_s_fielderror_fieldName_nobody.reuse(_jspx_th_s_fielderror_5);
+    return false;
+  }
+
+  private boolean _jspx_meth_s_textfield_5(javax.servlet.jsp.tagext.JspTag _jspx_th_s_form_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  s:textfield
+    org.apache.struts2.views.jsp.ui.TextFieldTag _jspx_th_s_textfield_5 = (org.apache.struts2.views.jsp.ui.TextFieldTag) _jspx_tagPool_s_textfield_name_nobody.get(org.apache.struts2.views.jsp.ui.TextFieldTag.class);
+    _jspx_th_s_textfield_5.setPageContext(_jspx_page_context);
+    _jspx_th_s_textfield_5.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_form_0);
+    _jspx_th_s_textfield_5.setName("numTarjeta");
+    int _jspx_eval_s_textfield_5 = _jspx_th_s_textfield_5.doStartTag();
+    if (_jspx_th_s_textfield_5.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_s_textfield_name_nobody.reuse(_jspx_th_s_textfield_5);
+      return true;
+    }
+    _jspx_tagPool_s_textfield_name_nobody.reuse(_jspx_th_s_textfield_5);
+    return false;
+  }
+
+  private boolean _jspx_meth_s_fielderror_6(javax.servlet.jsp.tagext.JspTag _jspx_th_s_form_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  s:fielderror
+    org.apache.struts2.views.jsp.ui.FieldErrorTag _jspx_th_s_fielderror_6 = (org.apache.struts2.views.jsp.ui.FieldErrorTag) _jspx_tagPool_s_fielderror_fieldName_nobody.get(org.apache.struts2.views.jsp.ui.FieldErrorTag.class);
+    _jspx_th_s_fielderror_6.setPageContext(_jspx_page_context);
+    _jspx_th_s_fielderror_6.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_form_0);
+    _jspx_th_s_fielderror_6.setFieldName("numTarjeta");
+    int _jspx_eval_s_fielderror_6 = _jspx_th_s_fielderror_6.doStartTag();
+    if (_jspx_th_s_fielderror_6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_s_fielderror_fieldName_nobody.reuse(_jspx_th_s_fielderror_6);
+      return true;
+    }
+    _jspx_tagPool_s_fielderror_fieldName_nobody.reuse(_jspx_th_s_fielderror_6);
+    return false;
+  }
+
+  private boolean _jspx_meth_s_textfield_6(javax.servlet.jsp.tagext.JspTag _jspx_th_s_form_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  s:textfield
+    org.apache.struts2.views.jsp.ui.TextFieldTag _jspx_th_s_textfield_6 = (org.apache.struts2.views.jsp.ui.TextFieldTag) _jspx_tagPool_s_textfield_name_nobody.get(org.apache.struts2.views.jsp.ui.TextFieldTag.class);
+    _jspx_th_s_textfield_6.setPageContext(_jspx_page_context);
+    _jspx_th_s_textfield_6.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_form_0);
+    _jspx_th_s_textfield_6.setName("caducidad");
+    int _jspx_eval_s_textfield_6 = _jspx_th_s_textfield_6.doStartTag();
+    if (_jspx_th_s_textfield_6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_s_textfield_name_nobody.reuse(_jspx_th_s_textfield_6);
+      return true;
+    }
+    _jspx_tagPool_s_textfield_name_nobody.reuse(_jspx_th_s_textfield_6);
+    return false;
+  }
+
+  private boolean _jspx_meth_s_fielderror_7(javax.servlet.jsp.tagext.JspTag _jspx_th_s_form_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  s:fielderror
+    org.apache.struts2.views.jsp.ui.FieldErrorTag _jspx_th_s_fielderror_7 = (org.apache.struts2.views.jsp.ui.FieldErrorTag) _jspx_tagPool_s_fielderror_fieldName_nobody.get(org.apache.struts2.views.jsp.ui.FieldErrorTag.class);
+    _jspx_th_s_fielderror_7.setPageContext(_jspx_page_context);
+    _jspx_th_s_fielderror_7.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_form_0);
+    _jspx_th_s_fielderror_7.setFieldName("caducidad");
+    int _jspx_eval_s_fielderror_7 = _jspx_th_s_fielderror_7.doStartTag();
+    if (_jspx_th_s_fielderror_7.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_s_fielderror_fieldName_nobody.reuse(_jspx_th_s_fielderror_7);
+      return true;
+    }
+    _jspx_tagPool_s_fielderror_fieldName_nobody.reuse(_jspx_th_s_fielderror_7);
     return false;
   }
 }

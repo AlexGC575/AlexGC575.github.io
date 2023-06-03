@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 *{
     margin:0;
-    paddin:0;
+   
     font-family:'poppins',sans-serif;
 }
 
@@ -22,14 +22,15 @@ section{
     background: url('ltotbngnzzu.jpg')no-repeat;
     background-position: center;
     background-size: cover;
+    
  
     
 }
 
 .form-box{
-  position: relative;
+  position: absoulte;
     width: 400px;
-    height: 700px;
+    height: 100%;
     background: transparent;
     border: 2px solid rgba(255,255,255,0.5);
     border-radius: 20px;
@@ -37,8 +38,11 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin: auto;
 }
 h2{
+    margin-top: 5px;
     font-size: 2em;
     color: white;
     text-align: center;
@@ -66,7 +70,7 @@ details.styled{
     border: 1px solid #ffffff;
     border-radius: 6px;
     margin-bottom: 1em;
-    transition: all 0.4 ease-in-out;
+    transition: all 0.4s ease-in-out;
     max-height: 20px;
     overflow: hidden;
 }

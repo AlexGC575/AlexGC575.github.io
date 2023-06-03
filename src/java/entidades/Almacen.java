@@ -141,9 +141,15 @@ public class Almacen {
         return (Especializacion) client.find_XML(genericType, nombre);
     }
 
-    public void altaUser(String email, String passregister, String nombre, String apellidos, Date fecha, int tlfn) {
+    public void altaUser(Usuario user) {
         ClienteUsuario client = new ClienteUsuario();
-        Usuario user = new Usuario(email, passregister, nombre, apellidos, fecha, tlfn);
+
         client.create_XML(user);
+    }
+
+    public void altaPago(Pago p) {
+    ClientePago client = new ClientePago();
+    client.create_XML(p);
+
     }
 }

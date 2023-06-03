@@ -21,16 +21,22 @@
 		<nav class="naveg">
                     <h1 class="logo">U<span>party</span> </h1>
 			<ul class="navbar">
-				<li><a href="#eventos">Eventos</a></li>
-				<li><a href="#decoracion">Decoración</a></li>
-				<li><a href="#musica">Música</a></li>
-				<li><a href="#catering">Catering</a></li>
-				<li><a href="#audiovisuales">Audiovisuales</a></li>
-				<li><a href="#empresas">Empresas</a></li>
-
+				<li><a href="eventos.jsp">Eventos</a></li>
+				<li><a href="decoracion.jsp">Decoración</a></li>
+				<li><a href="musica.jsp">Música</a></li>
+				<li><a href="catering.jsp">Catering</a></li>
+				<li><a href="audiovisuales.jsp">Audiovisuales</a></li>
+				<li><a href="empresas.jsp">Empresas</a></li>
+                                <s:if test="#session.Usuario!=null">         
                                 <s:form action="irPerfil" theme="simple" >
                                 <s:submit cssClass="login" name="irperfil" value="Ver Perfil"/>
-                                </s:form>
+                            </s:form>
+                                </s:if>
+                                <s:else >
+                                <s:form action="irLogin" theme="simple" >
+                                <s:submit cssClass="login" name="irlogin" value="Iniciar Sesión"/>
+                            </s:form>
+                                </s:else>
 			</ul>
 		</nav>
 	</header>
@@ -41,7 +47,7 @@
             <s:iterator value="especializaciones" var="e">
                  <details class="styled">
                    
-                    <summary>Boda <s:property value="#e.nombre"/></summary>
+                    <summary>Bautizo <s:property value="#e.nombre"/></summary>
                     <div >
                     <li>Cátering: <s:property value="#e.catering"/></li>
                     <li>Música: <s:property value="#e.musica"/></li>

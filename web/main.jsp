@@ -20,9 +20,16 @@
 				<li><a href="catering.jsp">Catering</a></li>
 				<li><a href="audiovisuales.jsp">Audiovisuales</a></li>
 				<li><a href="empresas.jsp">Empresas</a></li>
-<s:form action="irPerfil" theme="simple" >
+                                <s:if test="#session.Usuario!=null">         
+                                <s:form action="irPerfil" theme="simple" >
                                 <s:submit cssClass="login" name="irperfil" value="Ver Perfil"/>
                             </s:form>
+                                </s:if>
+                                <s:else >
+                                <s:form action="irLogin" theme="simple" >
+                                <s:submit cssClass="login" name="irlogin" value="Iniciar Sesión"/>
+                            </s:form>
+                                </s:else>
 			</ul>
 		</nav>
 	</header>

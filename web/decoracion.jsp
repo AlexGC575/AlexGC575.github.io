@@ -1,44 +1,52 @@
+
 <%-- 
-    Document   : decoracion
-    Created on : Mar 26, 2023, 9:04:50 AM
+    Document   : audiovisuales
+    Created on : Mar 26, 2023, 9:06:19 AM
     Author     : User
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="style.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Decoración para eventos</title>
 </head>
 <body>
+	 <div class="all">
 	<header >
 		
 		<nav class="naveg">
                     <h1 class="logo">U<span>party</span> </h1>
 			<ul class="navbar">
-				<li><a href="/eventos.jsp">Eventos</a></li>
-				<li><a href="/decoracion.jsp">Decoración</a></li>
-				<li><a href="/musica.jsp">Música</a></li>
+				<li><a href="eventos.jsp">Eventos</a></li>
+				<li><a href="decoracion.jsp">Decoración</a></li>
+				<li><a href="musica.jsp">Música</a></li>
 				<li><a href="catering.jsp">Catering</a></li>
-				<li><a href="/audiovisuales.jsp">Audiovisuales</a></li>
-				<li><a href="/empresas.jsp">Empresas</a></li>
-                                 <%= session.getAttribute("Usuario") %>
-<s:form action="unlog" theme="simple" >
-                                <s:submit cssClass="login" name="unlog" value="Cerrar Sesion"/>
-                                </s:form>
+				<li><a href="audiovisuales.jsp">Audiovisuales</a></li>
+				<li><a href="empresas.jsp">Empresas</a></li>
+                                <s:if test="#session.Usuario!=null">         
+                                <s:form action="irPerfil" theme="simple" >
+                                <s:submit cssClass="login" name="irperfil" value="Ver Perfil"/>
+                            </s:form>
+                                </s:if>
+                                <s:else >
+                                <s:form action="irLogin" theme="simple" >
+                                <s:submit cssClass="login" name="irlogin" value="Iniciar Sesión"/>
+                            </s:form>
+                                </s:else>
 			</ul>
 		</nav>
 	</header>
 <main>
-	<section id="banner">
+	<section class="banner" id="banner">
 		<h2>Decoración personalizada para eventos</h2>
 		<p>En nuestra empresa ofrecemos un servicio de decoración completo para todo tipo de eventos. Desde bodas y cumpleaños hasta eventos corporativos y ferias, tenemos la decoración perfecta para tu ocasión especial.</p>
-		<a href="#contacto">Solicita información</a>
-	</section>
-	
-	 <section id="main">
-                <p>
-                    Nuestro equipo de empresas diseñadoras de eventos es apasionado y creativo, y se dedica a convertir tus ideas en realidades visuales impresionantes. Desde elegantes bodas hasta sofisticadas galas corporativas y eventos temáticos extravagantes, tenemos la experiencia y la visión para llevar tu evento al siguiente nivel.
+		<a href="main.jsp">Crea tu evento</a><br>
+                
+                <p style="background-color: black; border-radius:6px ">Nuestro equipo de empresas diseñadoras de eventos es apasionado y creativo, y se dedica a convertir tus ideas en realidades visuales impresionantes. Desde elegantes bodas hasta sofisticadas galas corporativas y eventos temáticos extravagantes, tenemos la experiencia y la visión para llevar tu evento al siguiente nivel.
 
 Trabajaremos estrechamente contigo para comprender tus gustos, preferencias y objetivos para el evento. Ya sea que busques una estética clásica y atemporal, una ambientación moderna y vanguardista o un enfoque temático único, nos aseguraremos de capturar tu visión y plasmarla en cada detalle decorativo.
 
@@ -48,28 +56,15 @@ Además, nos mantenemos al tanto de las últimas tendencias y tecnologías en de
 
 Nuestro objetivo es crear una experiencia visualmente impactante y cohesiva que refleje tu estilo y personalidad. Nos encargaremos de todos los aspectos logísticos, desde la planificación y la instalación hasta el desmontaje después del evento, para que puedas disfrutar de la belleza de tu evento sin preocupaciones.
                 </p>
-            </section>
-	
-	<section id="contacto">
-		<h2>Contacto</h2>
-		<p>Si estás interesado en nuestro servicio de decoración o tienes alguna pregunta, no dudes en ponerte en contacto con nosotros.</p>
-		<form>
-			<label for="nombre">Nombre:</label>
-			<input type="text" id="nombre" name="nombre"><br>
-
-			<label for="email">Email:</label>
-			<input type="email" id="email" name="email"><br>
-
-			<label for="mensaje">Mensaje:</label>
-			<textarea id="mensaje" name="mensaje"></textarea><br>
-
-			<input type="submit" value="Enviar">
-		</form>
 	</section>
+	
+		
+	
 </main>
 
 <footer>
-	<p>Derechos reservados &copy; 2023 Decoraciones para eventos S.A.</p>
+	<p>Derechos reservados &copy; 2023 Audiovisuales para eventos S.A.</p>
 </footer>
+         </div>
 </body>
 </html>

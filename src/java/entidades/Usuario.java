@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author User
+ * @author juanl
  */
 @Entity
 @Table(name = "usuario")
@@ -42,7 +42,7 @@ import javax.xml.bind.annotation.XmlTransient;
 public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    // @Pattern(regexp="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", message="Invalid email")//if the field contains email address consider using this annotation to enforce field validation
+    // @Pattern(regexp="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", message="Correo electrónico no válido")//if the field contains email address consider using this annotation to enforce field validation
     @Id
     @Basic(optional = false)
     @NotNull
@@ -74,15 +74,7 @@ public class Usuario implements Serializable {
     @Column(name = "telefono")
     private int telefono;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario1")
-    private Collection<Direccion> direccionCollection;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario1")
     private Collection<Pago> pagoCollection;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario")
-    private Collection<Evento> eventoCollection;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario")
-    private Collection<Resenya> resenyaCollection;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario")
-    private Collection<Mensaje> mensajeCollection;
 
     public Usuario() {
     }
@@ -149,48 +141,12 @@ public class Usuario implements Serializable {
     }
 
     @XmlTransient
-    public Collection<Direccion> getDireccionCollection() {
-        return direccionCollection;
-    }
-
-    public void setDireccionCollection(Collection<Direccion> direccionCollection) {
-        this.direccionCollection = direccionCollection;
-    }
-
-    @XmlTransient
     public Collection<Pago> getPagoCollection() {
         return pagoCollection;
     }
 
     public void setPagoCollection(Collection<Pago> pagoCollection) {
         this.pagoCollection = pagoCollection;
-    }
-
-    @XmlTransient
-    public Collection<Evento> getEventoCollection() {
-        return eventoCollection;
-    }
-
-    public void setEventoCollection(Collection<Evento> eventoCollection) {
-        this.eventoCollection = eventoCollection;
-    }
-
-    @XmlTransient
-    public Collection<Resenya> getResenyaCollection() {
-        return resenyaCollection;
-    }
-
-    public void setResenyaCollection(Collection<Resenya> resenyaCollection) {
-        this.resenyaCollection = resenyaCollection;
-    }
-
-    @XmlTransient
-    public Collection<Mensaje> getMensajeCollection() {
-        return mensajeCollection;
-    }
-
-    public void setMensajeCollection(Collection<Mensaje> mensajeCollection) {
-        this.mensajeCollection = mensajeCollection;
     }
 
     @Override

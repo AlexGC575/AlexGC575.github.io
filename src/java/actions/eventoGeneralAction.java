@@ -243,11 +243,11 @@ public class eventoGeneralAction extends ActionSupport {
         return ERROR;
     }
 
-    public String cumpleaños() throws SQLException {
+    public String cumpleanyos() throws SQLException {
         Almacen a = new Almacen();
 
-        if (this.getElegirFiesta().equals("escape room") || this.getElegirFiesta().equals("paintball") || this.getElegirFiesta().equals("disfraces") || this.getElegirFiesta().equals("temática")) {
-            this.setEspecializacion(a.consultaEspecializacion(this.getElegirFiesta()));
+        if (this.getElegirCumpleaños().equals("escape room") || this.getElegirCumpleaños().equals("paintball") || this.getElegirCumpleaños().equals("disfraces") || getElegirCumpleaños().equals("temática")) {
+            this.setEspecializacion(a.consultaEspecializacion(this.getElegirCumpleaños()));
             this.setLugares(a.consultaLugares());
             this.setPatrocinadores(a.consultaPatrocinadores());
             return SUCCESS;

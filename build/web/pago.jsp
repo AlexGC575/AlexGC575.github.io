@@ -11,48 +11,42 @@
     <head>
         <link rel="stylesheet" href="register.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Registrarse - UParty</title>
+        <title>RedSys</title>
     </head>
     <body>
-        
-        
-         <section>
+        <section>
             <div class="form-box">
                 <div class="form-value">
-                    <s:form action="pago" theme="simple">
-            <h2>Pago</h2>
+                    <table  style="color:white; boder: 3px solid white;">
+        <s:iterator value="pago" var="p">
+            <tr>
+                <td>Tarjeta de Crédito</td><td><s:property value="#p.pagoPK.tarjetoCredito"/></td>
+            </tr>
+               <tr>
+                <td>Fecha de Caducidad</td><td><s:property value="#p.caducidad"/></td>
+            </tr> 
             
-            <div class="inputbox">
-                <ion-icon name="journal-outline"></ion-icon>
-               
-              <s:textfield name="tCredito"/>
+          
+                
             
-            <label for=""><s:fielderror fieldName="tCredito"/> Tarjeta de Crédito</label>
-            </div>
-            <div class="inputbox">
-                <ion-icon name="calendar-number-outline"></ion-icon>
-               <s:textfield name="fechaC"/>
-           
-            <label for=""><s:fielderror fieldName="fechaC"/>Fecha de Caducidad:</label>
-            </div>
+          
+        </s:iterator>
+                    </table>
+            <div class="form-box">
+                <div class="form-value">
+                    
+        <s:form action="pago" theme="simple">
             <div class="inputbox">
                 <ion-icon name="pricetags-outline"></ion-icon>
                <s:textfield name="pin"/>
             
             <label for=""><s:fielderror fieldName="pin"/>Numero secreto:</label>
             </div>
-           
-           
-            
-            
             <s:submit cssClass="login"  name="pagoTrigger" value="Pagar"/>
-           
         </s:form>
-                    
                 </div>
             </div>
-            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        </section> 
+            
+        </section>
     </body>
 </html>

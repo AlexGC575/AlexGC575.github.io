@@ -10,6 +10,9 @@
         <action name="irPerfil" class="actions.eventoAction" method="irAPerfil">
             <result name="success">/perfil.jsp</result>
         </action>
+        <action name="irLogin" class="actions.eventoAction" method="irAPerfil">
+            <result name="success">/login.jsp</result>
+        </action>
 	  <action name="loginCheck" class="actions.GestionUser" >
             <result name="success">/main.jsp</result>      
            <result name="error" >/login.jsp</result> 
@@ -55,7 +58,7 @@
         <action name="concierto" class="actions.eventoGeneralAction" method="concierto">
             <result name="success">/detalles.jsp</result>
         </action>       
-        <action name="cumpleaños" class="actions.eventoGeneralAction" method="cumpleaños">
+        <action name="cumpleanyos" class="actions.eventoGeneralAction" method="cumpleanyos">
             <result name="success">/detalles.jsp</result>
         </action>        
         <action name="deporte" class="actions.eventoGeneralAction" method="deporte">

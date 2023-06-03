@@ -212,7 +212,7 @@ public class eventoAction extends ActionSupport{
             return "CON";  
         }else if(this.getElegirEvento().equals("Deporte")){
             return "D";  
-        }else if(this.getElegirEvento().equals("Fiesta temática")){
+        }else if(this.getElegirEvento().equals("Fiesta")){
             return "FT";  
         }else if(this.getElegirEvento().equals("Bautizo")){
             return "BAU";  

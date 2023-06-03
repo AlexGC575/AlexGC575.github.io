@@ -211,4 +211,16 @@ footer{
 }
 h1 .logo{
     font-weight: bold;
+<<<<<<< Updated upstream
+=======
+}
+table{
+    position:relative;
+    width: 50%;
+    height: 30%;
+    background: #101010;
+    display:flex;
+    padding: 30px 30px;
+    color: white;
+>>>>>>> Stashed changes
 }

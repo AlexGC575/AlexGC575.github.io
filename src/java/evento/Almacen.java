@@ -28,6 +28,37 @@ public class Almacen {
         
     }
     
+<<<<<<< Updated upstream
+=======
+    public Usuario compruebaUser(String user, String pass){
+        session=NewHibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx=session.beginTransaction();
+        Query q=session.createQuery("From Usuario where email='"+user+"' and contrasenya='"+pass+"'");
+        Usuario u = (Usuario)q.uniqueResult();
+        tx.commit();
+        return u;
+    }
+    
+    public Usuario consultaUsuario(String user){
+        session=NewHibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx=session.beginTransaction();
+        Query q=session.createQuery("From Usuario where email='"+user+"'");
+        Usuario u = (Usuario)q.uniqueResult();
+        tx.commit();
+        return u;
+    }
+    
+    public List<Empresa> consultaEmpresas() throws SQLException{
+        session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        List<Empresa> le = new ArrayList();
+        org.hibernate.Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("from Empresa");
+        le = q.list();
+        tx.commit();
+        return le;
+    }
+    
+>>>>>>> Stashed changes
     public List<String> consultaTipos() throws SQLException{
         session = NewHibernateUtil.getSessionFactory().getCurrentSession();
         List<Tipo> lc = new ArrayList();
@@ -53,6 +84,69 @@ public class Almacen {
        return l;
     }
     
+<<<<<<< Updated upstream
+=======
+    public List<Patrocinador> consultaPatrocinadores ()throws SQLException {
+       session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+       List<Patrocinador> l = new ArrayList();
+       org.hibernate.Transaction tx = session.beginTransaction();
+       Query q = session.createQuery("from Patrocinador");
+       l = q.list();
+       tx.commit();
+       return l;
+    }
+    
+    public Patrocinador consultaPatrocinador (String nombre)throws SQLException {
+       session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+       Patrocinador p = null;
+       org.hibernate.Transaction tx = session.beginTransaction();
+       Query q = session.createQuery("from Patrocinador where nombre = '" + nombre +"'");
+       p = (Patrocinador) q.uniqueResult();
+       tx.commit();
+       return p;
+    }
+    
+    public List<Lugar> consultaLugares ()throws SQLException {
+       session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+       List<Lugar> l = new ArrayList();
+       org.hibernate.Transaction tx = session.beginTransaction();
+       Query q = session.createQuery("from Lugar");
+       l = q.list();
+       tx.commit();
+       return l;
+    }
+    
+    public Lugar consultaLugar (String nombre)throws SQLException {
+       session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+       Lugar l = null;
+       org.hibernate.Transaction tx = session.beginTransaction();
+       Query q = session.createQuery("from Lugar where nombre = '" + nombre +"'");
+       l = (Lugar) q.uniqueResult();
+       tx.commit();
+       return l;
+    }
+    
+    public List<Mensaje> consultaMensajes (String usuario)throws SQLException{
+        session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+       List<Mensaje> m = null;
+       org.hibernate.Transaction tx = session.beginTransaction();
+       Query q = session.createQuery("from Mensaje where usuario = '" + usuario +"'");
+       m = q.list();
+       tx.commit();
+       return m;
+    }
+    
+    public List<Direccion> consultaDirecciones (String usuario)throws SQLException{
+        session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+       List<Direccion> d = null;
+       org.hibernate.Transaction tx = session.beginTransaction();
+       Query q = session.createQuery("from Direccion where usuario = '" + usuario +"'");
+       d = q.list();
+       tx.commit();
+       return d;
+    }
+    
+>>>>>>> Stashed changes
     public Especializacion consultaEspecializacion (String nombre)throws SQLException {
        session = NewHibernateUtil.getSessionFactory().getCurrentSession();
        Especializacion e = null;
@@ -62,4 +156,31 @@ public class Almacen {
        tx.commit();
        return e;
     }
+<<<<<<< Updated upstream
+=======
+    
+    public Pago consultaTarjeta (String nombre)throws SQLException {
+       session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+       Pago p = null;
+       org.hibernate.Transaction tx = session.beginTransaction();
+       Query q = session.createQuery("from Pago where usuario = '" + nombre +"'");
+       p = (Pago) q.uniqueResult();
+       tx.commit();
+       return p;
+    }
+    
+    public void altaUser(Usuario user) {
+        session=NewHibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx=session.beginTransaction();
+        session.save(user);
+        tx.commit();
+    }
+    
+    public void altaEvento(Evento e) {
+        session=NewHibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx=session.beginTransaction();
+        session.save(e);
+        tx.commit();
+    }
+>>>>>>> Stashed changes
 }

@@ -11,12 +11,32 @@ package actions;
  */
 
 import com.opensymphony.xwork2.ActionSupport;
+<<<<<<< Updated upstream
+=======
+import com.opensymphony.xwork2.validator.annotations.RequiredFieldValidator;
+import com.opensymphony.xwork2.validator.annotations.RequiredStringValidator;
+import java.util.Random;
+>>>>>>> Stashed changes
 import evento.Almacen;
 import evento.Especializacion;
 import evento.Tipo;
 import java.util.List;
 
 public class eventoAction extends ActionSupport{
+<<<<<<< Updated upstream
+=======
+    private List<Empresa> empresasC;
+    private List<Empresa> empresasM;
+    private List<Empresa> empresasD;
+    private List<Empresa> empresasA;
+    private String especializacion;
+    private String elegirLugar;
+    private String elegirPatrocinador;
+    private int inv;
+    private float precio;
+    private Evento evento;
+    private String session;
+>>>>>>> Stashed changes
     private List<String> tipos;
     private List<Especializacion> especializaciones;
     private String elegirEvento;
@@ -45,6 +65,105 @@ public class eventoAction extends ActionSupport{
         this.especializaciones = especializaciones;
     }
 
+<<<<<<< Updated upstream
+=======
+    public Pago getPago() {
+        return pago;
+    }
+
+    public void setPago(Pago pago) {
+        this.pago = pago;
+    }
+
+    public String getSession() {
+        return session;
+    }
+
+        public void setSession(String session) {
+        this.session = session;
+    }
+
+    public Evento getEvento() {
+        return evento;
+    }
+
+    public void setEvento(Evento evento) {
+        this.evento = evento;
+    }
+
+    public String getElegirLugar() {
+        return elegirLugar;
+    }
+
+    public void setElegirLugar(String elegirLugar) {
+        this.elegirLugar = elegirLugar;
+    }
+
+    public String getElegirPatrocinador() {
+        return elegirPatrocinador;
+    }
+
+    public void setElegirPatrocinador(String elegirPatrocinador) {
+        this.elegirPatrocinador = elegirPatrocinador;
+    }
+
+    public int getInv() {
+        return inv;
+    }
+
+    public void setInv(int inv) {
+        this.inv = inv;
+    }
+
+    public float getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(float precio) {
+        this.precio = precio;
+    }
+
+    public String getEspecializacion() {
+        return especializacion;
+    }
+
+    public void setEspecializacion(String especializacion) {
+        this.especializacion = especializacion;
+    }
+
+    public List<Empresa> getEmpresasC() {
+        return empresasC;
+    }
+
+    public void setEmpresasC(List<Empresa> empresasC) {
+        this.empresasC = empresasC;
+    }
+
+    public List<Empresa> getEmpresasM() {
+        return empresasM;
+    }
+
+    public void setEmpresasM(List<Empresa> empresasM) {
+        this.empresasM = empresasM;
+    }
+
+    public List<Empresa> getEmpresasD() {
+        return empresasD;
+    }
+
+    public void setEmpresasD(List<Empresa> empresasD) {
+        this.empresasD = empresasD;
+    }
+
+    public List<Empresa> getEmpresasA() {
+        return empresasA;
+    }
+
+    public void setEmpresasA(List<Empresa> empresasA) {
+        this.empresasA = empresasA;
+    }
+
+>>>>>>> Stashed changes
     public eventoAction() {
     }
     

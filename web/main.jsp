@@ -8,6 +8,7 @@
 	<title>Organización de eventos</title>
 </head>
 <body>
+    <s:property value="#session.Rol==1"/>
     <div class="all">
 	<header >
 		
@@ -19,10 +20,25 @@
 				<li><a href="musica.jsp">Música</a></li>
 				<li><a href="catering.jsp">Catering</a></li>
 				<li><a href="audiovisuales.jsp">Audiovisuales</a></li>
-				<li><a href="empresas.jsp">Empresas</a></li>
-<s:form action="irPerfil" theme="simple" >
+                                <s:if test="#session.Rol==1">
+                                <s:form action="gestion" theme="simple" >
+                                <s:submit cssClass="login" name="Gestion" value="Gestión"/>
+                            </s:form>
+                                </s:if>
+				<s:form action="consultarEmpresas" theme="simple" >
+                                <s:submit cssClass="login" name="irEmpresa" value="Empresas"/>
+                            </s:form>
+                                
+                                <s:if test="#session.Usuario!=null">         
+                                <s:form action="perfil" theme="simple" >
                                 <s:submit cssClass="login" name="irperfil" value="Ver Perfil"/>
                             </s:form>
+                                </s:if>
+                                <s:else >
+                                <s:form action="irLogin" theme="simple" >
+                                <s:submit cssClass="login" name="irlogin" value="Iniciar Sesión"/>
+                            </s:form>
+                                </s:else>
 			</ul>
 		</nav>
 	</header>
@@ -43,69 +59,39 @@
                 <section id="evento">
 		<h3>Eventos</h3>
 		<p>En esta sección encontrarás información sobre nuestros servicios de organización de eventos.</p>
-		<a href="#contacto">Contáctanos</a>
-                <
                 </section>
 	
 	
 	<section id="decoracion">
 		<h3>Decoración</h3>
 		<p>En esta sección encontrarás información sobre nuestros servicios de decoración para eventos.</p>
-		<a href="#contacto">Contáctanos</a>
 	</section>
 	
 	<section id="musica">
 		<h3>Música</h3>
 		<p>En esta sección encontrarás información sobre nuestros servicios de música para eventos.</p>
-		<a href="#contacto">Contáctanos</a>
 	</section>
 	
 	<section id="catering">
 		<h3>Catering</h3>
 		<p>En esta sección encontrarás información sobre nuestros servicios de catering para eventos.</p>
-		<a href="#contacto">Contáctanos</a>
 	</section>
 	
 	<section id="audiovisuales">
 		<h3>Audiovisual</h3>
 		<p>En esta sección encontrarás información sobre nuestros servicios de audiovisuales para eventos.</p>
-		<a href="#contacto">Contáctanos</a>
 	</section>
 
 	
 	<section id="empresas">
 		<h3>Empresas</h3>
-		<p>En esta sección encontrarás información sobre nuestros servicios de organización de eventos para empresas.</p>
-		<a href="#contacto">Contáctanos</a>
+		<p>En esta sección encontrarás información sobre nuestras empresas asociadas para eventos.</p>
 	</section>
 	</div>
         </div>
         <footer>
-	<section id="contacto">
-            <div class="form-box">
-                <div class="form-value">
-		<form>
-                    <h2>Contacto</h2>
-		<div class="inputbox">
-			
-			<input type="text" id="nombre" name="nombre">
-                        <label for="nombre">Nombre:</label>
-                </div>
-                <div class="inputbox">
-			
-			<input type="email" id="email" name="email">
-                        <label for="email">Email:</label>
-                </div>
-                <div class="inputbox">
-                       
-                        <input type="text" id="mensaje" name="mensaje">
-                        <label for="mensaje">Mensaje:</label>
-                </div>
-            </form>
-                </div>
-            </div>
-        </section>
-        </footer>
+	<p>Derechos reservados &copy; 2023 Audiovisuales para eventos S.A.</p>
+</footer>
     </main>
     </div>
     </body>

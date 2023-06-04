@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author User
+ * @author juanl
  */
 @Embeddable
 public class PagoPK implements Serializable {

@@ -10,8 +10,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!--<link rel="stylesheet" href="crearEvnt.css">
-        --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="eventos.css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Evento Personalizado</title>
         <script>
     function checkPrice() {
@@ -22,40 +23,28 @@
 </script>
     </head>
     <body>
-        <header >
-		
-		<nav class="naveg">
-                    <h1 class="logo">U<span>party</span> </h1>
-			<ul class="navbar">
-				<li><a href="#eventos">Eventos</a></li>
-				<li><a href="#decoracion">Decoración</a></li>
-				<li><a href="#musica">Música</a></li>
-				<li><a href="#catering">Catering</a></li>
-				<li><a href="#audiovisuales">Audiovisuales</a></li>
-				<li><a href="#empresas">Empresas</a></li>
-<s:form action="unlog" theme="simple" >
-                                <s:submit cssClass="login" name="unlog" value="Cerrar Sesion"/>
-                                </s:form>
-			</ul>
-		</nav>
-	</header>
-        <h1>Eventos</h1>
+        
+        <div class="eventos">
+            
+        <s:form action="eventoP" theme="simple">
+            <div class="eventos">
+                <h2>Evento</h2>
+      <table class="tablaEmp">
 
-        <label>Personaliza tu evento:</label>
-        <s:form action="eventoP">
-                <s:label name="evento" value="Evento:"></s:label>
-                <s:select name="eventos" id="eventos" list="%{tipos}" onchange="checkPrice()"/>
-                <s:label name="catering" value="Cátering:"></s:label>
-                <s:select name="c" id="cat" list="%{empresasC.{nombre}}" onchange="checkPrice()"/>
-                <s:label name="musica" value="Música:"></s:label>
-                <s:select name="m" id="mus" list="%{empresasM.{nombre}}" onchange="checkPrice()"/>
-                <s:label name="decoracion" value="Decoración:"></s:label>
-                <s:select name="d" id="dec" list="%{empresasD.{nombre}}" onchange="checkPrice()"/>
-                <s:label name="audiovisuales" value="Audiovisuales:"></s:label>
-                <s:select name="a" id="aud" list="%{empresasA.{nombre}}" onchange="checkPrice()"/>
-                <s:label name="pre" id="precio" value="Precio: %{precio}"/>
+        <tr class="encabezado"><th></th><th></th></tr>
+            <tr><td>Evento</td><td><s:select name="eventos" id="eventos" list="%{tipos}" onchange="checkPrice()"/></td></tr>
+               <tr><td>Catering</td><td><s:select name="eCat" id="eCat" list="%{empresasC.{nombre}}" onchange="checkPrice()"/></td></tr>
+               <tr><td>Musica</td><td><s:select name="eMus" id="eMus" list="%{empresasM.{nombre}}" onchange="checkPrice()"/></td></tr>
+               <tr><td>Decoracion</td><td><s:select name="eDec" id="eDec" list="%{empresasD.{nombre}}" onchange="checkPrice()"/></td></tr>
+               <tr><td>audiovisuales</td><td><s:select name="eAud" id="eAud" list="%{empresasA.{nombre}}" onchange="checkPrice()"/></td></tr>
+                <tr><td><s:property value="%{precio}"/></td></tr>
+                </table>
+        </div>
                 <s:hidden name="precio" value="%{precio}"/>
-            <s:submit name="eventoPTrigger" value="Especificar detalles"/>
+                <s:submit cssClass="login" cssStyle="margin: auto;" name="eventoPTrigger" value="Especificar detalles"/>
         </s:form>
+        </div>
+        
     </body>
+</div>
 </html>

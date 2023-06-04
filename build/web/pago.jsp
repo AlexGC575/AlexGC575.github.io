@@ -9,17 +9,40 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="register.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>RedSys</title>
     </head>
     <body>
+        <section>
+            <div class="form-box">
+                <div class="form-value">
+                    <table  style="color:white; boder: 3px solid white;">
         <s:iterator value="pago" var="p">
-            Tarjeta de Crédito: <s:property value="#p.pagoPK.tarjetoCredito"/><br/>
-            Fecha de Caducidad: <s:property value="#p.caducidad"/><br/>
+            <tr>
+                <td>Tarjeta de Crédito</td><td><s:property value="#p.pagoPK.tarjetoCredito"/></td>
+            </tr>
+               <tr>
+                <td>Fecha de Caducidad</td><td><s:property value="#p.caducidad"/></td>
+            </tr> 
+   
         </s:iterator>
-        <s:form action="pago">
-            <s:textfield name="pin" label="Número secreto"/><br/>
-            <s:submit name="pagoTrigger" value="Pagar"/>
+                    </table>
+            <div class="form-box">
+                <div class="form-value">
+                    
+        <s:form action="pago" theme="simple">
+            <div class="inputbox">
+                <ion-icon name="pricetags-outline"></ion-icon>
+               <s:textfield name="pin"/>
+            
+            <label for=""><s:fielderror fieldName="pin"/>Numero secreto:</label>
+            </div>
+            <s:submit cssClass="login"  name="pagoTrigger" value="Pagar"/>
         </s:form>
+                </div>
+            </div>
+            
+        </section>
     </body>
 </html>

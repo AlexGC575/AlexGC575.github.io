@@ -22,9 +22,10 @@
             <div class="form-box">
                 <div class="form-value">
                     <s:form action="registerCheck" theme="simple">
-            <h2>Registrarse</h2>
+                        <h2>Registarse</h2>
             
             <div class="inputbox">
+                
                 <ion-icon name="mail-outline"></ion-icon>
                
               <s:textfield name="email"/>
@@ -63,6 +64,20 @@
                <s:password name="passregister"/>
             <ion-icon name="lock-closed-outline"></ion-icon>
              <label for=""><s:fielderror fieldName="passregister"/>Contraseña:</label>
+            </div>
+            <div class="inputbox">
+                
+               
+               <s:textfield name="numTarjeta"/>
+            <ion-icon name="journal-outline"></ion-icon>
+             <label for=""><s:fielderror fieldName="numTarjeta"/>Numero Tarjeta:</label>
+            </div>
+            <div class="inputbox">
+                
+                
+               <s:textfield name="caducidad"/>
+            <ion-icon name="calendar-number-outline"></ion-icon>
+             <label for=""><s:fielderror fieldName="caducidad"/>Caducidad:</label>
             </div>
             
             <input class="login" type="submit" name="login" value="Registrarse">

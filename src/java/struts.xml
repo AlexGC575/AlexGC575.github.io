@@ -10,6 +10,9 @@
         <action name="irPerfil" class="actions.eventoAction" method="irAPerfil">
             <result name="success">/perfil.jsp</result>
         </action>
+        <action name="irLogin" class="actions.eventoAction" method="irAPerfil">
+            <result name="success">/login.jsp</result>
+        </action>
 	  <action name="loginCheck" class="actions.GestionUser" >
             <result name="success">/main.jsp</result>      
            <result name="error" >/login.jsp</result> 
@@ -55,7 +58,7 @@
         <action name="concierto" class="actions.eventoGeneralAction" method="concierto">
             <result name="success">/detalles.jsp</result>
         </action>       
-        <action name="cumpleaños" class="actions.eventoGeneralAction" method="cumpleanyos">
+        <action name="cumpleanyos" class="actions.eventoGeneralAction" method="cumpleanyos">
             <result name="success">/detalles.jsp</result>
         </action>        
         <action name="deporte" class="actions.eventoGeneralAction" method="deporte">
@@ -69,12 +72,82 @@
         </action>
         <action name="detallesEvento" class="actions.eventoAction" method="detalles">
             <result name="success">/pago.jsp</result>
+            <result name="input">/detalles.jsp</result>
         </action>
         <action name="pago" class="actions.eventoAction" method="pago">
-            <result name="success">/detallesPago.jsp</result>
+            <result name="success">/main.jsp</result>
         </action>
         <action name="pInicio" class="actions.eventoAction" method="inicio">
             <result name="success">/main.jsp</result>
+        </action>
+        <action name="altaEmpresa" class="actions.empresaAction">
+            <result name="success">/gestion.jsp</result>
+        </action>
+        <action name="borrarEmpresa" class="actions.empresaAction" method="borrar">
+            <result name="success">/gestion.jsp</result>
+        </action>
+        <action name="modEmpresa" class="actions.empresaAction" method="modificar">
+            <result name="success">/gestion.jsp</result>
+        </action>
+        <action name="consultarEmpresas" class="actions.empresaAction" method="consulta">
+            <result name="success">/empresas.jsp</result>
+        </action>
+        <action name="modificarUser" class="actions.ResgistroUser" method="modificar">
+            <result name="success">/gestion.jsp</result>
+            <result name="input">/gestion.jsp</result>
+        </action>
+        <action name="borrarUser" class="actions.ResgistroUser" method="borrar">
+            <result name="success">/gestion.jsp</result>
+            <result name="input">/gestion.jsp</result>
+        </action>
+        <action name="checkSession" class="actions.GestionUser" method="checkSession">
+            <result name="success">/main.jsp</result>
+            <result name="logout">/login.jsp</result>
+        </action>
+        <action name="validarDetalles" class="actions.validarDetalles">
+            <result name="success">/pago.jsp</result>
+            <result name="input">/detalles.jsp</result>
+        </action>
+        <action name="perfil" class="actions.GestionUser" method="mostrarPerfil">
+            <result name="success">/perfil.jsp</result>
+            <result name="input">/main.jsp</result>
+        </action>
+        <action name="resenya" class="actions.eventoResenya">
+            <result name="success">/reseña.jsp</result>
+        </action>
+        <action name="crearResenya" class="actions.eventoResenya" method="crearResenya">
+            <result name="success">/perfil.jsp</result>
+        </action>
+        
+        <action name="altaLugar" class="actions.LugarAction" >
+            <result name="success">/gestion.jsp</result>
+        </action>
+        <action name="modificarLugar" class="actions.LugarAction" method="modificar">
+            <result name="success">/gestion.jsp</result>
+        </action>
+        <action name="borrarLugar" class="actions.LugarAction" method="borrar">
+            <result name="success">/gestion.jsp</result>
+        </action>
+        <action name="altaPatrocinador" class="actions.PatrocinadorAction" >
+            <result name="success">/gestion.jsp</result>
+        </action>
+        <action name="modificarPatrocinador" class="actions.PatrocinadorAction" method="modificar">
+            <result name="success">/gestion.jsp</result>
+        </action>
+        <action name="borrarPatrocinador" class="actions.PatrocinadorAction" method="borrar">
+            <result name="success">/gestion.jsp</result>
+        </action>
+        <action name="altaEspecializacion" class="actions.EspecializacionAction" >
+            <result name="success">/gestion.jsp</result>
+        </action>
+        <action name="modificarEspecializacion" class="actions.EspecializacionAction" method="modificar">
+            <result name="success">/gestion.jsp</result>
+        </action>
+        <action name="borrarEspecializacion" class="actions.EspecializacionAction" method="borrar">
+            <result name="success">/gestion.jsp</result>
+        </action>
+        <action name="gestion" class="actions.empresaAction" method="ini">
+            <result name="success">/gestion.jsp</result>
         </action>
     </package>
 </struts>

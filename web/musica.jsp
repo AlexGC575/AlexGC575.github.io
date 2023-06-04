@@ -1,16 +1,22 @@
+
+
 <%-- 
-    Document   : Musica
-    Created on : Mar 26, 2023, 9:04:04 AM
+    Document   : audiovisuales
+    Created on : Mar 26, 2023, 9:06:19 AM
     Author     : User
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="style.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Música para eventos</title>
 </head>
 <body>
+	 <div class="all">
 	<header >
 		
 		<nav class="naveg">
@@ -21,24 +27,29 @@
 				<li><a href="musica.jsp">Música</a></li>
 				<li><a href="catering.jsp">Catering</a></li>
 				<li><a href="audiovisuales.jsp">Audiovisuales</a></li>
-				<li><a href="empresas.jsp">Empresas</a></li>
-                                 <%= session.getAttribute("Usuario") %>
-<s:form action="unlog" theme="simple" >
-                                <s:submit cssClass="login" name="unlog" value="Cerrar Sesion"/>
-                                </s:form>
+				<s:form action="consultarEmpresas" theme="simple" >
+                                <s:submit cssClass="login" name="irEmpresa" value="Empresas"/>
+                            </s:form>
+                                
+                                <s:if test="#session.Usuario!=null">         
+                                <s:form action="irPerfil" theme="simple" >
+                                <s:submit cssClass="login" name="irperfil" value="Ver Perfil"/>
+                            </s:form>
+                                </s:if>
+                                <s:else >
+                                <s:form action="irLogin" theme="simple" >
+                                <s:submit cssClass="login" name="irlogin" value="Iniciar Sesión"/>
+                            </s:form>
+                                </s:else>
 			</ul>
 		</nav>
 	</header>
 <main>
-	<section id="banner">
+	<section class="banner" id="banner">
 		<h2>Servicio de música para eventos</h2>
 		<p>En nuestra empresa ofrecemos un servicio de música completo para todo tipo de eventos. Desde bodas y cumpleaños hasta eventos corporativos y ferias, tenemos el artista perfecto para tu ocasión especial.</p>
-		<a href="#contacto">Solicita información</a>
-	</section>
-	
-    <section id="main">
-                <p>
-	Contamos con una amplia variedad de opciones musicales para adaptarnos a todos los estilos y gustos. Nuestro talentoso equipo de músicos y artistas está formado por profesionales apasionados que dominan diversos géneros, desde bandas en vivo y solistas hasta DJ experimentados y grupos de música especializados.
+		<a href="main.jsp">Crea tu evento</a><br>
+                <p style="background-color: black; border-radius:6px ">Contamos con una amplia variedad de opciones musicales para adaptarnos a todos los estilos y gustos. Nuestro talentoso equipo de músicos y artistas está formado por profesionales apasionados que dominan diversos géneros, desde bandas en vivo y solistas hasta DJ experimentados y grupos de música especializados.
 
 Ya sea que desees una banda de jazz elegante para una recepción sofisticada, un DJ que haga que todos se levanten y bailen en una fiesta animada o un conjunto de música clásica para un ambiente refinado, tenemos la solución musical perfecta para tu evento.
 
@@ -49,29 +60,16 @@ Además, nos encargamos de todos los aspectos técnicos relacionados con el soni
 Si tienes necesidades especiales, como la incorporación de músicos adicionales, la creación de una lista de reproducción personalizada o la coordinación de actuaciones especiales, nuestro equipo estará encantado de ayudarte. Nos aseguraremos de que cada detalle musical esté cuidadosamente planificado y ejecutado para crear una experiencia musical inolvidable.
 
 En resumen, en nuestra empresa de organización de eventos, la música es una parte integral de la experiencia. Desde la selección de artistas talentosos hasta la producción de sonido impecable, nos ocupamos de todo para que puedas disfrutar de un evento memorable y lleno de melodía.
-    </p>
-            </section>
-	
-	<section id="contacto">
-		<h2>Contacto</h2>
-		<p>Si estás interesado en nuestro servicio de decoración o tienes alguna pregunta, no dudes en ponerte en contacto con nosotros.</p>
-		<form>
-			<label for="nombre">Nombre:</label>
-			<input type="text" id="nombre" name="nombre"><br>
-
-			<label for="email">Email:</label>
-			<input type="email" id="email" name="email"><br>
-
-			<label for="mensaje">Mensaje:</label>
-			<textarea id="mensaje" name="mensaje"></textarea><br>
-
-			<input type="submit" value="Enviar">
-		</form>
+   </p>
 	</section>
+	
+		
+	
 </main>
 
 <footer>
-	<p>Derechos reservados &copy; 2023 Decoraciones para eventos S.A.</p>
+	<p>Derechos reservados &copy; 2023 Audiovisuales para eventos S.A.</p>
 </footer>
+         </div>
 </body>
 </html>

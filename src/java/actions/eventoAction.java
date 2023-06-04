@@ -13,6 +13,8 @@ import com.opensymphony.xwork2.ActionSupport;
 import java.util.Random;
 import entidades.*;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
@@ -20,6 +22,7 @@ import java.util.List;
 
 public class eventoAction extends ActionSupport {
 
+    private Evento evento;
     private List<Empresa> empresasC;
     private List<Empresa> empresasM;
     private List<Empresa> empresasD;
@@ -31,9 +34,9 @@ public class eventoAction extends ActionSupport {
     private String espD;
     private String lugar;
     private String elegirLugar;
-    private Date fecha;
-    private Date horaI;
-    private Date horaF;
+    private String fecha;
+    private String horaI;
+    private String horaF;
     private String elegirPatrocinador;
     private Tipo tipo;
     private float precio;
@@ -42,10 +45,6 @@ public class eventoAction extends ActionSupport {
     private List<Especializacion> especializaciones;
     private Pago pago;
     private String elegirEvento;
-
-    public String getElegirEvento() {
-        return elegirEvento;
-    }
 
     public String getEspT() {
         return espT;
@@ -95,6 +94,10 @@ public class eventoAction extends ActionSupport {
         this.tipo = tipo;
     }
 
+    public String getElegirEvento() {
+        return elegirEvento;
+    }
+
     public void setElegirEvento(String elegirEvento) {
         this.elegirEvento = elegirEvento;
     }
@@ -131,6 +134,14 @@ public class eventoAction extends ActionSupport {
         this.session = session;
     }
 
+    public Evento getEvento() {
+        return evento;
+    }
+
+    public void setEvento(Evento evento) {
+        this.evento = evento;
+    }
+
     public String getLugar() {
         return lugar;
     }
@@ -147,27 +158,27 @@ public class eventoAction extends ActionSupport {
         this.elegirLugar = elegirLugar;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
-    public Date getHoraI() {
+    public String getHoraI() {
         return horaI;
     }
 
-    public void setHoraI(Date horaI) {
+    public void setHoraI(String horaI) {
         this.horaI = horaI;
     }
 
-    public Date getHoraF() {
+    public String getHoraF() {
         return horaF;
     }
 
-    public void setHoraF(Date horaF) {
+    public void setHoraF(String horaF) {
         this.horaF = horaF;
     }
 
@@ -222,6 +233,7 @@ public class eventoAction extends ActionSupport {
     public eventoAction() {
     }
 
+    //Metodo de seleccion de especializacion de evento, redirige a la pagina correspondiente de cada evento
     public String eventoGeneral() throws Exception {
         Almacen a = new Almacen();
 
@@ -239,7 +251,7 @@ public class eventoAction extends ActionSupport {
             return "CON";
         } else if (this.getElegirEvento().equals("Deporte")) {
             return "D";
-        } else if (this.getElegirEvento().equals("Fiesta temática")) {
+        } else if (this.getElegirEvento().equals("Fiesta")) {
             return "FT";
         } else if (this.getElegirEvento().equals("Bautizo")) {
             return "BAU";
@@ -247,6 +259,7 @@ public class eventoAction extends ActionSupport {
         return ERROR;
     }
 
+    //Metodo de empresas
     public String eventoOriginal() throws Exception {
         Almacen a = new Almacen();
         Iterator<Empresa> i;
@@ -281,25 +294,38 @@ public class eventoAction extends ActionSupport {
         return SUCCESS;
     }
 
-    public String detalles() throws SQLException {
+    //Recoge los datos de la creacion del evento en el formulario de detalles.jsp
+    public String detalles() throws SQLException, ParseException {
         Almacen a = new Almacen();
         Evento e = new Evento();
 
-        e.setFecha(this.getFecha());
-        e.setHoraInicio(this.getHoraI());
-        e.setHoraFin(this.getHoraF());
+        String dateString = "2023-05-31";
+        String pattern = "dd/MM/yyyy";
 
-        if (this.getLugar() == null) {
-            Lugar l = new Lugar();
-            l.setNombre(this.getElegirLugar());
-            e.setLugar(l);
+        SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
+        Date date = dateFormat.parse(this.getFecha());
+
+        e.setFecha(date);
+        
+        pattern = "hh:mm:ss";
+        dateFormat = new SimpleDateFormat(pattern);
+        date = dateFormat.parse(this.getHoraI());
+        e.setHoraInicio(date);
+        
+        date = dateFormat.parse(this.getHoraF());
+        e.setHoraFin(date);
+
+        if (this.getLugar().equals("")) {
+            e.setLugar(a.consultaLugar(this.getElegirLugar()));
         } else {
-            e.setLugar(a.consultaLugar(this.getLugar()));
+            Lugar l = new Lugar();
+            l.setNombre(this.getLugar());
+            e.setLugar(l);
         }
         if (this.getElegirPatrocinador() != null) {
             e.setPatrocinador(a.consultaPatrocinador(this.getElegirPatrocinador()));
-        }else{
-            Patrocinador p = a.consultaPatrocinador("WWE");
+        } else {
+            Patrocinador p = a.consultaPatrocinador("Ninguno");
             e.setPatrocinador(p);
         }
 
@@ -309,18 +335,32 @@ public class eventoAction extends ActionSupport {
         e.setDecoracion(this.getEspD());
         e.setMusica(this.getEspM());
         e.setReligion("-");
-            
 
-        a.altaResenya(7,5,"dsa","dasd",a.consultaUsuario(this.getSession()));
-        //e.setResenya(r);
-        
+        Date d = new Date();
+        Resenya r = new Resenya(112, 5, "fsdfs", "dfdfdsasd");
+        a.altaResenya(112, 5, "fsdfs", "dfdfdsasd", a.consultaUsuario(this.getSession()));
+        e.setResenya(r);
+
         e.setPrecio(this.getPrecio());
-        e.setUsuario(a.consultaUsuario(this.getSession()));        
-        
+        e.setUsuario(a.consultaUsuario(this.getSession()));
+
         e.setPagado(false);
+
         this.setPago(a.consultaTarjeta(this.getSession()));;
         
+        List <Empresa> le = new ArrayList<Empresa>();
+        List <Asistente> la = new ArrayList<Asistente>();
+        le.add(a.consultaEmpresa(this.getEspA()));
+        le.add(a.consultaEmpresa(this.getEspC()));
+        le.add(a.consultaEmpresa(this.getEspD()));
+        le.add(a.consultaEmpresa(this.getEspM()));
+
+        e.setEmpresaCollection(le);
+        e.setAsistenteCollection(la);
+        e.setId(1);
+        
         a.altaEvento(e);
+        this.setEvento(e);
 
         return SUCCESS;
     }
@@ -338,10 +378,20 @@ public class eventoAction extends ActionSupport {
         //recoger especializacion de la sesion
         return SUCCESS;
     }
-
+    
+    @Override//Metodo por defecto del action eventoAction
     public String execute() throws Exception {
         Almacen a = new Almacen();
         this.setTipos(a.consultaTipos());
+        String p;
+
+        for (int i = 0; i < this.getTipos().size(); i++) {
+            if (this.getTipos().get(i).equals("Cumpleanyos")) {
+                p = this.getTipos().get(i).replace("ny", "ñ");
+                this.getTipos().remove(i);
+                this.getTipos().add(p);
+            }
+        }
         return SUCCESS;
     }
 

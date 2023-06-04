@@ -6,7 +6,6 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags"%>
-<script src="jquery-1.12.4.min.js" type="text/javascript"></script>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,16 +21,25 @@
 		<nav class="naveg">
                     <h1 class="logo">U<span>party</span> </h1>
 			<ul class="navbar">
-				<li><a href="#eventos">Eventos</a></li>
-				<li><a href="#decoracion">Decoración</a></li>
-				<li><a href="#musica">Música</a></li>
-				<li><a href="#catering">Catering</a></li>
-				<li><a href="#audiovisuales">Audiovisuales</a></li>
-				<li><a href="#empresas">Empresas</a></li>
-
+				<li><a href="eventos.jsp">Eventos</a></li>
+				<li><a href="decoracion.jsp">Decoración</a></li>
+				<li><a href="musica.jsp">Música</a></li>
+				<li><a href="catering.jsp">Catering</a></li>
+				<li><a href="audiovisuales.jsp">Audiovisuales</a></li>
+				<s:form action="consultarEmpresas" theme="simple" >
+                                <s:submit cssClass="login" name="irEmpresa" value="Empresas"/>
+                            </s:form>
+                                
+                                <s:if test="#session.Usuario!=null">         
                                 <s:form action="irPerfil" theme="simple" >
                                 <s:submit cssClass="login" name="irperfil" value="Ver Perfil"/>
-                                </s:form>
+                            </s:form>
+                                </s:if>
+                                <s:else >
+                                <s:form action="irLogin" theme="simple" >
+                                <s:submit cssClass="login" name="irlogin" value="Iniciar Sesión"/>
+                            </s:form>
+                                </s:else>
 			</ul>
 		</nav>
 	</header>
@@ -46,7 +54,7 @@
                    
                     <summary>Boda <s:property value="#e.nombre"/></summary>
                     <div >
-                        <li onmouseover="description()">Cátering: <s:property value="#e.catering"/></li>
+                    <li>Cátering: <s:property value="#e.catering"/></li>
                     <li>Música: <s:property value="#e.musica"/></li>
                     <li>Decoración: <s:property value="#e.decoracion"/></li>
                     <li>Audiovisuales: <s:property value="#e.audiovisuales"/></li>
@@ -63,6 +71,10 @@
         
 
     </div>
+            
+<footer>
+	<p>Derechos reservados &copy; 2023 Uparty</p>
+</footer>
            </div> 
     </body>
 </html>

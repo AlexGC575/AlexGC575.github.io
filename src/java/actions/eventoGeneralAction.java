@@ -183,6 +183,7 @@ public class eventoGeneralAction extends ActionSupport {
     public eventoGeneralAction() {
     }
 
+    //Establece los atributos del evento de tipo boda
     public String boda() throws SQLException {
         Almacen a = new Almacen();
 
@@ -195,6 +196,7 @@ public class eventoGeneralAction extends ActionSupport {
         return ERROR;
     }
 
+    //Establece los atributos del evento de tipo bautizo
     public String bautizo() throws SQLException {
         Almacen a = new Almacen();
 
@@ -207,6 +209,7 @@ public class eventoGeneralAction extends ActionSupport {
         return ERROR;
     }
 
+    //Establece los atributos del evento de tipo cine
     public String cine() throws SQLException {
         Almacen a = new Almacen();
 
@@ -219,6 +222,7 @@ public class eventoGeneralAction extends ActionSupport {
         return ERROR;
     }
 
+    //Establece los atributos del evento de tipo comunion
     public String comunion() throws SQLException {
         Almacen a = new Almacen();
 
@@ -231,6 +235,7 @@ public class eventoGeneralAction extends ActionSupport {
         return ERROR;
     }
 
+    //Establece los atributos del evento de tipo concierto
     public String concierto() throws SQLException {
         Almacen a = new Almacen();
 
@@ -243,6 +248,7 @@ public class eventoGeneralAction extends ActionSupport {
         return ERROR;
     }
 
+    //Establece los atributos del evento de tipo cumpleaños
     public String cumpleanyos() throws SQLException {
         Almacen a = new Almacen();
 
@@ -255,6 +261,7 @@ public class eventoGeneralAction extends ActionSupport {
         return ERROR;
     }
 
+    //Establece los atributos del evento de tipo deporte
     public String deporte() throws SQLException {
         Almacen a = new Almacen();
 
@@ -267,6 +274,7 @@ public class eventoGeneralAction extends ActionSupport {
         return ERROR;
     }
 
+    //Establece los atributos del evento de tipo fiesta
     public String fiesta() throws SQLException {
         Almacen a = new Almacen();
 
@@ -279,6 +287,7 @@ public class eventoGeneralAction extends ActionSupport {
         return ERROR;
     }
 
+    //Establece los atributos del evento personalizado
     public String eventoP() throws SQLException {
         Almacen a = new Almacen();
         Especializacion e = new Especializacion();
@@ -295,7 +304,8 @@ public class eventoGeneralAction extends ActionSupport {
         this.setPatrocinadores(a.consultaPatrocinadores());
         return SUCCESS;
     }
-
+    
+    @Override//Metodo por defecto del action eventoGeneralAction
     public String execute() throws Exception {
         return SUCCESS;
     }

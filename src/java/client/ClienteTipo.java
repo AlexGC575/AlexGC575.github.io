@@ -26,7 +26,7 @@ public class ClienteTipo {
 
     private WebTarget webTarget;
     private Client client;
-    private static final String BASE_URI = "http://localhost:8080/RestUparty/webresources";
+    private static final String BASE_URI = "http://localhost:8080/restFinal/webresources";
 
     public ClienteTipo() {
         client = javax.ws.rs.client.ClientBuilder.newClient();

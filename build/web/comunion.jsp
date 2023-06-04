@@ -16,7 +16,7 @@
     </head>
     <body>
          <div class="eventos">
-        <header >
+      <header >
 		
 		<nav class="naveg">
                     <h1 class="logo">U<span>party</span> </h1>
@@ -26,7 +26,10 @@
 				<li><a href="musica.jsp">Música</a></li>
 				<li><a href="catering.jsp">Catering</a></li>
 				<li><a href="audiovisuales.jsp">Audiovisuales</a></li>
-				<li><a href="empresas.jsp">Empresas</a></li>
+				<s:form action="consultarEmpresas" theme="simple" >
+                                <s:submit cssClass="login" name="irEmpresa" value="Empresas"/>
+                            </s:form>
+                                
                                 <s:if test="#session.Usuario!=null">         
                                 <s:form action="irPerfil" theme="simple" >
                                 <s:submit cssClass="login" name="irperfil" value="Ver Perfil"/>
@@ -61,6 +64,10 @@
             <s:submit cssClass="login" name="comunionTrigger" value="Especificar detalles"/>
         </s:form>
             </div>
+             
+<footer>
+	<p>Derechos reservados &copy; 2023 Uparty</p>
+</footer>
            </div> 
     </body>
 </html>

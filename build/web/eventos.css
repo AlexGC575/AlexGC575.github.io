@@ -15,7 +15,7 @@ h2{
     text-align: center;
 }
 .tabla{
-    position: absoulte;
+   
     width: 400px;
     height: 100%;
     background: transparent;
@@ -115,4 +115,24 @@ input[type="radio"]:checked + label:before{
     font-size: 1em;
     pointer-events: none;
     transition: .5s;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline:0;
+  
+    background:lightblue;
+    
+    background-image: none;
+}
+.sel{
+    position: relative;
+    display:flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: lightblue;
+    overflow: hidden;
+    border-radius: .25em;
 }

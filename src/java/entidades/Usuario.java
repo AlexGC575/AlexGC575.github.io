@@ -38,7 +38,8 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "Usuario.findByNombre", query = "SELECT u FROM Usuario u WHERE u.nombre = :nombre")
     , @NamedQuery(name = "Usuario.findByApellidos", query = "SELECT u FROM Usuario u WHERE u.apellidos = :apellidos")
     , @NamedQuery(name = "Usuario.findByFechaNac", query = "SELECT u FROM Usuario u WHERE u.fechaNac = :fechaNac")
-    , @NamedQuery(name = "Usuario.findByTelefono", query = "SELECT u FROM Usuario u WHERE u.telefono = :telefono")})
+    , @NamedQuery(name = "Usuario.findByTelefono", query = "SELECT u FROM Usuario u WHERE u.telefono = :telefono")
+    , @NamedQuery(name = "Usuario.findByRol", query = "SELECT u FROM Usuario u WHERE u.rol = :rol")})
 public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -73,8 +74,20 @@ public class Usuario implements Serializable {
     @NotNull
     @Column(name = "telefono")
     private int telefono;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "rol")
+    private int rol;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario1")
+    private Collection<Direccion> direccionCollection;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario1")
     private Collection<Pago> pagoCollection;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario")
+    private Collection<Evento> eventoCollection;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario")
+    private Collection<Resenya> resenyaCollection;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario")
+    private Collection<Mensaje> mensajeCollection;
 
     public Usuario() {
     }
@@ -83,13 +96,14 @@ public class Usuario implements Serializable {
         this.email = email;
     }
 
-    public Usuario(String email, String contrasenya, String nombre, String apellidos, Date fechaNac, int telefono) {
+    public Usuario(String email, String contrasenya, String nombre, String apellidos, Date fechaNac, int telefono, int rol) {
         this.email = email;
         this.contrasenya = contrasenya;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.fechaNac = fechaNac;
         this.telefono = telefono;
+        this.rol = rol;
     }
 
     public String getEmail() {
@@ -140,6 +154,23 @@ public class Usuario implements Serializable {
         this.telefono = telefono;
     }
 
+    public int getRol() {
+        return rol;
+    }
+
+    public void setRol(int rol) {
+        this.rol = rol;
+    }
+
+    @XmlTransient
+    public Collection<Direccion> getDireccionCollection() {
+        return direccionCollection;
+    }
+
+    public void setDireccionCollection(Collection<Direccion> direccionCollection) {
+        this.direccionCollection = direccionCollection;
+    }
+
     @XmlTransient
     public Collection<Pago> getPagoCollection() {
         return pagoCollection;
@@ -147,6 +178,33 @@ public class Usuario implements Serializable {
 
     public void setPagoCollection(Collection<Pago> pagoCollection) {
         this.pagoCollection = pagoCollection;
+    }
+
+    @XmlTransient
+    public Collection<Evento> getEventoCollection() {
+        return eventoCollection;
+    }
+
+    public void setEventoCollection(Collection<Evento> eventoCollection) {
+        this.eventoCollection = eventoCollection;
+    }
+
+    @XmlTransient
+    public Collection<Resenya> getResenyaCollection() {
+        return resenyaCollection;
+    }
+
+    public void setResenyaCollection(Collection<Resenya> resenyaCollection) {
+        this.resenyaCollection = resenyaCollection;
+    }
+
+    @XmlTransient
+    public Collection<Mensaje> getMensajeCollection() {
+        return mensajeCollection;
+    }
+
+    public void setMensajeCollection(Collection<Mensaje> mensajeCollection) {
+        this.mensajeCollection = mensajeCollection;
     }
 
     @Override

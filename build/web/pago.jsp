@@ -25,11 +25,7 @@
                <tr>
                 <td>Fecha de Caducidad</td><td><s:property value="#p.caducidad"/></td>
             </tr> 
-            
-          
-                
-            
-          
+   
         </s:iterator>
                     </table>
             <div class="form-box">

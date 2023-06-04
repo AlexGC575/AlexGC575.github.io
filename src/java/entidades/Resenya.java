@@ -28,7 +28,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author User
+ * @author juanl
  */
 @Entity
 @Table(name = "resenya")
@@ -66,9 +66,6 @@ public class Resenya implements Serializable {
     @JoinColumn(name = "usuario", referencedColumnName = "email")
     @ManyToOne(optional = false)
     private Usuario usuario;
-    @JoinColumn(name = "evento", referencedColumnName = "id")
-    @ManyToOne(optional = false)
-    private Evento evento;
 
     public Resenya() {
     }
@@ -131,14 +128,6 @@ public class Resenya implements Serializable {
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
-    }
-
-    public Evento getEvento() {
-        return evento;
-    }
-
-    public void setEvento(Evento evento) {
-        this.evento = evento;
     }
 
     @Override

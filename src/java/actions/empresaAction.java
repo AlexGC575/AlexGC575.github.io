@@ -16,6 +16,7 @@ import java.util.*;
  * @author juanl
  */
 public class empresaAction extends ActionSupport {
+
     private String nombre;
     private String categoria;
     private String descripcion;
@@ -34,7 +35,6 @@ public class empresaAction extends ActionSupport {
     public void setEmpresas(List<Empresa> empresas) {
         this.empresas = empresas;
     }
-    
 
     public int getValm() {
         return valm;
@@ -83,7 +83,6 @@ public class empresaAction extends ActionSupport {
     public void setNombreb(String nombreb) {
         this.nombreb = nombreb;
     }
-    
 
     public String getNombre() {
         return nombre;
@@ -116,32 +115,43 @@ public class empresaAction extends ActionSupport {
     public void setVal(int val) {
         this.val = val;
     }
-    
+
     public empresaAction() {
-        
+
     }
-    
-    public String execute() throws Exception {
-        Almacen al=new Almacen();
-        Empresa emp=new Empresa(this.getNombre(),this.getCategoria(),this.getDescripcion(),this.getVal());
+
+    @Override//Metodo por defecto del action empresaAction
+    public String execute() throws Exception {//Alta empresa
+        Almacen al = new Almacen();
+        Empresa emp = new Empresa(this.getNombre(), this.getCategoria(), this.getDescripcion(), this.getVal());
         al.altaEmpresa(emp);
         return SUCCESS;
     }
-    public String borrar() throws Exception{
-        Almacen al=new Almacen();
+
+    //Borrar empresa
+    public String borrar() throws Exception {
+        Almacen al = new Almacen();
         al.bajaEmpresa(this.getNombreb());
         return SUCCESS;
     }
-    public String modificar() throws Exception{
-        Almacen al=new Almacen();
-        Empresa emp=new Empresa(this.getNombrem(),this.getCategoriam(),this.getDescripcionm(),this.getValm());
-        al.modEmpresa(emp, nombreb);
+
+    //Modificar empresa
+    public String modificar() throws Exception {
+        Almacen al = new Almacen();
+        Empresa emp = new Empresa(this.getNombrem(), this.getCategoriam(), this.getDescripcionm(), this.getValm());
+        al.modEmpresa(emp, nombrem);
         return SUCCESS;
     }
-    public String consulta(){
-        Almacen al=new Almacen();
-        empresas=al.obtenerEmpresas();
+
+    //Obtener listado de empresas
+    public String consulta() {
+        Almacen al = new Almacen();
+        empresas = al.obtenerEmpresas();
         return SUCCESS;
     }
-    
+
+    public String ini() throws Exception {    //redirección a gestion.jsp
+        return SUCCESS;
+    }
+
 }

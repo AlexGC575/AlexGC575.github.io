@@ -13,4 +13,5 @@
     <jdbc-resource enabled="true" jndi-name="java:app/a" object-type="user" pool-name="mysql_uparty_rootPool"/>
     <jdbc-resource enabled="true" jndi-name="java:app/Uparty" object-type="user" pool-name="mysql_uparty_rootPool"/>
     <jdbc-resource enabled="true" jndi-name="java:app/f" object-type="user" pool-name="mysql_uparty_rootPool"/>
+    <jdbc-resource enabled="true" jndi-name="java:app/s" object-type="user" pool-name="mysql_uparty_rootPool"/>
 </resources>

@@ -31,7 +31,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author User
+ * @author juanl
  */
 @Entity
 @Table(name = "evento")
@@ -122,8 +122,6 @@ public class Evento implements Serializable {
     @JoinColumn(name = "tipo", referencedColumnName = "nombre")
     @ManyToOne(optional = false)
     private Tipo tipo;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "evento")
-    private Collection<Resenya> resenyaCollection;
 
     public Evento() {
     }
@@ -289,15 +287,6 @@ public class Evento implements Serializable {
 
     public void setTipo(Tipo tipo) {
         this.tipo = tipo;
-    }
-
-    @XmlTransient
-    public Collection<Resenya> getResenyaCollection() {
-        return resenyaCollection;
-    }
-
-    public void setResenyaCollection(Collection<Resenya> resenyaCollection) {
-        this.resenyaCollection = resenyaCollection;
     }
 
     @Override

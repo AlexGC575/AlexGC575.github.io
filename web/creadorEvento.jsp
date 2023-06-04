@@ -17,22 +17,32 @@
     <body>
         <div class="all">
             <header >
-
-                <nav class="naveg">
+		
+		<nav class="naveg">
                     <h1 class="logo">U<span>party</span> </h1>
-                    <ul class="navbar">
-                        <li><a href="eventos.jsp">Eventos</a></li>
-                        <li><a href="decoracion.jsp">Decoración</a></li>
-                        <li><a href="musica.jsp">Música</a></li>
-                        <li><a href="catering.jsp">Catering</a></li>
-                        <li><a href="audiovisuales.jsp">Audiovisuales</a></li>
-                        <li><a href="empresas.jsp">Empresas</a></li>
-                            <s:form action="irPerfil" theme="simple" >
+			<ul class="navbar">
+				<li><a href="eventos.jsp">Eventos</a></li>
+				<li><a href="decoracion.jsp">Decoración</a></li>
+				<li><a href="musica.jsp">Música</a></li>
+				<li><a href="catering.jsp">Catering</a></li>
+				<li><a href="audiovisuales.jsp">Audiovisuales</a></li>
+				<s:form action="consultarEmpresas" theme="simple" >
+                                <s:submit cssClass="login" name="irEmpresa" value="Empresas"/>
+                            </s:form>
+                                
+                                <s:if test="#session.Usuario!=null">         
+                                <s:form action="irPerfil" theme="simple" >
                                 <s:submit cssClass="login" name="irperfil" value="Ver Perfil"/>
                             </s:form>
-                    </ul>
-                </nav>
-            </header>
+                                </s:if>
+                                <s:else >
+                                <s:form action="irLogin" theme="simple" >
+                                <s:submit cssClass="login" name="irlogin" value="Iniciar Sesión"/>
+                            </s:form>
+                                </s:else>
+			</ul>
+		</nav>
+	</header>
 
             <h1>Seleccione el tipo de evento que quiere organizar</h1>
 
@@ -73,6 +83,10 @@
                     <s:submit cssClass="login" name="crearEvntTrigger" value="Personalizar"/>
                 </s:form>
             </div>
+            
+<footer>
+	<p>Derechos reservados &copy; 2023 Uparty</p>
+</footer>
         </div>
 
     </body>

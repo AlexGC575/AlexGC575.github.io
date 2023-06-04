@@ -25,7 +25,6 @@
 				<li><a href="musica.jsp">Música</a></li>
 				<li><a href="catering.jsp">Catering</a></li>
 				<li><a href="audiovisuales.jsp">Audiovisuales</a></li>
-                                <li><a href="gestion.jsp">Gestión</a></li>
 				<s:form action="consultarEmpresas" theme="simple" >
                                 <s:submit cssClass="login" name="irEmpresa" value="Empresas"/>
                             </s:form>
